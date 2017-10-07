@@ -6,18 +6,20 @@ input [15:0] resultado;
 
 always @(posedge clk)
 begin
-	if(codop == 4'd0){
-		resultado = operando1 + operando2;
-	} else if(codop == 4'd1){
-		resultado = operando1 - operando2;
-	} else if(codop == 4'd2){
-		if(operando1 > operando2){
-			resultado = 16'd1;
-		} else {
-			resultado = 16'd0;
-		}
-	}
-		
+	case (codop)
+		4'd0: begin
+			resultado = operando1 + operando2;
+		end
+		4'd1: begin
+			resultado = operando1 - operando2;
+		end
+		4'd2: begin
+			if(operando1 > operando2){
+				resultado = 16'd1;
+			} else {
+				resultado = 16'd0;
+			}
+		end
 	endcase
 end
 
