@@ -20,6 +20,13 @@ begin
 				resultado = 16'd0;
 			}
 		end
+		4'd3: begin
+			if(operando1 > operando2){
+				resultado = 16'd1;
+			} else {
+				resultado = 16'd0;
+			}
+		end
 	endcase
 end
 
