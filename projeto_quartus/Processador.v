@@ -89,12 +89,12 @@ conversor7segmentos conversor0(
 
 always @(posedge CLOCK_50)
 begin
-	if(KEY[0] == 1) begin
+	if(SW[16] == 1) begin
 		endRegA = SW[11:8];
 		endRegB = SW[7:4];
 		bancoRW = 0;
 	end
-	if(KEY[3] == 1) begin
+	if(SW[17] == 1) begin
 		bancoRW = 0;
 		codop = SW[15:12];
 		if(codop == 4'd0) begin
@@ -148,7 +148,6 @@ begin
 			endRegB = SW[3:0];
 		end
 		dadoBanco = resultadoALU;
-		bancoRW = 1;
 	end
 
 
