@@ -9,47 +9,89 @@ z2
 cModel Technology
 Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-!s110 1507677480
+Z1 !s110 1507684537
 !i10b 1
-!s100 7Mho@]Sll7N3@4;==3SCc1
-IA1Aae<@GDkQ4@oN0F[`>M2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 SR[P:XKijmaTL4zEGzP<J0
+IJUSmUdWlESn[n[9mjaJaA3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1507675780
+w1507684408
 8/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 L0 1
-Z2 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1507677480.000000
+Z4 !s108 1507684537.000000
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-work|work|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
-o-work work
-Z3 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@a@l@u
-vProcessador
-!s110 1507677467
-!i10b 1
-!s100 aMbZo4e4aH]S>gi5n``l]1
-I`?JllSPW;mP;<61]jn?;:2
+vBanco_registradores
 R1
-R0
-w1507675947
-8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
-L0 1
+!i10b 1
+!s100 IaH7FEG8:k0RXkjKmo<EL3
+Ijb;cC;=T]]3BYJTC=8Zn80
 R2
+R0
+w1507678951
+8/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
+F/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
+L0 1
+R3
 r1
 !s85 0
 31
-!s108 1507677467.000000
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+R4
+!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
+!s90 -reportprogress|300|-work|work|/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
 !i113 1
-o-vlog01compat -work work
-!s92 -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus
+R5
+R6
+n@banco_registradores
+vconversor7segmentos
+R1
+!i10b 1
+!s100 IFNIWRkKzHHFi>1eB5Hg:2
+IDz=c?mzOzRdY:8`H`>M@Q1
+R2
+R0
+w1507680314
+8/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v
+F/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v
+L0 1
 R3
+r1
+!s85 0
+31
+R4
+!s107 /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v|
+!s90 -reportprogress|300|-work|work|/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v|
+!i113 1
+R5
+R6
+vProcessador
+R1
+!i10b 1
+!s100 >@iz]0goT9=9FBU3JK_Sc3
+Id9QKFDm0c2U::Fe0Y_`[z3
+R2
+R0
+w1507684448
+8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+!s90 -reportprogress|300|-work|work|/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+!i113 1
+R5
+R6
 n@processador

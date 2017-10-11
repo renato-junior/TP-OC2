@@ -41,6 +41,7 @@ ALU alu(
 	.codop(codop),
 	.operando1(saidaA),
 	.operando2(saidaB),
+	.imm(imm),
 	.resultado(resultadoALU)
 );
 
@@ -125,28 +126,27 @@ begin
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+		end else if(codop == 4'd7) begin
+			endRegC = SW[11:8];
+			imm[15:4] = 12'd0;
+			imm[3:0] = SW[7:4];
+			endRegB = SW[3:0];
+		end else if(codop == 4'd8) begin
+			endRegC = SW[11:8];
+			imm[15:4] = 12'd0;
+			imm[3:0] = SW[7:4];
+			endRegB = SW[3:0];
+		end else if(codop == 4'd9) begin
+			endRegC = SW[11:8];
+			imm[15:4] = 12'd0;
+			imm[3:0] = SW[7:4];
+			endRegB = SW[3:0];
+		end else if(codop == 4'd10) begin
+			endRegC = SW[11:8];
+			imm[15:4] = 12'd0;
+			imm[3:0] = SW[7:4];
+			endRegB = SW[3:0];
 		end
-//		end else if(codop == 4'd7) begin
-//			endRegC = SW[11:8];
-//			saidaA[15:4] = 12'd0;
-//			saidaA[3:0] = SW[7:4];
-//			endRegB = SW[3:0];
-//		end else if(codop == 4'd8) begin
-//			endRegC = SW[11:8];
-//			saidaA[15:4] = 12'd0;
-//			saidaA[3:0] = SW[7:4];
-//			endRegB = SW[3:0];
-//		end else if(codop == 4'd9) begin
-//			endRegC = SW[11:8];
-//			saidaA[15:4] = 12'd0;
-//			saidaA[3:0] = SW[7:4];
-//			endRegB = SW[3:0];
-//		end else if(codop == 4'd10) begin
-//			endRegC = SW[11:8];
-//			saidaA[15:4] = 12'd0;
-//			saidaA[3:0] = SW[7:4];
-//			endRegB = SW[3:0];
-//		end
 		
 		dadoBanco = resultadoALU;
 		bancoRW = 1;
