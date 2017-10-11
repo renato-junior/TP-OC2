@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Tue Oct 10 21:08:11 2017
+Tue Oct 10 22:06:31 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Oct 10 21:08:11 2017           ;
+; Analysis & Synthesis Status        ; Failed - Tue Oct 10 22:06:31 2017           ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -162,28 +162,23 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Oct 10 21:07:59 2017
+    Info: Processing started: Tue Oct 10 22:06:18 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Error (10170): Verilog HDL syntax error at Processador.v(20) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 20
-Error (10170): Verilog HDL syntax error at Processador.v(28) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 28
-Error (10170): Verilog HDL syntax error at Processador.v(33) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 33
-Error (10170): Verilog HDL syntax error at Processador.v(38) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 38
-Error (10170): Verilog HDL syntax error at Processador.v(43) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 43
-Error (10112): Ignored design unit "Processador" at Processador.v(1) due to previous errors File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file Processador.v
+Info (12021): Found 1 design units, including 1 entities, in source file Processador.v
+    Info (12023): Found entity 1: Processador File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Banco_registradores.v
     Info (12023): Found entity 1: Banco_registradores File: /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
     Info (12023): Found entity 1: ALU File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 1
-Warning (12019): Can't analyze file -- file 7segmentos.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file conversor7segmentos.v
     Info (12023): Found entity 1: conversor7segmentos File: /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v Line: 1
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 2 warnings
+Error (10137): Verilog HDL Procedural Assignment error at Processador.v(127): object "saidaA" on left-hand side of assignment must have a variable data type File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 127
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
     Error: Peak virtual memory: 888 megabytes
-    Error: Processing ended: Tue Oct 10 21:08:11 2017
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:30
+    Error: Processing ended: Tue Oct 10 22:06:31 2017
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:31
 
 
