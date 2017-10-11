@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Wed Oct 11 20:25:48 2017
+Wed Oct 11 20:37:53 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 11 20:25:48 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 11 20:37:53 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 65                                          ;
-;     Total combinational functions  ; 52                                          ;
+;     Total combinational functions  ; 46                                          ;
 ;     Dedicated logic registers      ; 36                                          ;
 ; Total registers                    ; 36                                          ;
 ; Total pins                         ; 79                                          ;
@@ -188,14 +188,14 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Estimated Total logic elements              ; 65             ;
 ;                                             ;                ;
-; Total combinational functions               ; 52             ;
+; Total combinational functions               ; 46             ;
 ; Logic element usage by number of LUT inputs ;                ;
 ;     -- 4 input functions                    ; 22             ;
 ;     -- 3 input functions                    ; 15             ;
-;     -- <=2 input functions                  ; 15             ;
+;     -- <=2 input functions                  ; 9              ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 46             ;
+;     -- normal mode                          ; 40             ;
 ;     -- arithmetic mode                      ; 6              ;
 ;                                             ;                ;
 ; Total registers                             ; 36             ;
@@ -208,8 +208,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 36             ;
-; Total fan-out                               ; 340            ;
-; Average fan-out                             ; 1.38           ;
+; Total fan-out                               ; 334            ;
+; Average fan-out                             ; 1.39           ;
 +---------------------------------------------+----------------+
 
 
@@ -218,12 +218,12 @@ agreement for further details.
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name         ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------------+--------------+
-; |Processador                        ; 52 (2)              ; 36 (8)                    ; 0           ; 0            ; 0       ; 0         ; 79   ; 0            ; |Processador                                ; Processador         ; work         ;
+; |Processador                        ; 46 (2)              ; 36 (8)                    ; 0           ; 0            ; 0       ; 0         ; 79   ; 0            ; |Processador                                ; Processador         ; work         ;
 ;    |ALU:alu|                        ; 33 (33)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ALU:alu                        ; ALU                 ; work         ;
 ;    |conversor7segmentos:conversor0| ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor0 ; conversor7segmentos ; work         ;
-;    |conversor7segmentos:conversor1| ; 4 (4)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor1 ; conversor7segmentos ; work         ;
-;    |conversor7segmentos:conversor2| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor2 ; conversor7segmentos ; work         ;
-;    |conversor7segmentos:conversor3| ; 3 (3)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor3 ; conversor7segmentos ; work         ;
+;    |conversor7segmentos:conversor1| ; 2 (2)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor1 ; conversor7segmentos ; work         ;
+;    |conversor7segmentos:conversor2| ; 1 (1)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor2 ; conversor7segmentos ; work         ;
+;    |conversor7segmentos:conversor3| ; 1 (1)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor3 ; conversor7segmentos ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -758,17 +758,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Banco_registradores:banco|regsaidaA[0..7]   ; Stuck at GND due to stuck port data_in ;
 ; Banco_registradores:banco|regsaidaB[8..15]  ; Stuck at GND due to stuck port data_in ;
 ; Banco_registradores:banco|regsaidaA[8..15]  ; Stuck at GND due to stuck port data_in ;
-; conversor7segmentos:conversor4|z[0..5]      ; Stuck at VCC due to stuck port data_in ;
-; conversor7segmentos:conversor4|z[6]         ; Stuck at GND due to stuck port data_in ;
-; conversor7segmentos:conversor5|z[0..5]      ; Stuck at VCC due to stuck port data_in ;
-; conversor7segmentos:conversor5|z[6]         ; Stuck at GND due to stuck port data_in ;
-; conversor7segmentos:conversor6|z[0..5]      ; Stuck at VCC due to stuck port data_in ;
-; conversor7segmentos:conversor6|z[6]         ; Stuck at GND due to stuck port data_in ;
-; conversor7segmentos:conversor7|z[0..5]      ; Stuck at VCC due to stuck port data_in ;
-; conversor7segmentos:conversor7|z[6]         ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor4|z[0..5]      ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor4|z[6]         ; Stuck at VCC due to stuck port data_in ;
+; conversor7segmentos:conversor5|z[0..5]      ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor5|z[6]         ; Stuck at VCC due to stuck port data_in ;
+; conversor7segmentos:conversor6|z[0..5]      ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor6|z[6]         ; Stuck at VCC due to stuck port data_in ;
+; conversor7segmentos:conversor7|z[0..5]      ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor7|z[6]         ; Stuck at VCC due to stuck port data_in ;
 ; ALU:alu|resultado[6..15]                    ; Merged with ALU:alu|resultado[5]       ;
-; conversor7segmentos:conversor2|z[0,4,5]     ; Stuck at VCC due to stuck port data_in ;
-; conversor7segmentos:conversor3|z[0,4,5]     ; Stuck at VCC due to stuck port data_in ;
+; conversor7segmentos:conversor2|z[0,4,5]     ; Stuck at GND due to stuck port data_in ;
+; conversor7segmentos:conversor3|z[0,4,5]     ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 632     ;                                        ;
 +---------------------------------------------+----------------------------------------+
 
@@ -867,18 +867,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cycloneiii_ff         ; 36                          ;
 ;     ENA               ; 13                          ;
 ;     plain             ; 23                          ;
-; cycloneiii_lcell_comb ; 54                          ;
+; cycloneiii_lcell_comb ; 48                          ;
 ;     arith             ; 6                           ;
 ;         3 data inputs ; 6                           ;
-;     normal            ; 48                          ;
+;     normal            ; 42                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
+;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 6                           ;
 ;         3 data inputs ; 9                           ;
 ;         4 data inputs ; 22                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 1.86                        ;
+; Average LUT depth     ; 1.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -897,7 +897,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 11 20:25:34 2017
+    Info: Processing started: Wed Oct 11 20:37:37 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -918,40 +918,40 @@ Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "Banco_registradores:banco|registradores" is uninferred due to inappropriate RAM size File: /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v Line: 11
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
-    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
-    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
-    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
-    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
-    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
-    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
-    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[3]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
-    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[1]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[2]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 7
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 9
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 10
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 11
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 29 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
@@ -976,10 +976,10 @@ Info (21057): Implemented 145 device resources after synthesis - the final resou
     Info (21059): Implemented 56 output pins
     Info (21061): Implemented 66 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 1003 megabytes
-    Info: Processing ended: Wed Oct 11 20:25:48 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 1001 megabytes
+    Info: Processing ended: Wed Oct 11 20:37:53 2017
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
