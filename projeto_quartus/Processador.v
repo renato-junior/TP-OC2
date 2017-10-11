@@ -147,7 +147,6 @@ begin
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
 		end
-		
 		dadoBanco = resultadoALU;
 		bancoRW = 1;
 	end

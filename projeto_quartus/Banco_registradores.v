@@ -10,6 +10,14 @@ output reg [15:0] regsaidaB;
 
 reg [15:0] registradores [31:0];
 
+integer i;
+
+initial begin
+	for(i = 0; i < 32; i=i+1) begin
+		registradores[i] <= 16'b0;
+	end
+end
+
 always @(posedge clk)
 begin
 	if(RW == 0) begin
