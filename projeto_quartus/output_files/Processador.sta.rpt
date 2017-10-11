@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Processador
-Wed Oct 11 20:12:38 2017
+Wed Oct 11 20:26:20 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -104,7 +104,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.2%      ;
+;     Processor 2            ;   0.9%      ;
 ;     Processors 3-6         ;   0.9%      ;
 +----------------------------+-------------+
 
@@ -123,7 +123,7 @@ agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 203.0 MHz ; 203.0 MHz       ; CLOCK_50   ;      ;
+; 206.4 MHz ; 206.4 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -139,7 +139,7 @@ HTML report is unavailable in plain text report export.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; -3.926 ; -71.044         ;
+; CLOCK_50 ; -3.845 ; -69.755         ;
 +----------+--------+-----------------+
 
 
@@ -148,7 +148,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 1.041 ; 0.000           ;
+; CLOCK_50 ; 1.252 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -178,95 +178,95 @@ No paths to report.
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; -3.926 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.090      ; 5.014      ;
-; -3.898 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.090      ; 4.986      ;
-; -3.894 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.109     ; 4.668      ;
-; -3.868 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.094      ; 4.960      ;
-; -3.814 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.111      ; 4.923      ;
-; -3.793 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 4.894      ;
-; -3.793 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 4.548      ;
-; -3.751 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.094      ; 4.843      ;
-; -3.745 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 4.500      ;
-; -3.713 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 4.814      ;
-; -3.636 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 4.411      ;
-; -3.624 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.072      ; 4.694      ;
-; -3.617 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.088      ; 4.703      ;
-; -3.608 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.128     ; 4.363      ;
-; -3.500 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.076      ; 4.574      ;
-; -3.468 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.085      ; 4.551      ;
-; -3.465 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 4.221      ;
-; -3.449 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 4.205      ;
-; -3.427 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.093      ; 4.518      ;
-; -3.370 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 4.474      ;
-; -3.351 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 4.107      ;
-; -3.287 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.111      ; 4.396      ;
-; -3.275 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.144      ; 4.417      ;
-; -3.206 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.198     ; 3.893      ;
-; -3.192 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.090      ; 4.280      ;
-; -3.192 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.144      ; 4.334      ;
-; -3.181 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.094      ; 4.273      ;
-; -3.167 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 3.926      ;
-; -3.155 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.487      ; 4.640      ;
-; -3.140 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.088      ; 4.226      ;
-; -3.085 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.145     ; 3.825      ;
-; -3.065 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.145     ; 3.805      ;
-; -3.034 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.198     ; 3.721      ;
-; -3.003 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.198     ; 3.690      ;
-; -3.001 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.126      ; 4.125      ;
-; -2.981 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.487      ; 4.466      ;
-; -2.970 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.129     ; 3.726      ;
-; -2.968 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.100     ; 3.751      ;
-; -2.919 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.491      ; 4.408      ;
-; -2.899 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.503      ; 4.400      ;
-; -2.895 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.503      ; 4.396      ;
-; -2.880 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.174     ; 3.591      ;
-; -2.880 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.145     ; 3.620      ;
-; -2.873 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.148     ; 3.610      ;
-; -2.866 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.119     ; 3.630      ;
-; -2.865 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.508      ; 4.371      ;
-; -2.852 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.953      ;
-; -2.844 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.500      ; 4.342      ;
-; -2.838 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.179     ; 3.544      ;
-; -2.794 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.499     ; 3.178      ;
-; -2.792 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.119     ; 3.556      ;
-; -2.785 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.148     ; 3.522      ;
-; -2.755 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.491      ; 4.244      ;
-; -2.746 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.500      ; 4.244      ;
-; -2.709 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.174     ; 3.420      ;
-; -2.705 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.508      ; 4.211      ;
-; -2.685 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.148     ; 3.422      ;
-; -2.682 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.119     ; 3.446      ;
-; -2.673 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.174     ; 3.384      ;
-; -2.599 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 3.703      ;
-; -2.586 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.558     ; 2.913      ;
-; -2.582 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 2.944      ;
-; -2.582 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 3.686      ;
-; -2.555 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.499     ; 2.939      ;
-; -2.503 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.155     ; 3.233      ;
-; -2.489 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.495     ; 2.877      ;
-; -2.449 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.118      ; 3.565      ;
-; -2.413 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.144      ; 3.555      ;
-; -2.335 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.533      ; 3.866      ;
-; -2.289 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 2.651      ;
-; -2.285 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.528     ; 2.642      ;
-; -2.283 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.541      ; 3.822      ;
-; -2.279 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.541      ; 3.818      ;
-; -2.229 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.503      ; 3.730      ;
-; -2.229 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.503      ; 3.730      ;
-; -2.161 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.533      ; 3.692      ;
-; -2.063 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.587     ; 2.361      ;
-; -1.983 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.528     ; 2.340      ;
-; -1.951 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.541     ; 2.295      ;
-; -1.941 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 3.045      ;
-; -1.646 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.541     ; 1.990      ;
-; -1.454 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 1.816      ;
-; -1.231 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.572     ; 1.544      ;
-; -1.223 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.580     ; 1.528      ;
-; -1.188 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.566     ; 1.507      ;
-; -1.188 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.566     ; 1.507      ;
-; -1.127 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.541     ; 1.471      ;
-; -0.831 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.555     ; 1.161      ;
-; -0.596 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.081     ; 1.513      ;
+; -3.845 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 4.932      ;
+; -3.841 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.085      ; 4.924      ;
+; -3.838 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.085      ; 4.921      ;
+; -3.816 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.121     ; 4.578      ;
+; -3.744 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.505      ;
+; -3.713 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 4.800      ;
+; -3.710 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.471      ;
+; -3.708 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.121     ; 4.470      ;
+; -3.679 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.121     ; 4.441      ;
+; -3.611 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.085      ; 4.694      ;
+; -3.602 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.363      ;
+; -3.534 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 4.304      ;
+; -3.534 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 4.638      ;
+; -3.513 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.609      ;
+; -3.505 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.121     ; 4.267      ;
+; -3.501 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 4.588      ;
+; -3.463 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.559      ;
+; -3.451 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 4.221      ;
+; -3.438 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.199      ;
+; -3.376 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.139      ; 4.513      ;
+; -3.368 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 4.138      ;
+; -3.326 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.139      ; 4.463      ;
+; -3.300 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.396      ;
+; -3.234 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.333      ;
+; -3.215 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 4.319      ;
+; -3.204 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.085      ; 4.287      ;
+; -3.197 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 3.967      ;
+; -3.146 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.139      ; 4.283      ;
+; -3.059 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.106      ; 4.163      ;
+; -3.050 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.502      ; 4.550      ;
+; -3.043 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.498      ; 4.539      ;
+; -3.031 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 4.118      ;
+; -3.009 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.105      ;
+; -2.995 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.498      ; 4.491      ;
+; -2.969 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.068      ;
+; -2.968 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.067      ;
+; -2.952 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.051      ;
+; -2.933 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.570     ; 3.248      ;
+; -2.930 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.029      ;
+; -2.906 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.101      ; 4.005      ;
+; -2.897 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.142     ; 3.640      ;
+; -2.886 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.142     ; 3.629      ;
+; -2.875 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.502      ; 4.375      ;
+; -2.793 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.139     ; 3.539      ;
+; -2.781 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 3.153      ;
+; -2.780 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.131      ; 3.909      ;
+; -2.780 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.139     ; 3.526      ;
+; -2.739 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.519      ; 4.256      ;
+; -2.689 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.511      ; 4.198      ;
+; -2.684 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.511      ; 4.193      ;
+; -2.684 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.544      ; 4.226      ;
+; -2.678 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.142     ; 3.421      ;
+; -2.640 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.518     ; 3.005      ;
+; -2.631 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.139     ; 3.377      ;
+; -2.623 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.514      ; 4.135      ;
+; -2.618 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.514      ; 4.130      ;
+; -2.601 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.142     ; 3.344      ;
+; -2.599 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.519      ; 4.116      ;
+; -2.567 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.192     ; 3.260      ;
+; -2.558 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.578     ; 2.865      ;
+; -2.553 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.168     ; 3.270      ;
+; -2.550 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.192     ; 3.243      ;
+; -2.542 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.544      ; 4.084      ;
+; -2.535 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.552      ; 4.085      ;
+; -2.530 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.552      ; 4.080      ;
+; -2.480 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.168     ; 3.197      ;
+; -2.456 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.139     ; 3.202      ;
+; -2.376 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.192     ; 3.069      ;
+; -2.374 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.570     ; 2.689      ;
+; -2.365 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.168     ; 3.082      ;
+; -2.316 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.514      ; 3.828      ;
+; -2.316 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.514      ; 3.828      ;
+; -2.243 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.567     ; 2.561      ;
+; -2.227 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.139      ; 3.364      ;
+; -2.201 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.192     ; 2.894      ;
+; -2.189 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.168     ; 2.906      ;
+; -2.041 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.578     ; 2.348      ;
+; -2.024 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.507     ; 2.400      ;
+; -1.861 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.592     ; 2.154      ;
+; -1.700 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.567     ; 2.018      ;
+; -1.537 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.535     ; 1.887      ;
+; -1.535 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.584     ; 1.836      ;
+; -1.535 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.584     ; 1.836      ;
+; -1.340 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.535     ; 1.690      ;
+; -1.180 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.537     ; 1.528      ;
+; -1.175 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.572     ; 1.488      ;
+; -1.148 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.540     ; 1.493      ;
+; -0.913 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.080     ; 1.831      ;
+; -0.815 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.553     ; 1.147      ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -275,95 +275,95 @@ No paths to report.
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.041 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 1.308      ;
-; 1.401 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.400     ; 1.115      ;
-; 1.625 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.385     ; 1.354      ;
-; 1.728 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.412     ; 1.430      ;
-; 1.728 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.412     ; 1.430      ;
-; 1.779 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.426     ; 1.467      ;
-; 1.779 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.278      ; 2.243      ;
-; 1.784 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.418     ; 1.480      ;
-; 1.982 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.367     ; 1.729      ;
-; 1.987 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.654      ; 2.827      ;
-; 2.064 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 2.496      ;
-; 2.114 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.643      ; 2.943      ;
-; 2.157 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.385     ; 1.886      ;
-; 2.211 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.654      ; 3.051      ;
-; 2.224 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.652      ; 3.062      ;
-; 2.252 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.639      ; 3.077      ;
-; 2.269 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.241      ; 2.696      ;
-; 2.269 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.241      ; 2.696      ;
-; 2.275 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.241      ; 2.702      ;
-; 2.285 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.691      ; 3.162      ;
-; 2.306 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.683      ; 3.175      ;
-; 2.355 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.691      ; 3.232      ;
-; 2.366 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.683      ; 3.235      ;
-; 2.370 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.652      ; 3.208      ;
-; 2.395 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.385     ; 2.124      ;
-; 2.431 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.241      ; 2.858      ;
-; 2.462 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.643      ; 3.291      ;
-; 2.476 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.372     ; 2.218      ;
-; 2.478 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.639      ; 3.303      ;
-; 2.527 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.434     ; 2.207      ;
-; 2.555 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.226      ; 2.967      ;
-; 2.555 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.226      ; 2.967      ;
-; 2.591 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.239      ; 3.016      ;
-; 2.591 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.239      ; 3.016      ;
-; 2.620 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 3.028      ;
-; 2.677 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.230      ; 3.093      ;
-; 2.677 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.230      ; 3.093      ;
-; 2.718 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.372     ; 2.460      ;
-; 2.754 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.251      ; 3.191      ;
-; 2.762 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.367     ; 2.509      ;
-; 2.818 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.239      ; 3.243      ;
-; 2.835 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.659      ; 3.680      ;
-; 2.871 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.654      ; 3.711      ;
-; 2.895 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.031      ; 3.040      ;
-; 2.898 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.207      ; 3.291      ;
-; 2.909 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.659      ; 3.754      ;
-; 2.930 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.337     ; 2.703      ;
-; 2.959 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 3.112      ;
-; 2.961 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.220      ; 3.367      ;
-; 2.968 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 3.149      ;
-; 2.980 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.654      ; 3.820      ;
-; 2.981 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.013      ; 3.108      ;
-; 3.001 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.341     ; 2.770      ;
-; 3.001 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.013      ; 3.128      ;
-; 3.011 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.211      ; 3.408      ;
-; 3.012 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.367     ; 2.759      ;
-; 3.013 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.259      ; 3.458      ;
-; 3.032 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.354     ; 2.792      ;
-; 3.052 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 3.205      ;
-; 3.056 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.226      ; 3.468      ;
-; 3.057 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.230      ; 3.473      ;
-; 3.113 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 3.294      ;
-; 3.150 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 3.303      ;
-; 3.171 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 3.352      ;
-; 3.183 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 3.340      ;
-; 3.216 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.006      ; 3.336      ;
-; 3.219 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.013      ; 3.346      ;
-; 3.224 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.341     ; 2.993      ;
-; 3.270 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.278      ; 3.734      ;
-; 3.273 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 3.430      ;
-; 3.295 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.057      ; 3.466      ;
-; 3.306 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.089      ; 3.505      ;
-; 3.314 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.278      ; 3.778      ;
-; 3.324 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 3.426      ;
-; 3.329 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 3.486      ;
-; 3.338 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 3.440      ;
-; 3.522 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 3.697      ;
-; 3.523 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 3.696      ;
-; 3.542 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.012     ; 3.644      ;
-; 3.563 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 3.976      ;
-; 3.599 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 4.007      ;
-; 3.608 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 3.781      ;
-; 3.741 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.063      ; 3.914      ;
-; 3.789 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 3.960      ;
-; 3.860 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.081      ; 4.051      ;
-; 3.868 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.246      ; 4.300      ;
-; 3.880 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 4.051      ;
-; 3.933 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.061      ; 4.104      ;
-; 4.127 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.079      ; 4.316      ;
+; 1.252 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 1.518      ;
+; 1.386 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.396     ; 1.104      ;
+; 1.638 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.383     ; 1.369      ;
+; 1.666 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.416     ; 1.364      ;
+; 1.724 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.380     ; 1.458      ;
+; 1.848 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.378     ; 1.584      ;
+; 1.857 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 2.283      ;
+; 1.947 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.664      ; 2.797      ;
+; 2.069 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.378     ; 1.805      ;
+; 2.077 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.429     ; 1.762      ;
+; 2.077 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.429     ; 1.762      ;
+; 2.121 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 2.542      ;
+; 2.183 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.272      ; 2.641      ;
+; 2.214 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.411     ; 1.917      ;
+; 2.250 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.651      ; 3.087      ;
+; 2.254 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.651      ; 3.091      ;
+; 2.295 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.666      ; 3.147      ;
+; 2.323 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.664      ; 3.173      ;
+; 2.341 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.233      ; 2.760      ;
+; 2.382 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.437     ; 2.059      ;
+; 2.448 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.655      ; 3.289      ;
+; 2.455 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.264      ; 2.905      ;
+; 2.474 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.233      ; 2.893      ;
+; 2.491 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.233      ; 2.910      ;
+; 2.504 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.666      ; 3.356      ;
+; 2.519 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.423     ; 2.210      ;
+; 2.528 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.348     ; 2.290      ;
+; 2.537 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.703      ; 3.426      ;
+; 2.545 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.018      ; 2.677      ;
+; 2.557 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 2.664      ;
+; 2.570 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.655      ; 3.411      ;
+; 2.612 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.703      ; 3.501      ;
+; 2.649 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.695      ; 3.530      ;
+; 2.673 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.411     ; 2.376      ;
+; 2.676 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.018      ; 2.808      ;
+; 2.686 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.671      ; 3.543      ;
+; 2.690 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.666      ; 3.542      ;
+; 2.690 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 2.797      ;
+; 2.696 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.220      ; 3.102      ;
+; 2.717 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.233      ; 3.136      ;
+; 2.735 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.695      ; 3.616      ;
+; 2.752 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 3.173      ;
+; 2.753 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 3.174      ;
+; 2.755 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.224      ; 3.165      ;
+; 2.757 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.018      ; 2.889      ;
+; 2.758 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.666      ; 3.610      ;
+; 2.772 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.671      ; 3.629      ;
+; 2.781 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 2.943      ;
+; 2.788 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 2.895      ;
+; 2.789 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.007     ; 2.896      ;
+; 2.806 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.220      ; 3.212      ;
+; 2.811 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.018      ; 2.943      ;
+; 2.817 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.220      ; 3.223      ;
+; 2.829 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.365     ; 2.578      ;
+; 2.855 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.220      ; 3.261      ;
+; 2.855 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.224      ; 3.265      ;
+; 2.886 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 3.307      ;
+; 2.888 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.224      ; 3.298      ;
+; 2.903 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 3.324      ;
+; 2.905 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.224      ; 3.315      ;
+; 2.911 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 3.073      ;
+; 2.925 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 3.083      ;
+; 2.984 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 3.146      ;
+; 3.002 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.423     ; 2.693      ;
+; 3.048 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.048      ; 3.210      ;
+; 3.111 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 3.269      ;
+; 3.122 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.359     ; 2.873      ;
+; 3.127 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 3.285      ;
+; 3.164 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.272      ; 3.622      ;
+; 3.190 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.044      ; 3.348      ;
+; 3.214 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.352     ; 2.972      ;
+; 3.271 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.365     ; 3.020      ;
+; 3.313 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 3.739      ;
+; 3.317 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.235      ; 3.738      ;
+; 3.384 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.272      ; 3.842      ;
+; 3.421 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 3.607      ;
+; 3.431 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.272      ; 3.889      ;
+; 3.552 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 3.738      ;
+; 3.591 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.240      ; 4.017      ;
+; 3.647 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 3.833      ;
+; 3.649 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 3.825      ;
+; 3.651 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.076      ; 3.837      ;
+; 3.703 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 3.881      ;
+; 3.774 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 3.950      ;
+; 3.832 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 4.010      ;
+; 3.862 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 4.038      ;
+; 3.870 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.066      ; 4.046      ;
+; 3.955 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 4.133      ;
+; 4.058 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.068      ; 4.236      ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -378,7 +378,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 221.24 MHz ; 221.24 MHz      ; CLOCK_50   ;      ;
+; 224.11 MHz ; 224.11 MHz      ; CLOCK_50   ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -388,7 +388,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -3.520 ; -62.740        ;
+; CLOCK_50 ; -3.462 ; -61.513        ;
 +----------+--------+----------------+
 
 
@@ -397,7 +397,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.960 ; 0.000          ;
+; CLOCK_50 ; 1.143 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -427,95 +427,95 @@ No paths to report.
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; -3.520 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.092      ; 4.611      ;
-; -3.503 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.092      ; 4.594      ;
-; -3.465 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.096      ; 4.560      ;
-; -3.439 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.113      ; 4.551      ;
-; -3.420 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 4.522      ;
-; -3.414 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.102     ; 4.199      ;
-; -3.323 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.088      ;
-; -3.316 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 4.418      ;
-; -3.304 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 4.069      ;
-; -3.285 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.096      ; 4.380      ;
-; -3.243 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.073      ; 4.315      ;
-; -3.227 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 4.315      ;
-; -3.185 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.100     ; 3.972      ;
-; -3.162 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.122     ; 3.927      ;
-; -3.127 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.077      ; 4.203      ;
-; -3.102 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.084      ; 4.185      ;
-; -3.051 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 3.818      ;
-; -3.046 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.094      ; 4.139      ;
-; -3.032 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 3.799      ;
-; -3.026 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 4.133      ;
-; -2.939 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.113      ; 4.051      ;
-; -2.935 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.120     ; 3.702      ;
-; -2.899 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.146      ; 4.044      ;
-; -2.849 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.096      ; 3.944      ;
-; -2.838 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.092      ; 3.929      ;
-; -2.816 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.111     ; 3.594      ;
-; -2.811 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.146      ; 3.956      ;
-; -2.809 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.186     ; 3.512      ;
-; -2.801 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.455      ; 4.255      ;
-; -2.794 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.089      ; 3.882      ;
-; -2.707 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.131     ; 3.465      ;
-; -2.685 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.131     ; 3.443      ;
-; -2.653 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.186     ; 3.356      ;
-; -2.643 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.186     ; 3.346      ;
-; -2.640 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.455      ; 4.094      ;
-; -2.639 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.127      ; 3.765      ;
-; -2.612 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.093     ; 3.406      ;
-; -2.586 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.114     ; 3.361      ;
-; -2.553 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.460     ; 2.980      ;
-; -2.552 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.459      ; 4.010      ;
-; -2.545 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.471      ; 4.015      ;
-; -2.543 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.645      ;
-; -2.532 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.471      ; 4.002      ;
-; -2.526 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.476      ; 4.001      ;
-; -2.525 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.131     ; 3.283      ;
-; -2.514 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 3.288      ;
-; -2.508 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.160     ; 3.237      ;
-; -2.508 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.134     ; 3.263      ;
-; -2.507 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.466      ; 3.972      ;
-; -2.505 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.166     ; 3.228      ;
-; -2.489 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 3.263      ;
-; -2.486 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.134     ; 3.241      ;
-; -2.401 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.466      ; 3.866      ;
-; -2.391 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.459      ; 3.849      ;
-; -2.367 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.160     ; 3.096      ;
-; -2.365 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.476      ; 3.840      ;
-; -2.351 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.160     ; 3.080      ;
-; -2.337 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 3.444      ;
-; -2.330 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.134     ; 3.085      ;
-; -2.327 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.460     ; 2.754      ;
-; -2.327 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.113     ; 3.101      ;
-; -2.316 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 3.423      ;
-; -2.312 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.510     ; 2.691      ;
-; -2.263 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.480     ; 2.672      ;
-; -2.256 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.456     ; 2.687      ;
-; -2.190 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.120      ; 3.309      ;
-; -2.190 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.140     ; 2.939      ;
-; -2.126 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.146      ; 3.271      ;
-; -2.032 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.502      ; 3.533      ;
-; -2.010 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.480     ; 2.419      ;
-; -1.982 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.485     ; 2.386      ;
-; -1.957 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.509      ; 3.465      ;
-; -1.957 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.471      ; 3.427      ;
-; -1.957 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.471      ; 3.427      ;
-; -1.944 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.509      ; 3.452      ;
-; -1.871 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.502      ; 3.372      ;
-; -1.783 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.546     ; 2.126      ;
-; -1.727 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 2.834      ;
-; -1.724 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.485     ; 2.128      ;
-; -1.678 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.495     ; 2.072      ;
-; -1.413 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.495     ; 1.807      ;
-; -1.276 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.480     ; 1.685      ;
-; -1.071 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.530     ; 1.430      ;
-; -1.062 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.536     ; 1.415      ;
-; -1.027 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 1.393      ;
-; -1.027 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 1.393      ;
-; -0.944 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.495     ; 1.338      ;
-; -0.693 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.511     ; 1.071      ;
-; -0.434 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 1.361      ;
+; -3.462 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.087      ; 4.548      ;
+; -3.443 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.091      ; 4.533      ;
+; -3.389 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.087      ; 4.475      ;
+; -3.347 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 4.119      ;
+; -3.312 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 4.084      ;
+; -3.295 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 4.065      ;
+; -3.265 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 4.035      ;
+; -3.258 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.091      ; 4.348      ;
+; -3.245 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.087      ; 4.331      ;
+; -3.227 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 3.999      ;
+; -3.164 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 4.271      ;
+; -3.155 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 3.925      ;
+; -3.133 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.230      ;
+; -3.099 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 3.878      ;
+; -3.084 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.091      ; 4.174      ;
+; -3.071 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.115     ; 3.843      ;
+; -3.065 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.162      ;
+; -3.059 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 3.838      ;
+; -3.006 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.117     ; 3.776      ;
+; -2.993 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.141      ; 4.133      ;
+; -2.951 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 3.730      ;
+; -2.936 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 4.033      ;
+; -2.899 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.141      ; 4.039      ;
+; -2.872 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.974      ;
+; -2.860 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 3.967      ;
+; -2.836 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.087      ; 3.922      ;
+; -2.797 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 3.576      ;
+; -2.776 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.141      ; 3.916      ;
+; -2.706 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.091      ; 3.796      ;
+; -2.687 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.098      ; 3.784      ;
+; -2.687 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.108      ; 3.794      ;
+; -2.674 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.472      ; 4.145      ;
+; -2.657 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.468      ; 4.124      ;
+; -2.645 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.468      ; 4.112      ;
+; -2.635 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.737      ;
+; -2.635 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.737      ;
+; -2.620 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.722      ;
+; -2.608 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.710      ;
+; -2.570 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 2.936      ;
+; -2.563 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.129     ; 3.323      ;
+; -2.555 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.129     ; 3.315      ;
+; -2.554 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.103      ; 3.656      ;
+; -2.512 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.472      ; 3.983      ;
+; -2.460 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.473     ; 2.874      ;
+; -2.439 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 3.202      ;
+; -2.429 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 3.192      ;
+; -2.426 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.134      ; 3.559      ;
+; -2.403 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.481     ; 2.809      ;
+; -2.395 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.489      ; 3.883      ;
+; -2.394 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.129     ; 3.154      ;
+; -2.348 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.479      ; 3.826      ;
+; -2.343 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.515      ; 3.857      ;
+; -2.336 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.479      ; 3.814      ;
+; -2.284 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.484      ; 3.767      ;
+; -2.276 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.129     ; 3.036      ;
+; -2.274 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 3.037      ;
+; -2.272 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.484      ; 3.755      ;
+; -2.272 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.489      ; 3.760      ;
+; -2.244 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.536     ; 2.597      ;
+; -2.232 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.181     ; 2.940      ;
+; -2.216 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.155     ; 2.950      ;
+; -2.216 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.515      ; 3.730      ;
+; -2.213 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.181     ; 2.921      ;
+; -2.196 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.155     ; 2.930      ;
+; -2.188 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.522      ; 3.709      ;
+; -2.176 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.522      ; 3.697      ;
+; -2.148 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.126     ; 2.911      ;
+; -2.094 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.523     ; 2.460      ;
+; -2.057 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.181     ; 2.765      ;
+; -2.044 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.155     ; 2.778      ;
+; -2.029 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.484      ; 3.512      ;
+; -2.029 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.484      ; 3.512      ;
+; -1.955 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.141      ; 3.095      ;
+; -1.954 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.524     ; 2.319      ;
+; -1.911 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.155     ; 2.645      ;
+; -1.900 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.181     ; 2.608      ;
+; -1.821 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.469     ; 2.239      ;
+; -1.786 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.536     ; 2.139      ;
+; -1.659 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.549     ; 1.999      ;
+; -1.472 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.524     ; 1.837      ;
+; -1.355 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.543     ; 1.701      ;
+; -1.355 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.543     ; 1.701      ;
+; -1.350 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.493     ; 1.746      ;
+; -1.176 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.493     ; 1.572      ;
+; -1.020 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.495     ; 1.414      ;
+; -0.995 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.530     ; 1.354      ;
+; -0.965 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.498     ; 1.356      ;
+; -0.710 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 1.637      ;
+; -0.678 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.508     ; 1.059      ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -524,95 +524,95 @@ No paths to report.
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.960 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.203      ;
-; 1.271 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.370     ; 1.002      ;
-; 1.496 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.354     ; 1.243      ;
-; 1.568 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.383     ; 1.286      ;
-; 1.568 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.383     ; 1.286      ;
-; 1.570 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.264      ; 2.005      ;
-; 1.615 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.397     ; 1.319      ;
-; 1.620 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.390     ; 1.331      ;
-; 1.781 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.606      ; 2.558      ;
-; 1.795 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.338     ; 1.558      ;
-; 1.815 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.232      ; 2.218      ;
-; 1.862 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.595      ; 2.628      ;
-; 1.953 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.602      ; 2.726      ;
-; 1.984 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.606      ; 2.761      ;
-; 1.987 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.592      ; 2.750      ;
-; 1.993 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.354     ; 1.740      ;
-; 2.006 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 2.404      ;
-; 2.007 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 2.405      ;
-; 2.007 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 2.405      ;
-; 2.029 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.643      ; 2.843      ;
-; 2.065 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.637      ; 2.873      ;
-; 2.080 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.643      ; 2.894      ;
-; 2.092 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.637      ; 2.900      ;
-; 2.095 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.602      ; 2.868      ;
-; 2.155 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 2.553      ;
-; 2.192 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.595      ; 2.958      ;
-; 2.213 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.592      ; 2.976      ;
-; 2.214 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.354     ; 1.961      ;
-; 2.270 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.213      ; 2.654      ;
-; 2.270 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.213      ; 2.654      ;
-; 2.286 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.343     ; 2.044      ;
-; 2.300 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.223      ; 2.694      ;
-; 2.300 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.223      ; 2.694      ;
-; 2.347 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.207      ; 2.725      ;
-; 2.356 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.407     ; 2.050      ;
-; 2.383 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.216      ; 2.770      ;
-; 2.383 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.216      ; 2.770      ;
-; 2.430 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.238      ; 2.839      ;
-; 2.487 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.223      ; 2.881      ;
-; 2.514 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.343     ; 2.272      ;
-; 2.534 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.611      ; 3.316      ;
-; 2.542 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.338     ; 2.305      ;
-; 2.566 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.193      ; 2.930      ;
-; 2.567 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.611      ; 3.349      ;
-; 2.571 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.606      ; 3.348      ;
-; 2.631 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.315     ; 2.413      ;
-; 2.631 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.203      ; 3.005      ;
-; 2.654 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.606      ; 3.431      ;
-; 2.673 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.025      ; 2.799      ;
-; 2.683 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.244      ; 3.098      ;
-; 2.695 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.319     ; 2.473      ;
-; 2.709 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.213      ; 3.093      ;
-; 2.711 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.196      ; 3.078      ;
-; 2.726 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.216      ; 3.113      ;
-; 2.748 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.053      ; 2.898      ;
-; 2.751 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.033      ; 2.885      ;
-; 2.767 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.327     ; 2.541      ;
-; 2.770 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.338     ; 2.533      ;
-; 2.773 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.006      ; 2.880      ;
-; 2.776 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.006      ; 2.883      ;
-; 2.840 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.033      ; 2.974      ;
-; 2.865 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.033      ; 2.999      ;
-; 2.872 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.053      ; 3.022      ;
-; 2.877 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.053      ; 3.027      ;
-; 2.891 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.319     ; 2.669      ;
-; 2.905 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.264      ; 3.340      ;
-; 2.910 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 3.047      ;
-; 2.932 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.264      ; 3.367      ;
-; 2.964 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.002     ; 3.063      ;
-; 2.978 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.006      ; 3.085      ;
-; 3.026 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 3.163      ;
-; 3.031 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 3.168      ;
-; 3.063 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.021     ; 3.143      ;
-; 3.077 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 3.246      ;
-; 3.077 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.052      ; 3.230      ;
-; 3.098 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.021     ; 3.178      ;
-; 3.188 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.212      ; 3.571      ;
-; 3.225 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.207      ; 3.603      ;
-; 3.237 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.055      ; 3.393      ;
-; 3.282 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.021     ; 3.362      ;
-; 3.287 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.046      ; 3.430      ;
-; 3.364 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.046      ; 3.507      ;
-; 3.419 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.232      ; 3.822      ;
-; 3.461 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.046      ; 3.604      ;
-; 3.532 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 3.674      ;
-; 3.616 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.065      ; 3.778      ;
-; 3.617 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 3.759      ;
-; 3.660 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 3.802      ;
-; 3.862 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.064      ; 4.023      ;
+; 1.143 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 1.386      ;
+; 1.256 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.367     ; 0.990      ;
+; 1.510 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.356     ; 1.255      ;
+; 1.540 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.390     ; 1.251      ;
+; 1.560 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.354     ; 1.307      ;
+; 1.631 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 2.029      ;
+; 1.672 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.351     ; 1.422      ;
+; 1.705 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.615      ; 2.491      ;
+; 1.873 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.351     ; 1.623      ;
+; 1.878 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 2.271      ;
+; 1.888 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.403     ; 1.586      ;
+; 1.888 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.403     ; 1.586      ;
+; 1.926 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.259      ; 2.356      ;
+; 1.972 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.605      ; 2.748      ;
+; 1.979 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.605      ; 2.755      ;
+; 2.040 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.383     ; 1.758      ;
+; 2.044 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.619      ; 2.834      ;
+; 2.053 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.615      ; 2.839      ;
+; 2.094 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.218      ; 2.483      ;
+; 2.162 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.410     ; 1.853      ;
+; 2.169 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.253      ; 2.593      ;
+; 2.187 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.608      ; 2.966      ;
+; 2.193 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.218      ; 2.582      ;
+; 2.229 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.619      ; 3.019      ;
+; 2.230 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.218      ; 2.619      ;
+; 2.256 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.656      ; 3.083      ;
+; 2.276 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.608      ; 3.055      ;
+; 2.277 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.328     ; 2.046      ;
+; 2.308 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.656      ; 3.135      ;
+; 2.319 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.396     ; 2.024      ;
+; 2.349 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.011      ; 2.461      ;
+; 2.363 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.650      ; 3.184      ;
+; 2.384 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.624      ; 3.179      ;
+; 2.387 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.472      ;
+; 2.387 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.208      ; 2.766      ;
+; 2.405 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.619      ; 3.195      ;
+; 2.420 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.218      ; 2.809      ;
+; 2.425 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.650      ; 3.246      ;
+; 2.432 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 2.825      ;
+; 2.447 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.624      ; 3.242      ;
+; 2.451 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.619      ; 3.241      ;
+; 2.458 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 2.851      ;
+; 2.461 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.211      ; 2.843      ;
+; 2.466 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.011      ; 2.578      ;
+; 2.477 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.383     ; 2.195      ;
+; 2.483 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.568      ;
+; 2.486 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.208      ; 2.865      ;
+; 2.489 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.208      ; 2.868      ;
+; 2.523 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.208      ; 2.902      ;
+; 2.524 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.211      ; 2.906      ;
+; 2.558 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.011      ; 2.670      ;
+; 2.568 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 2.710      ;
+; 2.584 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.011      ; 2.696      ;
+; 2.587 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 2.980      ;
+; 2.589 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.340     ; 2.350      ;
+; 2.590 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.211      ; 2.972      ;
+; 2.592 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 2.985      ;
+; 2.595 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.211      ; 2.977      ;
+; 2.597 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.682      ;
+; 2.603 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.016     ; 2.688      ;
+; 2.685 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 2.827      ;
+; 2.696 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.038      ; 2.835      ;
+; 2.780 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.396     ; 2.485      ;
+; 2.781 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 2.923      ;
+; 2.794 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 2.936      ;
+; 2.811 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.340     ; 2.568      ;
+; 2.812 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.038      ; 2.951      ;
+; 2.838 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.259      ; 3.268      ;
+; 2.901 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.038      ; 3.040      ;
+; 2.919 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.038      ; 3.058      ;
+; 2.959 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.332     ; 2.724      ;
+; 2.966 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 3.364      ;
+; 2.987 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.222      ; 3.380      ;
+; 3.032 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.340     ; 2.793      ;
+; 3.033 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.259      ; 3.463      ;
+; 3.064 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.259      ; 3.494      ;
+; 3.189 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 3.344      ;
+; 3.203 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.227      ; 3.601      ;
+; 3.306 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 3.461      ;
+; 3.399 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 3.554      ;
+; 3.401 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.058      ; 3.556      ;
+; 3.407 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 3.554      ;
+; 3.457 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.051      ; 3.605      ;
+; 3.518 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 3.665      ;
+; 3.572 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.051      ; 3.720      ;
+; 3.604 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 3.751      ;
+; 3.606 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 3.753      ;
+; 3.681 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.051      ; 3.829      ;
+; 3.729 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.051      ; 3.877      ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -627,7 +627,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; -1.613 ; -22.775        ;
+; CLOCK_50 ; -1.546 ; -22.289        ;
 +----------+--------+----------------+
 
 
@@ -636,7 +636,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.479 ; 0.000          ;
+; CLOCK_50 ; 0.581 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -657,7 +657,7 @@ No paths to report.
 +----------+--------+------------------------------+
 ; Clock    ; Slack  ; End Point TNS                ;
 +----------+--------+------------------------------+
-; CLOCK_50 ; -3.000 ; -49.917                      ;
+; CLOCK_50 ; -3.000 ; -49.898                      ;
 +----------+--------+------------------------------+
 
 
@@ -666,95 +666,95 @@ No paths to report.
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.613 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.051     ; 2.501      ;
-; -1.534 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 2.403      ;
-; -1.525 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.556      ;
-; -1.512 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 2.381      ;
-; -1.471 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.502      ;
-; -1.459 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.050     ; 2.348      ;
-; -1.440 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 2.309      ;
-; -1.400 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.048      ; 2.435      ;
-; -1.391 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.048      ; 2.426      ;
-; -1.378 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.066      ; 2.431      ;
-; -1.350 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.056      ; 2.393      ;
-; -1.350 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.069     ; 2.220      ;
-; -1.341 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.056      ; 2.384      ;
-; -1.334 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.025      ; 2.346      ;
-; -1.333 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.069     ; 2.203      ;
-; -1.305 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.042      ; 2.334      ;
-; -1.286 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.069     ; 2.156      ;
-; -1.272 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.029      ; 2.288      ;
-; -1.254 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.037      ; 2.278      ;
-; -1.226 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 2.039      ;
-; -1.189 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.061      ; 2.237      ;
-; -1.187 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.047      ; 2.221      ;
-; -1.185 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.216      ;
-; -1.176 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.055     ; 2.061      ;
-; -1.160 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.066      ; 2.213      ;
-; -1.150 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.048      ; 2.185      ;
-; -1.132 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 1.945      ;
-; -1.103 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 1.969      ;
-; -1.097 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 1.963      ;
-; -1.080 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.045     ; 1.974      ;
-; -1.078 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.127     ; 1.891      ;
-; -1.077 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.058     ; 1.959      ;
-; -1.073 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.099      ; 2.159      ;
-; -1.064 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.099      ; 2.150      ;
-; -1.059 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.221      ; 2.267      ;
-; -1.049 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.221      ; 2.257      ;
-; -1.048 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.042      ; 2.077      ;
-; -1.025 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 1.862      ;
-; -1.012 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.108     ; 1.844      ;
-; -1.003 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 1.866      ;
-; -1.001 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.064     ; 1.876      ;
-; -1.000 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.074     ; 1.866      ;
-; -0.970 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.238      ; 2.195      ;
-; -0.962 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.238      ; 2.187      ;
-; -0.947 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.064     ; 1.822      ;
-; -0.946 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 1.809      ;
-; -0.933 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.080      ; 2.000      ;
-; -0.933 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.056      ; 1.976      ;
-; -0.926 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.228     ; 1.637      ;
-; -0.925 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.225      ; 2.137      ;
-; -0.923 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 1.760      ;
-; -0.919 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.103     ; 1.756      ;
-; -0.917 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.225      ; 2.129      ;
-; -0.912 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.243      ; 2.142      ;
-; -0.905 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.077     ; 1.768      ;
-; -0.904 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.064     ; 1.779      ;
-; -0.875 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.233      ; 2.095      ;
-; -0.867 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.233      ; 2.087      ;
-; -0.864 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.259     ; 1.545      ;
-; -0.844 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.243      ; 2.074      ;
-; -0.815 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.061      ; 1.863      ;
-; -0.811 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.084     ; 1.667      ;
-; -0.805 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.228     ; 1.516      ;
-; -0.804 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.239     ; 1.505      ;
-; -0.791 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.061      ; 1.839      ;
-; -0.760 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.225     ; 1.474      ;
-; -0.745 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.072      ; 1.804      ;
-; -0.668 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.099      ; 1.754      ;
-; -0.642 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.338      ;
-; -0.630 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.238      ; 1.855      ;
-; -0.630 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.238      ; 1.855      ;
-; -0.607 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.239     ; 1.308      ;
-; -0.601 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.268      ; 1.856      ;
-; -0.598 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.276      ; 1.861      ;
-; -0.590 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.276      ; 1.853      ;
-; -0.579 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.303     ; 1.216      ;
-; -0.537 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.268      ; 1.792      ;
-; -0.460 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.244     ; 1.156      ;
-; -0.455 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.061      ; 1.503      ;
-; -0.451 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.255     ; 1.136      ;
-; -0.295 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.255     ; 0.980      ;
-; -0.227 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.239     ; 0.928      ;
-; -0.122 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.296     ; 0.766      ;
-; -0.121 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.288     ; 0.773      ;
-; -0.081 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.281     ; 0.740      ;
-; -0.081 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.281     ; 0.740      ;
-; -0.033 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.255     ; 0.718      ;
-; 0.118  ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.269     ; 0.553      ;
-; 0.215  ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 0.731      ;
+; -1.546 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.065     ; 2.420      ;
+; -1.514 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 2.387      ;
+; -1.490 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.040      ; 2.517      ;
+; -1.488 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 2.361      ;
+; -1.482 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.065     ; 2.356      ;
+; -1.479 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.065     ; 2.353      ;
+; -1.468 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.040      ; 2.495      ;
+; -1.436 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 2.309      ;
+; -1.396 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.065     ; 2.270      ;
+; -1.387 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 2.266      ;
+; -1.369 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.400      ;
+; -1.363 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.040      ; 2.390      ;
+; -1.359 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.066     ; 2.232      ;
+; -1.359 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.390      ;
+; -1.348 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 2.227      ;
+; -1.303 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 2.182      ;
+; -1.264 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.295      ;
+; -1.239 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.052      ; 2.278      ;
+; -1.229 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.052      ; 2.268      ;
+; -1.228 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.062      ; 2.277      ;
+; -1.219 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.060     ; 2.098      ;
+; -1.152 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 2.196      ;
+; -1.150 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.052      ; 2.189      ;
+; -1.141 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.040      ; 2.168      ;
+; -1.136 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.095      ; 2.218      ;
+; -1.126 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.095      ; 2.208      ;
+; -1.106 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.235      ; 2.328      ;
+; -1.073 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.062      ; 2.122      ;
+; -1.068 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.044      ; 2.099      ;
+; -1.064 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.235      ; 2.286      ;
+; -1.043 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.052      ; 2.082      ;
+; -1.031 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.095      ; 2.113      ;
+; -1.018 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 1.885      ;
+; -1.008 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.273     ; 1.675      ;
+; -1.008 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 1.875      ;
+; -1.005 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 2.049      ;
+; -1.002 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.062      ; 2.051      ;
+; -0.997 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 2.041      ;
+; -0.975 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.239      ; 2.201      ;
+; -0.965 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.239      ; 2.191      ;
+; -0.953 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 1.997      ;
+; -0.953 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 1.997      ;
+; -0.943 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 1.813      ;
+; -0.942 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.057      ; 1.986      ;
+; -0.937 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.242     ; 1.634      ;
+; -0.929 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 1.799      ;
+; -0.891 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 1.758      ;
+; -0.890 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.087      ; 1.964      ;
+; -0.876 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.246     ; 1.569      ;
+; -0.874 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 1.741      ;
+; -0.863 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.252      ; 2.102      ;
+; -0.862 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 1.732      ;
+; -0.861 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.247      ; 2.095      ;
+; -0.853 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.252      ; 2.092      ;
+; -0.852 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.123     ; 1.669      ;
+; -0.851 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.247      ; 2.085      ;
+; -0.844 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.257      ; 2.088      ;
+; -0.839 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.123     ; 1.656      ;
+; -0.835 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.282      ; 2.104      ;
+; -0.834 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 1.675      ;
+; -0.822 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.295     ; 1.467      ;
+; -0.792 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 1.633      ;
+; -0.780 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.070     ; 1.650      ;
+; -0.774 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.257      ; 2.018      ;
+; -0.765 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.282      ; 2.034      ;
+; -0.752 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.123     ; 1.569      ;
+; -0.742 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.290      ; 2.019      ;
+; -0.738 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 1.579      ;
+; -0.732 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.290      ; 2.009      ;
+; -0.682 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.273     ; 1.349      ;
+; -0.671 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.123     ; 1.488      ;
+; -0.665 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.252      ; 1.904      ;
+; -0.665 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.252      ; 1.904      ;
+; -0.655 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.099     ; 1.496      ;
+; -0.636 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.283     ; 1.293      ;
+; -0.572 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.095      ; 1.654      ;
+; -0.537 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.239     ; 1.237      ;
+; -0.496 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.295     ; 1.141      ;
+; -0.492 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.310     ; 1.122      ;
+; -0.310 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.302     ; 0.948      ;
+; -0.310 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.302     ; 0.948      ;
+; -0.310 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.283     ; 0.967      ;
+; -0.281 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.253     ; 0.968      ;
+; -0.140 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.253     ; 0.827      ;
+; -0.082 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.289     ; 0.733      ;
+; -0.077 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.255     ; 0.762      ;
+; -0.055 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.258     ; 0.737      ;
+; 0.054  ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.041     ; 0.892      ;
+; 0.124  ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.269     ; 0.547      ;
 +--------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -763,95 +763,95 @@ No paths to report.
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node            ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.479 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.604      ;
-; 0.644 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.192     ; 0.510      ;
-; 0.758 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.177     ; 0.639      ;
-; 0.822 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.205     ; 0.675      ;
-; 0.822 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.205     ; 0.675      ;
-; 0.844 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.165      ; 1.093      ;
-; 0.849 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.212     ; 0.695      ;
-; 0.850 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.220     ; 0.688      ;
-; 0.932 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.161     ; 0.829      ;
-; 0.989 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.134      ; 1.207      ;
-; 1.001 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.177     ; 0.882      ;
-; 1.013 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.314      ; 1.411      ;
-; 1.051 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.309      ; 1.444      ;
-; 1.066 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.302      ; 1.452      ;
-; 1.073 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.129      ; 1.286      ;
-; 1.073 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.129      ; 1.286      ;
-; 1.080 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.350      ; 1.514      ;
-; 1.088 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.298      ; 1.470      ;
-; 1.092 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.129      ; 1.305      ;
-; 1.095 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.342      ; 1.521      ;
-; 1.104 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.177     ; 0.985      ;
-; 1.108 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.309      ; 1.501      ;
-; 1.122 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.314      ; 1.520      ;
-; 1.135 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.350      ; 1.569      ;
-; 1.150 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.342      ; 1.576      ;
-; 1.183 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.165     ; 1.076      ;
-; 1.195 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.298      ; 1.577      ;
-; 1.200 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.129      ; 1.413      ;
-; 1.224 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.227     ; 1.055      ;
-; 1.236 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.433      ;
-; 1.236 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.433      ;
-; 1.239 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.302      ; 1.625      ;
-; 1.260 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.124      ; 1.468      ;
-; 1.261 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.124      ; 1.469      ;
-; 1.262 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.165     ; 1.155      ;
-; 1.285 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.117      ; 1.486      ;
-; 1.285 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.117      ; 1.486      ;
-; 1.291 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.138      ; 1.513      ;
-; 1.317 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.110      ; 1.511      ;
-; 1.339 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.161     ; 1.236      ;
-; 1.340 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.319      ; 1.743      ;
-; 1.354 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.124      ; 1.562      ;
-; 1.365 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.015      ; 1.438      ;
-; 1.395 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.319      ; 1.798      ;
-; 1.403 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.146     ; 1.313      ;
-; 1.404 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.161     ; 1.301      ;
-; 1.411 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.146      ; 1.641      ;
-; 1.412 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.314      ; 1.810      ;
-; 1.422 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.094      ; 1.600      ;
-; 1.428 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.023      ; 1.509      ;
-; 1.435 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.148     ; 1.343      ;
-; 1.436 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.490      ;
-; 1.440 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.494      ;
-; 1.441 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 1.534      ;
-; 1.443 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.151     ; 1.350      ;
-; 1.454 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.105      ; 1.643      ;
-; 1.456 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.653      ;
-; 1.467 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.314      ; 1.865      ;
-; 1.476 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.117      ; 1.677      ;
-; 1.481 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.023      ; 1.562      ;
-; 1.512 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 1.605      ;
-; 1.513 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.165      ; 1.762      ;
-; 1.514 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.098      ; 1.696      ;
-; 1.516 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.026      ; 1.600      ;
-; 1.531 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.023      ; 1.612      ;
-; 1.538 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.148     ; 1.446      ;
-; 1.540 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.010     ; 1.588      ;
-; 1.547 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.004     ; 1.601      ;
-; 1.561 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.026      ; 1.645      ;
-; 1.565 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.165      ; 1.814      ;
-; 1.572 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.037      ; 1.665      ;
-; 1.574 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.042      ; 1.674      ;
-; 1.588 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.056      ; 1.700      ;
-; 1.592 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.026      ; 1.676      ;
-; 1.618 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.029     ; 1.647      ;
-; 1.647 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.029     ; 1.676      ;
-; 1.664 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.045      ; 1.767      ;
-; 1.671 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.115      ; 1.870      ;
-; 1.721 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.029     ; 1.750      ;
-; 1.743 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.110      ; 1.937      ;
-; 1.744 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 1.832      ;
-; 1.787 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 1.875      ;
-; 1.825 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.134      ; 2.043      ;
-; 1.865 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.032      ; 1.953      ;
-; 1.876 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.031      ; 1.963      ;
-; 1.889 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.051      ; 1.996      ;
-; 1.924 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.031      ; 2.011      ;
-; 1.949 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.031      ; 2.036      ;
-; 2.023 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.050      ; 2.129      ;
+; 0.581 ; ALU:alu|resultado[0] ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 0.706      ;
+; 0.636 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.191     ; 0.503      ;
+; 0.769 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.179     ; 0.648      ;
+; 0.800 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.212     ; 0.646      ;
+; 0.805 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.177     ; 0.686      ;
+; 0.862 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.175     ; 0.745      ;
+; 0.896 ; imm[1]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.130      ; 1.110      ;
+; 0.929 ; codop[1]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.323      ; 1.336      ;
+; 0.975 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.175     ; 0.858      ;
+; 1.010 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.226     ; 0.842      ;
+; 1.010 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.226     ; 0.842      ;
+; 1.028 ; imm[0]               ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.161      ; 1.273      ;
+; 1.043 ; imm[2]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.252      ;
+; 1.079 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.206     ; 0.931      ;
+; 1.089 ; codop[1]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.323      ; 1.496      ;
+; 1.099 ; codop[3]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.312      ; 1.495      ;
+; 1.100 ; codop[3]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.312      ; 1.496      ;
+; 1.121 ; codop[1]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.120      ; 1.325      ;
+; 1.137 ; codop[2]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.328      ; 1.549      ;
+; 1.170 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor2|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.234     ; 0.994      ;
+; 1.181 ; imm[3]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.153      ; 1.418      ;
+; 1.185 ; codop[1]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.120      ; 1.389      ;
+; 1.194 ; codop[1]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.120      ; 1.398      ;
+; 1.199 ; imm[0]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.364      ; 1.647      ;
+; 1.206 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.160     ; 1.102      ;
+; 1.230 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.288      ;
+; 1.231 ; codop[0]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.316      ; 1.631      ;
+; 1.248 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.219     ; 1.087      ;
+; 1.248 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.025     ; 1.281      ;
+; 1.252 ; codop[0]             ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.316      ; 1.652      ;
+; 1.254 ; codop[2]             ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.328      ; 1.666      ;
+; 1.256 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.206     ; 1.108      ;
+; 1.256 ; imm[0]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.364      ; 1.704      ;
+; 1.258 ; imm[3]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.356      ; 1.698      ;
+; 1.274 ; imm[1]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.333      ; 1.691      ;
+; 1.292 ; codop[1]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.120      ; 1.496      ;
+; 1.294 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.352      ;
+; 1.299 ; imm[2]               ; ALU:alu|resultado[5]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.328      ; 1.711      ;
+; 1.307 ; codop[3]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.109      ; 1.500      ;
+; 1.312 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.025     ; 1.345      ;
+; 1.315 ; codop[2]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.524      ;
+; 1.315 ; imm[3]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.356      ; 1.755      ;
+; 1.331 ; imm[1]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.333      ; 1.748      ;
+; 1.332 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.030      ; 1.420      ;
+; 1.332 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.390      ;
+; 1.348 ; codop[0]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.545      ;
+; 1.349 ; codop[2]             ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.558      ;
+; 1.356 ; imm[2]               ; ALU:alu|resultado[4]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.328      ; 1.768      ;
+; 1.359 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.025     ; 1.392      ;
+; 1.361 ; ALU:alu|resultado[4] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.165     ; 1.254      ;
+; 1.363 ; codop[3]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.109      ; 1.556      ;
+; 1.366 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.025     ; 1.399      ;
+; 1.368 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[3] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.000      ; 1.426      ;
+; 1.371 ; codop[3]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.109      ; 1.564      ;
+; 1.371 ; codop[0]             ; ALU:alu|resultado[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.568      ;
+; 1.380 ; codop[3]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.109      ; 1.573      ;
+; 1.396 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.030      ; 1.484      ;
+; 1.407 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.027      ; 1.492      ;
+; 1.408 ; codop[2]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.617      ;
+; 1.425 ; codop[0]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.622      ;
+; 1.425 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[4] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.219     ; 1.264      ;
+; 1.426 ; codop[2]             ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.635      ;
+; 1.435 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.030      ; 1.523      ;
+; 1.441 ; codop[0]             ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.113      ; 1.638      ;
+; 1.460 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.030      ; 1.548      ;
+; 1.476 ; imm[0]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.161      ; 1.721      ;
+; 1.489 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.167     ; 1.378      ;
+; 1.507 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.027      ; 1.592      ;
+; 1.515 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.027      ; 1.600      ;
+; 1.523 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor3|z[6] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.162     ; 1.417      ;
+; 1.534 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[5] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.027      ; 1.619      ;
+; 1.538 ; ALU:alu|resultado[5] ; conversor7segmentos:conversor1|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; -0.165     ; 1.431      ;
+; 1.551 ; imm[1]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.130      ; 1.765      ;
+; 1.564 ; imm[0]               ; ALU:alu|resultado[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.161      ; 1.809      ;
+; 1.576 ; imm[2]               ; ALU:alu|resultado[3]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.125      ; 1.785      ;
+; 1.615 ; imm[0]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.161      ; 1.860      ;
+; 1.685 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 1.782      ;
+; 1.690 ; imm[1]               ; ALU:alu|resultado[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.130      ; 1.904      ;
+; 1.750 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 1.847      ;
+; 1.796 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 1.893      ;
+; 1.799 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[1] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.041      ; 1.896      ;
+; 1.808 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.035      ; 1.899      ;
+; 1.837 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 1.929      ;
+; 1.867 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.035      ; 1.958      ;
+; 1.902 ; ALU:alu|resultado[0] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 1.994      ;
+; 1.909 ; ALU:alu|resultado[3] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.035      ; 2.000      ;
+; 1.918 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[0] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.035      ; 2.009      ;
+; 1.959 ; ALU:alu|resultado[2] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 2.051      ;
+; 2.027 ; ALU:alu|resultado[1] ; conversor7segmentos:conversor0|z[2] ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.036      ; 2.119      ;
 +-------+----------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -866,10 +866,10 @@ No synchronizer chains to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -3.926  ; 0.479 ; N/A      ; N/A     ; -3.000              ;
-;  CLOCK_50        ; -3.926  ; 0.479 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -71.044 ; 0.0   ; 0.0      ; 0.0     ; -49.917             ;
-;  CLOCK_50        ; -71.044 ; 0.000 ; N/A      ; N/A     ; -49.917             ;
+; Worst-case Slack ; -3.845  ; 0.581 ; N/A      ; N/A     ; -3.000              ;
+;  CLOCK_50        ; -3.845  ; 0.581 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -69.755 ; 0.0   ; 0.0      ; 0.0     ; -49.898             ;
+;  CLOCK_50        ; -69.755 ; 0.000 ; N/A      ; N/A     ; -49.898             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -1262,14 +1262,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -1309,14 +1309,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX2[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX2[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX2[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -1326,7 +1326,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 11 20:12:36 2017
+    Info: Processing started: Wed Oct 11 20:26:17 2017
 Info: Command: quartus_sta Processador -c Processador
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1343,14 +1343,14 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.926
+Info (332146): Worst-case setup slack is -3.845
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.926             -71.044 CLOCK_50 
-Info (332146): Worst-case hold slack is 1.041
+    Info (332119):    -3.845             -69.755 CLOCK_50 
+Info (332146): Worst-case hold slack is 1.252
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.041               0.000 CLOCK_50 
+    Info (332119):     1.252               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1363,14 +1363,14 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.520
+Info (332146): Worst-case setup slack is -3.462
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.520             -62.740 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.960
+    Info (332119):    -3.462             -61.513 CLOCK_50 
+Info (332146): Worst-case hold slack is 1.143
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.960               0.000 CLOCK_50 
+    Info (332119):     1.143               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
@@ -1381,25 +1381,25 @@ Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.613
+Info (332146): Worst-case setup slack is -1.546
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.613             -22.775 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.479
+    Info (332119):    -1.546             -22.289 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.581
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.479               0.000 CLOCK_50 
+    Info (332119):     0.581               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -49.917 CLOCK_50 
+    Info (332119):    -3.000             -49.898 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 945 megabytes
-    Info: Processing ended: Wed Oct 11 20:12:38 2017
+    Info: Processing ended: Wed Oct 11 20:26:19 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
