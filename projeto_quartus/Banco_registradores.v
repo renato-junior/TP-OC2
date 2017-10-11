@@ -1,8 +1,8 @@
 module Banco_registradores(regA, regB, dado, regC, RW, clk, regsaidaA, regsaidaB);
-input [5:0] regA;
-input [5:0] regB;
+input [4:0] regA;
+input [4:0] regB;
 input [15:0] dado;
-input [5:0] regC;
+input [4:0] regC;
 input RW; //0 - leitura / 1 - escrita
 input clk;
 output reg [15:0] regsaidaA;

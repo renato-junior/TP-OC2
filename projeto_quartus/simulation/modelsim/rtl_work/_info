@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
+vALU
+!s110 1507677480
+!i10b 1
+!s100 7Mho@]Sll7N3@4;==3SCc1
+IA1Aae<@GDkQ4@oN0F[`>M2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1507675780
+8/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
+F/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1507677480.000000
+!s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
+!s90 -reportprogress|300|-work|work|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
+!i113 1
+o-work work
+Z3 tCvgOpt 0
+n@a@l@u
+vProcessador
+!s110 1507677467
+!i10b 1
+!s100 aMbZo4e4aH]S>gi5n``l]1
+I`?JllSPW;mP;<61]jn?;:2
+R1
+R0
+w1507675947
+8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1507677467.000000
+!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus
+R3
+n@processador
