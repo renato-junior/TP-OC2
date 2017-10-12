@@ -11,6 +11,8 @@ output [6:0] HEX5;
 output [6:0] HEX6;
 output [6:0] HEX7;
 
+integer aux;
+
 //Componentes do Banco de Registradores
 reg bancoRW;
 reg [4:0] endRegA;
@@ -89,12 +91,17 @@ conversor7segmentos conversor0(
 
 always @(posedge CLOCK_50)
 begin
-	if(SW[16] == 1) begin
+	if(aux == 1)  begin
+		bancoRW = 1;
+		aux = 0;
+	end
+	if(KEY[0] == 0) begin
 		endRegA = SW[11:8];
 		endRegB = SW[7:4];
 		bancoRW = 0;
 	end
-	if(SW[17] == 1) begin
+	if(KEY[3] == 0) begin
+		aux = 1;
 		bancoRW = 0;
 		codop = SW[15:12];
 		if(codop == 4'd0) begin
