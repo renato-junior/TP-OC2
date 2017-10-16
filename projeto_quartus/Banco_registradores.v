@@ -1,9 +1,11 @@
-module Banco_registradores(regA, regB, dado, regC, RW, clk, regsaidaA, regsaidaB);
+module Banco_registradores(regA, regB, dado, regC, RW, imediato, flagImediato, clk, regsaidaA, regsaidaB);
 input [4:0] regA;
 input [4:0] regB;
 input [15:0] dado;
 input [4:0] regC;
 input RW; //0 - leitura / 1 - escrita
+input [15:0] imediato;
+input flagImediato;
 input clk;
 output reg [15:0] regsaidaA;
 output reg [15:0] regsaidaB;
@@ -21,7 +23,11 @@ end
 always @(posedge clk)
 begin
 	if(RW == 0) begin
-		regsaidaA <= registradores[regA][15:0];
+		if(flagImediato == 0) begin
+			regsaidaA <= registradores[regA][15:0];
+		end else begin
+			regsaidaA <= imediato[15:0];
+		end
 		regsaidaB <= registradores[regB][15:0];
 	end else begin
 		registradores[regC] <= dado;

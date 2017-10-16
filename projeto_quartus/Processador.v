@@ -19,6 +19,8 @@ reg [4:0] endRegA;
 reg [4:0] endRegB;
 reg [4:0] endRegC;
 reg [15:0] dadoBanco;
+reg [15:0] imm;
+reg flagimm;
 wire [15:0] saidaA;
 wire [15:0] saidaB;
 
@@ -28,6 +30,8 @@ Banco_registradores banco(
 	.regC(endRegC),
 	.RW(bancoRW),
 	.dado(dadoBanco),
+	.imediato(imm),
+	.flagImediato(flagimm),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
 	.regsaidaB(saidaB)
@@ -35,7 +39,6 @@ Banco_registradores banco(
 
 //Componentes da ALU
 reg [4:0] codop;
-reg [15:0] imm;
 wire [15:0] resultadoALU;
 
 ALU alu(
@@ -103,6 +106,7 @@ begin
 	if(KEY[3] == 0) begin
 		aux = 1;
 		bancoRW = 0;
+		flagimm = 0;
 		codop = SW[15:12];
 		if(codop == 4'd0) begin
 			endRegC = SW[11:8];
@@ -133,26 +137,31 @@ begin
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+			flagimm = 1;
 		end else if(codop == 4'd7) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+			flagimm = 1;
 		end else if(codop == 4'd8) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+			flagimm = 1;
 		end else if(codop == 4'd9) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+			flagimm = 1;
 		end else if(codop == 4'd10) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
+			flagimm = 1;
 		end
 		dadoBanco = resultadoALU;
 	end
