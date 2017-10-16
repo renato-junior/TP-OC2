@@ -102,6 +102,7 @@ begin
 		endRegA = SW[11:8];
 		endRegB = SW[7:4];
 		bancoRW = 0;
+		flagimm = 0;
 	end
 	if(KEY[3] == 0) begin
 		aux = 1;
