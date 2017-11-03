@@ -11,161 +11,64 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:50 on Oct 11,2017
+# Start time: 09:50:02 on Nov 03,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v 
 # -- Compiling module Processador
 # 
 # Top level modules:
 # 	Processador
-# End time: 21:34:50 on Oct 11,2017, Elapsed time: 0:00:00
+# End time: 09:50:03 on Nov 03,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:50 on Oct 11,2017
+# Start time: 09:50:03 on Nov 03,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v 
 # -- Compiling module Banco_registradores
 # 
 # Top level modules:
 # 	Banco_registradores
-# End time: 21:34:50 on Oct 11,2017, Elapsed time: 0:00:00
+# End time: 09:50:03 on Nov 03,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:50 on Oct 11,2017
+# Start time: 09:50:03 on Nov 03,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:34:51 on Oct 11,2017, Elapsed time: 0:00:01
+# End time: 09:50:03 on Nov 03,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:51 on Oct 11,2017
+# Start time: 09:50:03 on Nov 03,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v 
 # -- Compiling module conversor7segmentos
 # 
 # Top level modules:
 # 	conversor7segmentos
-# End time: 21:34:51 on Oct 11,2017, Elapsed time: 0:00:00
+# End time: 09:50:03 on Nov 03,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:58 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v 
-# -- Compiling module Processador
+# Start time: 09:50:12 on Nov 03,2017
+# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v 
+# -- Compiling module Controle
 # 
 # Top level modules:
-# 	Processador
-# End time: 21:34:58 on Oct 11,2017, Elapsed time: 0:00:00
+# 	Controle
+# End time: 09:50:12 on Nov 03,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v
+vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:59 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v 
-# -- Compiling module conversor7segmentos
+# Start time: 09:50:13 on Nov 03,2017
+# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v 
+# -- Compiling module Controle
 # 
 # Top level modules:
-# 	conversor7segmentos
-# End time: 21:34:59 on Oct 11,2017, Elapsed time: 0:00:00
+# 	Controle
+# End time: 09:50:13 on Nov 03,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:35:00 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v 
-# -- Compiling module ALU
-# 
-# Top level modules:
-# 	ALU
-# End time: 21:35:00 on Oct 11,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:35:00 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v 
-# -- Compiling module ALU
-# 
-# Top level modules:
-# 	ALU
-# End time: 21:35:00 on Oct 11,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:35:01 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v 
-# -- Compiling module Banco_registradores
-# 
-# Top level modules:
-# 	Banco_registradores
-# End time: 21:35:01 on Oct 11,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:35:01 on Oct 11,2017
-# vlog -reportprogress 300 -work work /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v 
-# -- Compiling module Banco_registradores
-# 
-# Top level modules:
-# 	Banco_registradores
-# End time: 21:35:01 on Oct 11,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.Processador
-# vsim work.Processador 
-# Start time: 21:35:05 on Oct 11,2017
-# Loading work.Processador
-# Loading work.Banco_registradores
-# Loading work.ALU
-# Loading work.conversor7segmentos
-# ** Warning: (vsim-3017) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(41): [TFMPC] - Too few port connections. Expected 9, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/alu File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
-# ** Warning: (vsim-3015) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(41): [PCDPC] - Port size (4) does not match connection size (5) for port 'codop'. The port definition is at: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/alu File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
-# ** Warning: (vsim-3722) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(41): [TFMPC] - Missing connection for port 'neg'.
-# ** Warning: (vsim-3722) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(41): [TFMPC] - Missing connection for port 'zero'.
-# ** Warning: (vsim-3722) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(41): [TFMPC] - Missing connection for port 'overflow'.
-add wave -position end  sim:/Processador/CLOCK_50
-add wave -position end  sim:/Processador/KEY
-add wave -position end  sim:/Processador/SW
-add wave -position end  sim:/Processador/HEX0
-add wave -position end  sim:/Processador/HEX1
-add wave -position end  sim:/Processador/HEX2
-add wave -position end  sim:/Processador/HEX3
-add wave -position end  sim:/Processador/HEX4
-add wave -position end  sim:/Processador/HEX5
-add wave -position end  sim:/Processador/HEX6
-add wave -position end  sim:/Processador/HEX7
-add wave -position end  sim:/Processador/aux
-add wave -position end  sim:/Processador/bancoRW
-add wave -position end  sim:/Processador/endRegA
-add wave -position end  sim:/Processador/endRegB
-add wave -position end  sim:/Processador/endRegC
-add wave -position end  sim:/Processador/dadoBanco
-add wave -position end  sim:/Processador/saidaA
-add wave -position end  sim:/Processador/saidaB
-add wave -position end  sim:/Processador/codop
-add wave -position end  sim:/Processador/imm
-add wave -position end  sim:/Processador/resultadoALU
-force -freeze sim:/Processador/CLOCK_50 1 0, 0 {50 ps} -r 100
-force -freeze sim:/Processador/SW 101001000101010001 0
-run
-run
-run
-run
-run
-force -freeze sim:/Processador/SW 001001000101010001 0
-run
-run
-run
-run
-force -freeze sim:/Processador/SW 101001000100000001 0
-run
-force -freeze sim:/Processador/SW 001001000100000001 0
-run
-run
-run
-run
-# End time: 21:36:26 on Oct 11,2017, Elapsed time: 0:01:21
-# Errors: 0, Warnings: 5
