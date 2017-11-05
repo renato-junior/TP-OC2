@@ -72,7 +72,7 @@ wire [15:0] resultadoALU;
 ALU alu(
 	.clk(CLOCK_50),
 	.codeop(codeop),
-	.operando1(saidaMux1Alu),
+	.operando1(resultadoMux1Alu),
 	.operando2(saidaB),
 	.imm(imm),
 	.resultado(resultadoALU)
