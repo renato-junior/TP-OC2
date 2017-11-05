@@ -13,9 +13,7 @@ begin
         extdata[15:4] = 12'd0;
         resultado = extData;
     end else begin
-        extData[3:0] = regA;
-        extdata[15:4] = 12'd0;
-        resultado = extData;
+        resultado = regA;
     end
 end
 endmodule

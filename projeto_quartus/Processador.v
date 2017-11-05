@@ -70,16 +70,13 @@ Mux_2_to_1 muxAluA(
 //Componentes do MUX 3 to 1 ALU
 reg [15:0] data = 16'd1;
 reg [15:0] extEndRegB;
-reg [15:0] extSaidaB;
 reg [15:0] resultadoMuxAluB;
 
 extEndRegB[3:0] = endRegB;
 extEndRegB[15:4] = 12'd0;
-extSaidaB[3:0] = saidaB;
-extSaidaB[15:4] = 12'd0;
 
 Mux_3_to_1 muxAluB(
-	.data0(extSaidaB),
+	.data0(saidaB),
 	.data1(data),
 	.data2(extEndRegB)
 	.select(aluB),
@@ -91,7 +88,8 @@ wire [15:0] resultadoALU;
 
 ALU alu(
 	.clk(CLOCK_50),
-	.codeop(codeop),
+	.codop(codeop),
+	.pc(PC),
 	.operando1(resultadoMux1Alu),
 	.operando2(resultadoMuxAluB),
 	.imm(imm),
