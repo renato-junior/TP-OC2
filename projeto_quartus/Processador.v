@@ -11,6 +11,8 @@ output [6:0] HEX5;
 output [6:0] HEX6;
 output [6:0] HEX7;
 
+reg [3:0] PC;
+
 integer aux;
 
 //Componentes unidade de controle
@@ -28,7 +30,7 @@ Controle controle(
 	.ULA_A(aluA),
 	.ULA_B(aluB),
 	.EscIR(escIr),
-	.fonteCp(fonteCp),
+	.FonteCp(fonteCp),
 	.EscReg(bancoRW)
 );
 
@@ -61,15 +63,15 @@ reg [4:0] resultadoMuxAluA;
 Mux_2_to_1 muxAluA(
 	.select(aluA),
 	.regA(saidaA),
-	//.pc(), tem que conectar o pc ainda nesta unidade
+	.pc(PC),
 	.resultado(resultadoMuxAluA)
 );
 
-//Componentes do MUX 3 to 1
+//Componentes do MUX 3 to 1 ALU
 reg [15:0] data = 16'd1;
 reg [15:0] extEndRegB;
 reg [15:0] extSaidaB;
-reg [15:0] resultadoMuxAluA;
+reg [15:0] resultadoMuxAluB;
 
 extEndRegB[3:0] = endRegB;
 extEndRegB[15:4] = 12'd0;
@@ -81,7 +83,7 @@ Mux_3_to_1 muxAluB(
 	.data1(data),
 	.data2(extEndRegB)
 	.select(aluB),
-	.resultado(resultadoMuxAluA)
+	.resultado(resultadoMuxAluB)
 );
 
 //Componentes da ALU
@@ -91,9 +93,20 @@ ALU alu(
 	.clk(CLOCK_50),
 	.codeop(codeop),
 	.operando1(resultadoMux1Alu),
-	.operando2(saidaB),
+	.operando2(resultadoMuxAluB),
 	.imm(imm),
 	.resultado(resultadoALU)
+);
+
+//Componentes do ultimo Mux 3 to 1
+wire [15:0] resultadoMux;
+
+Mux_3_to_1 muxPosAlu(
+	.data0(resultadoALU),
+	.data1(resultadoALU),
+	// .data2(extPC), falta extender o pc de acordo com a spec
+	.select(fonteCp),
+	.resultado(resultadoMux)
 );
 
 
@@ -212,8 +225,6 @@ begin
 		end
 		dadoBanco = resultadoALU;
 	end
-
-
 end
  
 endmodule
