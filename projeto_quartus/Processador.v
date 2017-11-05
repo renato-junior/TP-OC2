@@ -55,6 +55,16 @@ Banco_registradores banco(
 	.regsaidaB(saidaB)
 );
 
+//Componentes do MUX 2 to 1
+reg [4:0] resultadoMux1Alu;
+
+Mux_2_to_1 mux1Alu(
+	.select(ulaA),
+	.regA(saidaA),
+	//.pc(), tem que conectar o pc ainda nesta unidade
+	.resultado(resultadoMux1Alu)
+);
+
 //Componentes da ALU
 
 wire [15:0] resultadoALU;
@@ -62,7 +72,7 @@ wire [15:0] resultadoALU;
 ALU alu(
 	.clk(CLOCK_50),
 	.codeop(codeop),
-	.operando1(saidaA),
+	.operando1(saidaMux1Alu),
 	.operando2(saidaB),
 	.imm(imm),
 	.resultado(resultadoALU)
