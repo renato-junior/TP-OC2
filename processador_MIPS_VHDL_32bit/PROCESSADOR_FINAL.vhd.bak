@@ -1,0 +1,46 @@
+-- @2012 - Prof. Julio C. D. de Melo - DELT/EEUFMG
+-- Sistemas, Processadores e Perif ricos
+-- Marina Antonia Carvalho Salmen
+-- Vinicius Vecchia
+-- Thais Rodrigues
+
+-- Declara  o de bibliotecas
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Processador com entradas e saidas do kit
+entity PROCESSADOR_FINAL is
+port (
+	KEY : in std_logic_vector (3 downto 0);			-- key(3): reset, key(2): clock e key(1): clock_ram
+	LEDR	: out std_logic_vector (17 downto 0)		-- resultado da saida do kit (17 bits menos significativos da saida do processador)
+	);
+end PROCESSADOR_FINAL;
+
+architecture beh of PROCESSADOR_FINAL is							
+
+component processador is
+port (
+	clk, reset: in std_logic;								
+	resultado	: out std_logic_vector(31 downto 0)			-- resultado na saída
+	);
+end component;
+
+signal resultado_aux : std_logic_vector (31 downto 0);
+signal aux, aux1 : std_logic;
+
+begin
+
+LEDR <= resultado_aux(17 downto 0);
+aux  <= not KEY(2);
+aux1 <= not KEY(3);
+
+	Processador1: processador port map
+	(
+	clk => aux,
+	reset => aux1,
+	resultado => resultado_aux
+	);
+	
+	
+end beh;
