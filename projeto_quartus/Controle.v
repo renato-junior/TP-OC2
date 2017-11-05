@@ -1,22 +1,59 @@
 module Controle(clk, opcode, EscCondCP, EscCP, ULA_OP, ULA_A, ULA_B, EscIR, FonteCP, EscReg);
 input clk;
 input [3:0] opcode;
-output reg EscCondCP, EscCP, ULA_OP, ULA_A, ULA_B, EscIR, FonteCP, EscReg;
+output reg EscCondCP, EscCP, ULA_A, EscIR, EscReg;
+output reg [3:0]ULA_OP;
+output reg [1:0]ULA_B;  
+output reg [1:0]FonteCP;
+
 
 always @(posedge clk)
 begin
 	ULA_OP = opcode;
-	if ( opcode[3:0] == 4'b1011 || opcode [3:0] == 4'b1100 ) 		//Gera sinal EscCondCP
-			EscCondCP = 1;
-	else 
-			EscCondCP = 0;
-		
-		
-	if (opcode == 4'd11)							//Se opcode==jump ULA_B=2b'10;
-		ULA_B = 2'b10;
-	else
-		ULA_B = 2'b00;
 	
+	if (opcode == 4'd0 || opcode == 4'd1 || opcode == 4'd3 || opcode == 4'd4 || opcode == 4'd5)
+		begin
+			EscCondCP = 0;
+			EscCP = 1;
+			ULA_A = 0;
+			ULA_B = 00;
+			EscIR = 0;
+			FonteCP = 0;
+			EscReg = 0;
+		end
+		
+	if (opcode == 4'd2 || opcode == 4'd6 || opcode == 4'd7 || opcode == 4'd8 || opcode == 4'd9 || opcode == 4'd10)	
+		begin
+			EscCondCP = 0;
+			EscCP = 1;
+			ULA_A = 0;
+			ULA_B = 10;   //operador imediato
+			EscIR = 0;
+			FonteCP = 00;
+			EscReg = 1;
+		end
+		
+	if (opcode == 4'd11)	//jump
+		begin
+			EscCondCP = 0;
+			EscCP = 1;
+			ULA_A = 0;
+			ULA_B = 10; //operador imediato
+			EscIR = 0;	//nao escreve na memoria
+			FonteCP = 00;
+			EscReg = 0;  //nao escreve no banco
+		end
+		
+	if (opcode == 4'd12)	
+		begin
+			EscCondCP = 1;
+			EscCP = 1;
+			ULA_A = 0;
+			ULA_B = 00;
+			EscIR = 0;
+			FonteCP = 01;
+			EscReg = 0; //nao escreve no banco
+		end	
 		
 end
 
