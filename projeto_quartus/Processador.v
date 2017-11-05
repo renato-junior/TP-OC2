@@ -13,8 +13,26 @@ output [6:0] HEX7;
 
 integer aux;
 
+//Componentes unidade de controle
+reg [4:0] codeop;
+reg ulaA, bancoRW, escCondCp, escCp, escIr;
+reg [1:0]ulaB;  
+reg [1:0]fonteCp;
+
+Controle controle(
+	.clk(CLOCK_50),
+	.opcode(codeop),
+	.EscCondCP(escCondCp),
+	.EscCP(escCp),
+	.ULA_OP(codeop),
+	.ULA_A(ulaA),
+	.ULA_B(ulaB),
+	.EscIR(escIr),
+	.fonteCp(fonteCp),
+	.EscReg(bancoRW)
+);
+
 //Componentes do Banco de Registradores
-reg bancoRW;
 reg [4:0] endRegA;
 reg [4:0] endRegB;
 reg [4:0] endRegC;
@@ -38,12 +56,12 @@ Banco_registradores banco(
 );
 
 //Componentes da ALU
-reg [4:0] codop;
+
 wire [15:0] resultadoALU;
 
 ALU alu(
 	.clk(CLOCK_50),
-	.codop(codop),
+	.codeop(codeop),
 	.operando1(saidaA),
 	.operando2(saidaB),
 	.imm(imm),
@@ -108,56 +126,56 @@ begin
 		aux = 1;
 		bancoRW = 0;
 		flagimm = 0;
-		codop = SW[15:12];
-		if(codop == 4'd0) begin
+		codeop = SW[15:12];
+		if(codeop == 4'd0) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd1) begin
+		end else if(codeop == 4'd1) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd2) begin
+		end else if(codeop == 4'd2) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd3) begin
+		end else if(codeop == 4'd3) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd4) begin
+		end else if(codeop == 4'd4) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd5) begin
+		end else if(codeop == 4'd5) begin
 			endRegC = SW[11:8];
 			endRegA = SW[7:4];
 			endRegB = SW[3:0];
-		end else if(codop == 4'd6) begin
+		end else if(codeop == 4'd6) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
 			flagimm = 1;
-		end else if(codop == 4'd7) begin
+		end else if(codeop == 4'd7) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
 			flagimm = 1;
-		end else if(codop == 4'd8) begin
+		end else if(codeop == 4'd8) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
 			flagimm = 1;
-		end else if(codop == 4'd9) begin
+		end else if(codeop == 4'd9) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
 			endRegB = SW[3:0];
 			flagimm = 1;
-		end else if(codop == 4'd10) begin
+		end else if(codeop == 4'd10) begin
 			endRegC = SW[11:8];
 			imm[15:4] = 12'd0;
 			imm[3:0] = SW[7:4];
