@@ -56,17 +56,35 @@ Banco_registradores banco(
 );
 
 //Componentes do MUX 2 to 1
-reg [4:0] resultadoMux1Alu;
+reg [4:0] resultadoMuxAluA;
 
 Mux_2_to_1 muxAluA(
-	.select(ulaA),
+	.select(aluA),
 	.regA(saidaA),
 	//.pc(), tem que conectar o pc ainda nesta unidade
-	.resultado(resultadoMux1Alu)
+	.resultado(resultadoMuxAluA)
+);
+
+//Componentes do MUX 3 to 1
+reg [15:0] data = 16'd1;
+reg [15:0] extEndRegB;
+reg [15:0] extSaidaB;
+reg [15:0] resultadoMuxAluA;
+
+extEndRegB[3:0] = endRegB;
+extEndRegB[15:4] = 12'd0;
+extSaidaB[3:0] = saidaB;
+extSaidaB[15:4] = 12'd0;
+
+Mux_3_to_1 muxAluB(
+	.data0(extSaidaB),
+	.data1(data),
+	.data2(extEndRegB)
+	.select(aluB),
+	.resultado(resultadoMuxAluA)
 );
 
 //Componentes da ALU
-
 wire [15:0] resultadoALU;
 
 ALU alu(

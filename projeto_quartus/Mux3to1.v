@@ -1,4 +1,4 @@
-module Mux_2_to_1(data0, data1, data2, select, resultado);
+module Mux_3_to_1(data0, data1, data2, select, resultado);
 input [15:0] data0;
 input [15:0] data1;
 input [15:0] data2;
