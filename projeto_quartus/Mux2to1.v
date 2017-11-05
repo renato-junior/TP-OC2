@@ -2,15 +2,20 @@ module Mux_2_to_1(regA, pc, select, resultado);
 input [4:0] regA;
 input [4:0] pc;
 input select;
-output reg [4:0] resultado;
+output reg [15:0] resultado;
+reg [15:0] extData
 
 always @(regA or pc or select) 
 begin
     if (S == 1'b0) 
     begin
-        resultado = pc;
+        extData[3:0] = pc;
+        extdata[15:4] = 12'd0;
+        resultado = extData;
     end else begin
-        resultado = regA;
+        extData[3:0] = regA;
+        extdata[15:4] = 12'd0;
+        resultado = extData;
     end
 end
 endmodule
