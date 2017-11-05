@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jun 18 18:19:49 2015
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : PROCESSADOR_FINAL
+Top-level Entity Name : PROCESSADOR_FINAL
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 2,074 / 33,216 ( 6 % )
+    Total combinational functions : 1,793 / 33,216 ( 5 % )
+    Dedicated logic registers : 1,033 / 33,216 ( 3 % )
+Total registers : 1033
+Total pins : 22 / 475 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 49,152 / 483,840 ( 10 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
