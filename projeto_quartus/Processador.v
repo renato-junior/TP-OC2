@@ -15,8 +15,8 @@ integer aux;
 
 //Componentes unidade de controle
 reg [4:0] codeop;
-reg ulaA, bancoRW, escCondCp, escCp, escIr;
-reg [1:0]ulaB;  
+reg aluA, bancoRW, escCondCp, escCp, escIr;
+reg [1:0]aluB;  
 reg [1:0]fonteCp;
 
 Controle controle(
@@ -25,8 +25,8 @@ Controle controle(
 	.EscCondCP(escCondCp),
 	.EscCP(escCp),
 	.ULA_OP(codeop),
-	.ULA_A(ulaA),
-	.ULA_B(ulaB),
+	.ULA_A(aluA),
+	.ULA_B(aluB),
 	.EscIR(escIr),
 	.fonteCp(fonteCp),
 	.EscReg(bancoRW)
@@ -58,7 +58,7 @@ Banco_registradores banco(
 //Componentes do MUX 2 to 1
 reg [4:0] resultadoMux1Alu;
 
-Mux_2_to_1 mux1Alu(
+Mux_2_to_1 muxAluA(
 	.select(ulaA),
 	.regA(saidaA),
 	//.pc(), tem que conectar o pc ainda nesta unidade

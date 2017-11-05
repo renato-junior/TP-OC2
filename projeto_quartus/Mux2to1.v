@@ -7,7 +7,7 @@ reg [15:0] extData
 
 always @(regA or pc or select) 
 begin
-    if (S == 1'b0) 
+    if (select == 1'b0) 
     begin
         extData[3:0] = pc;
         extdata[15:4] = 12'd0;
