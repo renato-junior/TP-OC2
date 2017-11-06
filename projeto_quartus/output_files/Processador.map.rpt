@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Mon Oct 16 14:45:38 2017
+Mon Nov 06 14:25:15 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,22 +14,31 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Registers Added for RAM Pass-Through Logic
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated
- 16. Source assignments for Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated
- 17. Parameter Settings for Inferred Entity Instance: Banco_registradores:banco|altsyncram:registradores_rtl_0
- 18. Parameter Settings for Inferred Entity Instance: Banco_registradores:banco|altsyncram:registradores_rtl_1
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "ALU:alu"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated
+ 17. Source assignments for Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated
+ 18. Source assignments for Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated
+ 19. Parameter Settings for User Entity Instance: Memoria:memoria|altsyncram:altsyncram_component
+ 20. Parameter Settings for Inferred Entity Instance: Banco_registradores:banco|altsyncram:registradores_rtl_0
+ 21. Parameter Settings for Inferred Entity Instance: Banco_registradores:banco|altsyncram:registradores_rtl_1
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "Mux_3_to_1:muxPosAlu"
+ 24. Port Connectivity Checks: "ALU:alu"
+ 25. Port Connectivity Checks: "Mux_3_to_1:muxAluB"
+ 26. Port Connectivity Checks: "Mux_2_to_1:muxAluA"
+ 27. Port Connectivity Checks: "Banco_registradores:banco"
+ 28. Port Connectivity Checks: "Memoria:memoria"
+ 29. Port Connectivity Checks: "Controle:controle"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,18 +65,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 16 14:45:38 2017       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 06 14:25:15 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 359                                         ;
-;     Total combinational functions  ; 249                                         ;
-;     Dedicated logic registers      ; 225                                         ;
-; Total registers                    ; 225                                         ;
-; Total pins                         ; 79                                          ;
+; Total logic elements               ; 233                                         ;
+;     Total combinational functions  ; 143                                         ;
+;     Dedicated logic registers      ; 196                                         ;
+; Total registers                    ; 196                                         ;
+; Total pins                         ; 61                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 512                                         ;
+; Total memory bits                  ; 640                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -172,31 +181,37 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
-+----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; Processador.v                                            ; yes             ; User Verilog HDL File                                 ; /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v                                            ;         ;
-; Banco_registradores.v                                    ; yes             ; User Verilog HDL File                                 ; /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v                                    ;         ;
-; ALU.v                                                    ; yes             ; User Verilog HDL File                                 ; /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v                                                    ;         ;
-; conversor7segmentos.v                                    ; yes             ; User Verilog HDL File                                 ; /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v                                    ;         ;
-; altsyncram.tdf                                           ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
-; stratix_ram_block.inc                                    ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
-; lpm_mux.inc                                              ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
-; lpm_decode.inc                                           ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
-; aglobal170.inc                                           ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                          ;         ;
-; a_rdenreg.inc                                            ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
-; altrom.inc                                               ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altrom.inc                              ;         ;
-; altram.inc                                               ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altram.inc                              ;         ;
-; altdpram.inc                                             ; yes             ; Megafunction                                          ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
-; db/altsyncram_d8n1.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf                                   ;         ;
-; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/renato/Dev/TP-OC2/projeto_quartus/db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;         ;
-+----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                            ;
++----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                       ; Library ;
++----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; Mux3to1.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v                                                ;         ;
+; Mux2to1.v                                                ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v                                                ;         ;
+; Processador.v                                            ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v                                            ;         ;
+; Banco_registradores.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v                                    ;         ;
+; ALU.v                                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v                                                    ;         ;
+; conversor7segmentos.v                                    ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v                                    ;         ;
+; MemoriaInstrucao.mif                                     ; yes             ; User Memory Initialization File                       ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/MemoriaInstrucao.mif                                     ;         ;
+; Memoria.v                                                ; yes             ; User Wizard-Generated File                            ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v                                                ;         ;
+; Controle.v                                               ; yes             ; User Verilog HDL File                                 ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v                                               ;         ;
+; altsyncram.tdf                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                              ;         ;
+; stratix_ram_block.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                       ;         ;
+; lpm_mux.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc                                                 ;         ;
+; lpm_decode.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc                                              ;         ;
+; aglobal170.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc                                              ;         ;
+; a_rdenreg.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc                                               ;         ;
+; altrom.inc                                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc                                                  ;         ;
+; altram.inc                                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc                                                  ;         ;
+; altdpram.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc                                                ;         ;
+; db/altsyncram_75b1.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_75b1.tdf                                   ;         ;
+; db/altsyncram_d8n1.tdf                                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf                                   ;         ;
+; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;         ;
++----------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -204,31 +219,31 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 359            ;
+; Estimated Total logic elements              ; 233            ;
 ;                                             ;                ;
-; Total combinational functions               ; 249            ;
+; Total combinational functions               ; 143            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 162            ;
-;     -- 3 input functions                    ; 82             ;
-;     -- <=2 input functions                  ; 5              ;
+;     -- 4 input functions                    ; 110            ;
+;     -- 3 input functions                    ; 17             ;
+;     -- <=2 input functions                  ; 16             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 218            ;
-;     -- arithmetic mode                      ; 31             ;
+;     -- normal mode                          ; 128            ;
+;     -- arithmetic mode                      ; 15             ;
 ;                                             ;                ;
-; Total registers                             ; 225            ;
-;     -- Dedicated logic registers            ; 225            ;
+; Total registers                             ; 196            ;
+;     -- Dedicated logic registers            ; 196            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 79             ;
-; Total memory bits                           ; 512            ;
+; I/O pins                                    ; 61             ;
+; Total memory bits                           ; 640            ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 257            ;
-; Total fan-out                               ; 1904           ;
-; Average fan-out                             ; 2.87           ;
+; Maximum fan-out                             ; 236            ;
+; Total fan-out                               ; 1407           ;
+; Average fan-out                             ; 2.81           ;
 +---------------------------------------------+----------------+
 
 
@@ -237,13 +252,17 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                  ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Processador                              ; 249 (24)            ; 225 (39)                  ; 512         ; 0            ; 0       ; 0         ; 79   ; 0            ; |Processador                                                                                         ; Processador         ; work         ;
-;    |ALU:alu|                              ; 131 (131)           ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ALU:alu                                                                                 ; ALU                 ; work         ;
-;    |Banco_registradores:banco|            ; 38 (38)             ; 114 (114)                 ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco                                                               ; Banco_registradores ; work         ;
-;       |altsyncram:registradores_rtl_0|    ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_0                                ; altsyncram          ; work         ;
-;          |altsyncram_d8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated ; altsyncram_d8n1     ; work         ;
+; |Processador                              ; 143 (11)            ; 196 (33)                  ; 640         ; 0            ; 0       ; 0         ; 61   ; 0            ; |Processador                                                                                         ; Processador         ; work         ;
+;    |ALU:alu|                              ; 35 (35)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|ALU:alu                                                                                 ; ALU                 ; work         ;
+;    |Banco_registradores:banco|            ; 39 (39)             ; 90 (90)                   ; 384         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco                                                               ; Banco_registradores ; work         ;
+;       |altsyncram:registradores_rtl_0|    ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_0                                ; altsyncram          ; work         ;
+;          |altsyncram_d8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated ; altsyncram_d8n1     ; work         ;
 ;       |altsyncram:registradores_rtl_1|    ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_1                                ; altsyncram          ; work         ;
 ;          |altsyncram_d8n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated ; altsyncram_d8n1     ; work         ;
+;    |Controle:controle|                    ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Controle:controle                                                                       ; Controle            ; work         ;
+;    |Memoria:memoria|                      ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Memoria:memoria                                                                         ; Memoria             ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Memoria:memoria|altsyncram:altsyncram_component                                         ; altsyncram          ; work         ;
+;          |altsyncram_75b1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated          ; altsyncram_75b1     ; work         ;
 ;    |conversor7segmentos:conversor0|       ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor0                                                          ; conversor7segmentos ; work         ;
 ;    |conversor7segmentos:conversor1|       ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor1                                                          ; conversor7segmentos ; work         ;
 ;    |conversor7segmentos:conversor2|       ; 7 (7)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processador|conversor7segmentos:conversor2                                                          ; conversor7segmentos ; work         ;
@@ -256,46 +275,60 @@ agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                           ;
-+----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------+
-; Name                                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                      ;
-+----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------+
-; Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 16           ; 32           ; 16           ; 512  ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;
-; Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 16           ; 32           ; 16           ; 512  ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;
-+----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------------------+
+; Name                                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                      ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------------------+
+; Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 16           ; 32           ; 16           ; 512   ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;
+; Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 16           ; 32           ; 16           ; 512   ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ;
+; Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated|ALTSYNCRAM          ; AUTO ; ROM              ; 4096         ; 16           ; --           ; --           ; 65536 ; MemoriaInstrucao.mif                                     ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+----------------------------------------------------------+----------------------------------------+
-; Register name                                            ; Reason for Removal                     ;
-+----------------------------------------------------------+----------------------------------------+
-; imm[4..9,11..15]                                         ; Merged with imm[10]                    ;
-; aux[1..9,11..31]                                         ; Merged with aux[10]                    ;
-; imm[10]                                                  ; Stuck at GND due to stuck port data_in ;
-; aux[10]                                                  ; Stuck at GND due to stuck port data_in ;
-; endRegC[4]                                               ; Stuck at GND due to stuck port data_in ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[9]  ; Stuck at GND due to stuck port data_in ;
-; endRegA[4]                                               ; Stuck at GND due to stuck port data_in ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[10] ; Stuck at GND due to stuck port data_in ;
-; endRegB[4]                                               ; Stuck at GND due to stuck port data_in ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[10] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 50                   ;                                        ;
-+----------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                          ;
++--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance              ; IP Include File ;
++--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |Processador|Memoria:memoria ; Memoria.v       ;
++--------+--------------+---------+--------------+--------------+------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                          ;
-+---------------+---------------------------+----------------------------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register                   ;
-+---------------+---------------------------+----------------------------------------------------------+
-; endRegA[4]    ; Stuck at GND              ; Banco_registradores:banco|registradores_rtl_0_bypass[10] ;
-;               ; due to stuck port data_in ;                                                          ;
-; endRegB[4]    ; Stuck at GND              ; Banco_registradores:banco|registradores_rtl_1_bypass[10] ;
-;               ; due to stuck port data_in ;                                                          ;
-+---------------+---------------------------+----------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                    ;
++--------------------------------------------------------------+----------------------------------------+
+; Register name                                                ; Reason for Removal                     ;
++--------------------------------------------------------------+----------------------------------------+
+; Controle:controle|FonteCP[0]                                 ; Lost fanout                            ;
+; endRegC[4]                                                   ; Merged with endRegB[4]                 ;
+; imm[5..7]                                                    ; Merged with imm[4]                     ;
+; imm[4]                                                       ; Stuck at GND due to stuck port data_in ;
+; endRegA[4]                                                   ; Stuck at GND due to stuck port data_in ;
+; Controle:controle|ULA_B[0]                                   ; Stuck at GND due to stuck port data_in ;
+; endRegB[4]                                                   ; Stuck at GND due to stuck port data_in ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[27..42] ; Lost fanout                            ;
+; Controle:controle|EscCP                                      ; Stuck at VCC due to stuck port data_in ;
+; ALU:alu|zero                                                 ; Lost fanout                            ;
+; Controle:controle|EscCondCP                                  ; Lost fanout                            ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[9,10]   ; Stuck at GND due to stuck port data_in ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[9,10]   ; Stuck at GND due to stuck port data_in ;
+; PC[0]                                                        ; Merged with dadoBanco[0]               ;
+; PC[1]                                                        ; Merged with dadoBanco[1]               ;
+; PC[2]                                                        ; Merged with dadoBanco[2]               ;
+; PC[3]                                                        ; Merged with dadoBanco[3]               ;
+; Total Number of Removed Registers = 36                       ;                                        ;
++--------------------------------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                     ;
++-------------------------+---------------------------+-------------------------------------------+
+; Register name           ; Reason for Removal        ; Registers Removed due to This Register    ;
++-------------------------+---------------------------+-------------------------------------------+
+; Controle:controle|EscCP ; Stuck at VCC              ; ALU:alu|zero, Controle:controle|EscCondCP ;
+;                         ; due to stuck port data_in ;                                           ;
++-------------------------+---------------------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -303,12 +336,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 225   ;
-; Number of registers using Synchronous Clear  ; 13    ;
+; Total registers                              ; 196   ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 75    ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -330,27 +363,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Banco_registradores:banco|registradores_rtl_0_bypass[14] ; 1       ;
 ; Banco_registradores:banco|registradores_rtl_0_bypass[16] ; 1       ;
 ; Banco_registradores:banco|registradores_rtl_0_bypass[18] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[20] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[22] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[24] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[26] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[42] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[42] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[40] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[40] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[38] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[38] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[36] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[36] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[34] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[34] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[32] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[32] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_1_bypass[30] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[30] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[20] ; 2       ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[22] ; 2       ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[24] ; 2       ;
+; Banco_registradores:banco|registradores_rtl_0_bypass[26] ; 2       ;
 ; Banco_registradores:banco|registradores_rtl_1_bypass[28] ; 1       ;
-; Banco_registradores:banco|registradores_rtl_0_bypass[28] ; 1       ;
-; Total number of inverted registers = 32                  ;         ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[30] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[32] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[34] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[36] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[38] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[40] ; 1       ;
+; Banco_registradores:banco|registradores_rtl_1_bypass[42] ; 1       ;
+; Total number of inverted registers = 24                  ;         ;
 +----------------------------------------------------------+---------+
 
 
@@ -448,20 +473,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+-----------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 16:1               ; 3 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |Processador|ALU:alu|resultado[1] ;
-; 12:1               ; 12 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |Processador|ALU:alu|resultado[4] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Processador|endRegA              ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Processador|endRegB              ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Processador|ALU:alu|Add0         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Processador|ALU:alu|Add0         ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Processador|ALU:alu|Add0         ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |Processador|ALU:alu|Add0         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 16:1               ; 16 bits   ; 160 LEs       ; 32 LEs               ; 128 LEs                ; Yes        ; |Processador|ALU:alu|resultado[12] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -480,6 +507,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+--------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
 +---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memoria|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------+
+; Parameter Name                     ; Value                ; Type                             ;
++------------------------------------+----------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                          ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                          ;
+; WIDTH_A                            ; 16                   ; Signed Integer                   ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                   ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WIDTH_B                            ; 1                    ; Untyped                          ;
+; WIDTHAD_B                          ; 1                    ; Untyped                          ;
+; NUMWORDS_B                         ; 1                    ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                   ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; INIT_FILE                          ; MemoriaInstrucao.mif ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_75b1      ; Untyped                          ;
++------------------------------------+----------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -609,7 +697,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------+
 ; Name                                      ; Value                                                    ;
 +-------------------------------------------+----------------------------------------------------------+
-; Number of entity instances                ; 2                                                        ;
+; Number of entity instances                ; 3                                                        ;
+; Entity Instance                           ; Memoria:memoria|altsyncram:altsyncram_component          ;
+;     -- OPERATION_MODE                     ; ROM                                                      ;
+;     -- WIDTH_A                            ; 16                                                       ;
+;     -- NUMWORDS_A                         ; 4096                                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                             ;
+;     -- WIDTH_B                            ; 1                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                ;
 ; Entity Instance                           ; Banco_registradores:banco|altsyncram:registradores_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                ;
 ;     -- WIDTH_A                            ; 16                                                       ;
@@ -635,16 +734,82 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu"                                                                                                                                                                             ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; codop    ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; neg      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                         ;
-; zero     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                         ;
-; overflow ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                         ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux_3_to_1:muxPosAlu"                                                                                                                                                                        ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data2[15..12]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; select           ; Input  ; Warning  ; Input port expression (2 bits) is wider than the input port (1 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; resultado[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                                                                                                                              ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; codop     ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; operando1 ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "operando1[15..1]" will be connected to GND.                              ;
+; neg       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                         ;
+; overflow  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                         ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Mux_3_to_1:muxAluB" ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; data1[15..1] ; Input ; Info     ; Stuck at GND ;
+; data1[0]     ; Input ; Info     ; Stuck at VCC ;
+; data2[15..4] ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Mux_2_to_1:muxAluA"                                                                                                                                                                     ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; regA      ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (5 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; pc        ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "pc[4..4]" will be connected to GND.                                         ;
+; resultado ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (5 bits) it drives; bit(s) "resultado[15..5]" have no fanouts                                                     ;
+; resultado ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Banco_registradores:banco"                                                                      ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; regsaidaA[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Memoria:memoria"                                                                                                                                    ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "address[11..4]" will be connected to GND. ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controle:controle"                                                                                                                                                                       ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                                          ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; opcode       ; Input  ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ULA_OP       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (5 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.            ;
+; ULA_OP[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
+; ULA_B[1]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
+; EscIR        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
+; FonteCP[1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                              ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -652,25 +817,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 79                          ;
-; cycloneiii_ff         ; 225                         ;
-;     ENA               ; 59                          ;
-;     ENA SCLR          ; 12                          ;
+; boundary_port         ; 61                          ;
+; cycloneiii_ff         ; 196                         ;
+;     ENA               ; 44                          ;
 ;     ENA SLD           ; 4                           ;
-;     SCLR              ; 1                           ;
-;     plain             ; 149                         ;
-; cycloneiii_lcell_comb ; 249                         ;
-;     arith             ; 31                          ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 218                         ;
+;     plain             ; 148                         ;
+; cycloneiii_lcell_comb ; 143                         ;
+;     arith             ; 15                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 128                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 51                          ;
-;         4 data inputs ; 162                         ;
-; cycloneiii_ram_block  ; 32                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 110                         ;
+; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 2.35                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -679,7 +841,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -689,23 +851,78 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Oct 16 14:45:29 2017
+    Info: Processing started: Mon Nov 06 14:24:57 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file Processador.v
-    Info (12023): Found entity 1: Processador File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Banco_registradores.v
-    Info (12023): Found entity 1: Banco_registradores File: /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
-    Info (12023): Found entity 1: ALU File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux3to1.v
+    Info (12023): Found entity 1: Mux_3_to_1 File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: Mux_2_to_1 File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file processador.v
+    Info (12023): Found entity 1: Processador File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file banco_registradores.v
+    Info (12023): Found entity 1: Banco_registradores File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conversor7segmentos.v
-    Info (12023): Found entity 1: conversor7segmentos File: /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v Line: 1
+    Info (12023): Found entity 1: conversor7segmentos File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memoria.v
+    Info (12023): Found entity 1: Memoria File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file controle.v
+    Info (12023): Found entity 1: Controle File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Processador.v(105): created implicit net for "resultadoMux1Alu" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 105
 Info (12127): Elaborating entity "Processador" for the top level hierarchy
-Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 38
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 51
-Warning (10034): Output port "zero" at ALU.v(9) has no driver File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 9
-Info (12128): Elaborating entity "conversor7segmentos" for hierarchy "conversor7segmentos:conversor7" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 58
+Warning (10230): Verilog HDL assignment warning at Processador.v(143): truncated value with size 16 to match size of target (4) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 143
+Warning (10230): Verilog HDL assignment warning at Processador.v(145): truncated value with size 32 to match size of target (4) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 145
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:controle" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 38
+Warning (10230): Verilog HDL assignment warning at Controle.v(30): truncated value with size 32 to match size of target (2) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 30
+Warning (10230): Verilog HDL assignment warning at Controle.v(41): truncated value with size 32 to match size of target (2) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 41
+Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:memoria" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 46
+Info (12128): Elaborating entity "altsyncram" for hierarchy "Memoria:memoria|altsyncram:altsyncram_component" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 82
+Info (12130): Elaborated megafunction instantiation "Memoria:memoria|altsyncram:altsyncram_component" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 82
+Info (12133): Instantiated megafunction "Memoria:memoria|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "MemoriaInstrucao.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "4096"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "12"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_75b1.tdf
+    Info (12023): Found entity 1: altsyncram_75b1 File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_75b1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_75b1" for hierarchy "Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 70
+Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 80
+Warning (10230): Verilog HDL assignment warning at Mux2to1.v(12): truncated value with size 5 to match size of target (4) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v Line: 12
+Warning (10240): Verilog HDL Always Construct warning at Mux2to1.v(8): inferring latch(es) for variable "extData", which holds its previous value in one or more paths through the always construct File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v Line: 8
+Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 97
+Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(8): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 8
+Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(13) File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 109
+Info (12128): Elaborating entity "conversor7segmentos" for hierarchy "conversor7segmentos:conversor7" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 219
 Warning (276020): Inferred RAM node "Banco_registradores:banco|registradores_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "Banco_registradores:banco|registradores_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
@@ -762,7 +979,7 @@ Info (12133): Instantiated megafunction "Banco_registradores:banco|altsyncram:re
     Info (12134): Parameter "INIT_FILE" = "db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d8n1.tdf
-    Info (12023): Found entity 1: altsyncram_d8n1 File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_d8n1 File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 28
 Info (12130): Elaborated megafunction instantiation "Banco_registradores:banco|altsyncram:registradores_rtl_1"
 Info (12133): Instantiated megafunction "Banco_registradores:banco|altsyncram:registradores_rtl_1" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -781,33 +998,45 @@ Info (12133): Instantiated megafunction "Banco_registradores:banco|altsyncram:re
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a8" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 278
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a9" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 308
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a10" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 338
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a11" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 368
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a12" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 398
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a13" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 428
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a14" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 458
+        Warning (14320): Synthesized away node "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ram_block1a15" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 488
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated|ALTSYNCRAM" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 38
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ALTSYNCRAM" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 38
-Info (144001): Generated suppressed messages file /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 8 MSB VCC or GND address nodes from RAM block "Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated|ALTSYNCRAM" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_75b1.tdf Line: 32
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_d8n1:auto_generated|ALTSYNCRAM" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 38
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_d8n1:auto_generated|ALTSYNCRAM" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_d8n1.tdf Line: 38
+Info (144001): Generated suppressed messages file C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "SW[16]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[17]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 4
-Info (21057): Implemented 478 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 23 input pins
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 3
+Info (21057): Implemented 343 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 367 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 1023 megabytes
-    Info: Processing ended: Mon Oct 16 14:45:38 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 242 logic cells
+    Info (21064): Implemented 40 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 677 megabytes
+    Info: Processing ended: Mon Nov 06 14:25:15 2017
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg.
+The suppressed messages can be found in C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.map.smsg.
 
 

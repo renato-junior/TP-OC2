@@ -1,4 +1,4 @@
-module Processador(CLOCK_50, KEY, memi_out, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
+module Processador(CLOCK_50, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
 input CLOCK_50;
 input [3:0] KEY;
 //input [15:0] SW;
@@ -10,37 +10,38 @@ output [6:0] HEX4;
 output [6:0] HEX5;
 output [6:0] HEX6;
 output [6:0] HEX7;
-
+wire [15:0] memi_out;
 reg [3:0] PC;
-reg [15:0] memi_out;
 reg [15:0] extPC;
-reg zero;
+wire zero;
 integer aux;
 
 //Componentes unidade de controle
-reg [4:0] codeop;
-reg aluA, bancoRW, escCondCp, escCp, escIr;
-reg [1:0]aluB;  
-reg [1:0]fonteCp;
+wire [4:0] codeop;
+wire [4:0] ULA_OP;
+assign codeop = memi_out[15:12];
+wire aluA, bancoRW, escCondCp, escCp, escIr;
+wire [1:0]aluB;  
+wire [1:0]fonteCp;
 
 Controle controle(
 	.clk(CLOCK_50),
 	.opcode(codeop),
 	.EscCondCP(escCondCp),
 	.EscCP(escCp),
-	.ULA_OP(codeop),
+	.ULA_OP(ULA_OP),
 	.ULA_A(aluA),
 	.ULA_B(aluB),
 	.EscIR(escIr),
-	.FonteCp(fonteCp),
+	.FonteCP(fonteCp),
 	.EscReg(bancoRW)
 );
 
 
 Memoria memoria(
 	
-	.address(PC);
-	.clock(CLOCK_50);
+	.address(PC),
+	.clock(CLOCK_50),
 	.q (memi_out)
 );
 
@@ -69,7 +70,7 @@ Banco_registradores banco(
 );
 
 //Componentes do MUX 2 to 1
-reg [4:0] resultadoMuxAluA;
+wire [4:0] resultadoMuxAluA;
 
 Mux_2_to_1 muxAluA(
 	.select(aluA),
@@ -80,16 +81,17 @@ Mux_2_to_1 muxAluA(
 
 //Componentes do MUX 3 to 1 ALU
 reg [15:0] data = 16'd1;
-reg [15:0] extEndRegB;
-reg [15:0] resultadoMuxAluB;
+wire [15:0] extEndRegB;
+wire [15:0] j_imm;
+wire [15:0] resultadoMuxAluB;
 
-extEndRegB[3:0] = endRegB;
-extEndRegB[15:4] = 12'd0;
+assign extEndRegB[3:0] = endRegB[3:0];
+assign extEndRegB[15:4] = 12'd0;
 
 Mux_3_to_1 muxAluB(
 	.data0(saidaB),
 	.data1(data),
-	.data2(extEndRegB)
+	.data2(extEndRegB),
 	.select(aluB),
 	.resultado(resultadoMuxAluB)
 );
@@ -109,8 +111,8 @@ ALU alu(
 //Componentes do ultimo Mux 3 to 1
 wire [15:0] resultadoMux;
 
-j_imm[11:0] = memi_out[11:0];
-j_imm[15:12] = 4'b0;
+assign j_imm[11:0] = memi_out[11:0];
+assign j_imm[15:12] = 4'b0;
 
 Mux_3_to_1 muxPosAlu(
 	.data0(resultadoALU),
@@ -137,7 +139,7 @@ begin
 	
 	//logica do PC
 	
-	if (EscCP || (EscCondCP && zero )) begin
+	if (escCp || (escCondCp && zero )) begin
 		PC = resultadoMux;
 	end else begin
 		PC = PC + 4;
@@ -147,7 +149,8 @@ begin
 //		aux = 1;
 //		bancoRW = 0;
 		flagimm = 0;
-		codeop = memi_out[15:12];
+
+		
 		if(codeop == 4'd0) begin
 			endRegC = memi_out[11:8];
 			endRegA = memi_out[7:4];
@@ -206,9 +209,8 @@ begin
 		dadoBanco = resultadoALU;
 //	end
 end
- 
-endmodule
- 
+
+
  
  conversor7segmentos conversor7(
 	.clk(CLOCK_50),
@@ -253,4 +255,7 @@ conversor7segmentos conversor0(
 
 
 
+ 
+endmodule
+ 
  
