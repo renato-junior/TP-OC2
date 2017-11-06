@@ -60,6 +60,18 @@ HEX7[3] <= conversor7segmentos:conversor7.z
 HEX7[4] <= conversor7segmentos:conversor7.z
 HEX7[5] <= conversor7segmentos:conversor7.z
 HEX7[6] <= conversor7segmentos:conversor7.z
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
+reset => PC.OUTPUTSELECT
 
 
 |Processador|Controle:controle
@@ -147,7 +159,7 @@ FonteCP[1] <= FonteCP[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 EscReg <= EscReg~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Processador|Memoria:memoria
+|Processador|memoria:memoria_inst
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -179,7 +191,7 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|Processador|Memoria:memoria|altsyncram:altsyncram_component
+|Processador|memoria:memoria_inst|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -201,22 +213,22 @@ data_a[13] => ~NO_FANOUT~
 data_a[14] => ~NO_FANOUT~
 data_a[15] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_75b1:auto_generated.address_a[0]
-address_a[1] => altsyncram_75b1:auto_generated.address_a[1]
-address_a[2] => altsyncram_75b1:auto_generated.address_a[2]
-address_a[3] => altsyncram_75b1:auto_generated.address_a[3]
-address_a[4] => altsyncram_75b1:auto_generated.address_a[4]
-address_a[5] => altsyncram_75b1:auto_generated.address_a[5]
-address_a[6] => altsyncram_75b1:auto_generated.address_a[6]
-address_a[7] => altsyncram_75b1:auto_generated.address_a[7]
-address_a[8] => altsyncram_75b1:auto_generated.address_a[8]
-address_a[9] => altsyncram_75b1:auto_generated.address_a[9]
-address_a[10] => altsyncram_75b1:auto_generated.address_a[10]
-address_a[11] => altsyncram_75b1:auto_generated.address_a[11]
+address_a[0] => altsyncram_ds91:auto_generated.address_a[0]
+address_a[1] => altsyncram_ds91:auto_generated.address_a[1]
+address_a[2] => altsyncram_ds91:auto_generated.address_a[2]
+address_a[3] => altsyncram_ds91:auto_generated.address_a[3]
+address_a[4] => altsyncram_ds91:auto_generated.address_a[4]
+address_a[5] => altsyncram_ds91:auto_generated.address_a[5]
+address_a[6] => altsyncram_ds91:auto_generated.address_a[6]
+address_a[7] => altsyncram_ds91:auto_generated.address_a[7]
+address_a[8] => altsyncram_ds91:auto_generated.address_a[8]
+address_a[9] => altsyncram_ds91:auto_generated.address_a[9]
+address_a[10] => altsyncram_ds91:auto_generated.address_a[10]
+address_a[11] => altsyncram_ds91:auto_generated.address_a[11]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_75b1:auto_generated.clock0
+clock0 => altsyncram_ds91:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -226,29 +238,29 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_75b1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_75b1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_75b1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_75b1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_75b1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_75b1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_75b1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_75b1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_75b1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_75b1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_75b1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_75b1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_75b1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_75b1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_75b1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_75b1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_ds91:auto_generated.q_a[0]
+q_a[1] <= altsyncram_ds91:auto_generated.q_a[1]
+q_a[2] <= altsyncram_ds91:auto_generated.q_a[2]
+q_a[3] <= altsyncram_ds91:auto_generated.q_a[3]
+q_a[4] <= altsyncram_ds91:auto_generated.q_a[4]
+q_a[5] <= altsyncram_ds91:auto_generated.q_a[5]
+q_a[6] <= altsyncram_ds91:auto_generated.q_a[6]
+q_a[7] <= altsyncram_ds91:auto_generated.q_a[7]
+q_a[8] <= altsyncram_ds91:auto_generated.q_a[8]
+q_a[9] <= altsyncram_ds91:auto_generated.q_a[9]
+q_a[10] <= altsyncram_ds91:auto_generated.q_a[10]
+q_a[11] <= altsyncram_ds91:auto_generated.q_a[11]
+q_a[12] <= altsyncram_ds91:auto_generated.q_a[12]
+q_a[13] <= altsyncram_ds91:auto_generated.q_a[13]
+q_a[14] <= altsyncram_ds91:auto_generated.q_a[14]
+q_a[15] <= altsyncram_ds91:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Processador|Memoria:memoria|altsyncram:altsyncram_component|altsyncram_75b1:auto_generated
+|Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -480,12 +492,10 @@ regA[0] => registradores.RADDR
 regA[1] => registradores.RADDR1
 regA[2] => registradores.RADDR2
 regA[3] => registradores.RADDR3
-regA[4] => registradores.RADDR4
 regB[0] => registradores.PORTBRADDR
 regB[1] => registradores.PORTBRADDR1
 regB[2] => registradores.PORTBRADDR2
 regB[3] => registradores.PORTBRADDR3
-regB[4] => registradores.PORTBRADDR4
 dado[0] => registradores.data_a[0].DATAIN
 dado[0] => registradores.DATAIN
 dado[1] => registradores.data_a[1].DATAIN
@@ -526,8 +536,6 @@ regC[2] => registradores.waddr_a[2].DATAIN
 regC[2] => registradores.WADDR2
 regC[3] => registradores.waddr_a[3].DATAIN
 regC[3] => registradores.WADDR3
-regC[4] => registradores.waddr_a[4].DATAIN
-regC[4] => registradores.WADDR4
 RW => registradores.we_a.DATAIN
 RW => regsaidaB[0]~reg0.ENA
 RW => regsaidaB[1]~reg0.ENA
@@ -595,7 +603,6 @@ flagImediato => regsaidaA.OUTPUTSELECT
 flagImediato => regsaidaA.OUTPUTSELECT
 flagImediato => regsaidaA.OUTPUTSELECT
 clk => registradores.we_a.CLK
-clk => registradores.waddr_a[4].CLK
 clk => registradores.waddr_a[3].CLK
 clk => registradores.waddr_a[2].CLK
 clk => registradores.waddr_a[1].CLK

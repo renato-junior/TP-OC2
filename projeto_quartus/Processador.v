@@ -1,4 +1,4 @@
-module Processador(CLOCK_50, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
+module Processador(CLOCK_50, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, reset);
 input CLOCK_50;
 input [3:0] KEY;
 //input [15:0] SW;
@@ -11,14 +11,16 @@ output [6:0] HEX5;
 output [6:0] HEX6;
 output [6:0] HEX7;
 wire [15:0] memi_out;
-reg [3:0] PC;
+reg [11:0] PC;
 reg [15:0] extPC;
 wire zero;
 integer aux;
+input reset;
 
 //Componentes unidade de controle
-wire [4:0] codeop;
-wire [4:0] ULA_OP;
+
+wire [3:0] codeop;
+wire [3:0] ULA_OP;
 assign codeop = memi_out[15:12];
 wire aluA, bancoRW, escCondCp, escCp, escIr;
 wire [1:0]aluB;  
@@ -38,7 +40,7 @@ Controle controle(
 );
 
 
-Memoria memoria(
+memoria memoria_inst(
 	
 	.address(PC),
 	.clock(CLOCK_50),
@@ -47,9 +49,9 @@ Memoria memoria(
 
 
 //Componentes do Banco de Registradores
-reg [4:0] endRegA;
-reg [4:0] endRegB;
-reg [4:0] endRegC;
+reg [3:0] endRegA;
+reg [3:0] endRegB;
+reg [3:0] endRegC;
 reg [15:0] dadoBanco;
 reg [15:0] imm;
 reg flagimm;
@@ -70,7 +72,7 @@ Banco_registradores banco(
 );
 
 //Componentes do MUX 2 to 1
-wire [4:0] resultadoMuxAluA;
+wire [15:0] resultadoMuxAluA;
 
 Mux_2_to_1 muxAluA(
 	.select(aluA),
@@ -102,7 +104,7 @@ wire [15:0] resultadoALU;
 ALU alu(
 	.clk(CLOCK_50),
 	.codop(codeop),
-	.operando1(resultadoMux1Alu),
+	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
 	.resultado(resultadoALU),
 	.zero(zero)
@@ -138,11 +140,14 @@ begin
 //	end
 	
 	//logica do PC
+	if (reset) begin 
+	PC = 15'b0;
+	end
 	
 	if (escCp || (escCondCp && zero )) begin
 		PC = resultadoMux;
 	end else begin
-		PC = PC + 4;
+		PC = PC + 1'b1;
 	end
 	
 //	if(KEY[3] == 0) begin

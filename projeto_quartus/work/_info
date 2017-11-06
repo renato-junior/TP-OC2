@@ -1,0 +1,206 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/17.0
+vALU
+Z0 !s110 1510002369
+!i10b 1
+!s100 U>i30[RjQ=P^fYnaJ0fZ_2
+I3i89e602>f7MBkVXPXh9S2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus
+w1509984451
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1510002369.000000
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@l@u
+vBanco_registradores
+Z7 !s110 1510002370
+!i10b 1
+!s100 T:deD0n^75kKNA_LRhYEG0
+IA1:7C<B9QC`g8G274>WhK0
+R1
+R2
+w1509998473
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
+!i113 1
+R5
+R6
+n@banco_registradores
+vControle
+R7
+!i10b 1
+!s100 4lAa_MaFgVN<7F:UQMmS13
+IY5T@M`8Bn^TVHDzk[z_3T0
+R1
+R2
+Z8 w1509983759
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1510002370.000000
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
+!i113 1
+R5
+R6
+n@controle
+vconversor7segmentos
+R7
+!i10b 1
+!s100 NC2IG53:GIZh7PDQ_=DZ=1
+IT:0gEkmPBPRQ4e4T679<=1
+R1
+R2
+R8
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v|
+!i113 1
+R5
+R6
+vMemoria
+!s110 1510000168
+!i10b 1
+!s100 ^5Yg]lcO@eXf3]n@bcnM]2
+I6V<::n8c?jf[[4?4@N[F[1
+R1
+R2
+R8
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria_bb.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria_bb.v
+Z10 L0 35
+R3
+r1
+!s85 0
+31
+!s108 1510000168.000000
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria_bb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Memoria_bb.v|
+!i113 1
+R5
+R6
+n@memoria
+vmemoria
+R7
+!i10b 1
+!s100 ]@PGS]WSD0D_:kGkJ1fA[0
+II44h6Iz[b:aT6^K`D5@6B0
+R1
+R2
+w1510001028
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v
+R10
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v|
+!i113 1
+R5
+R6
+vMux_2_to_1
+R7
+!i10b 1
+!s100 Pl?KY=Bkl4UEYnh5Y;GMA1
+In;E@?4TLXDb=XMCEmYYcA3
+R1
+R2
+w1509985256
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
+!i113 1
+R5
+R6
+n@mux_2_to_1
+vMux_3_to_1
+R7
+!i10b 1
+!s100 ecF=zGIQKk3?UMJCEl6El3
+IChT2D522jNn@`3;<3h>o?2
+R1
+R2
+R8
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
+!i113 1
+R5
+R6
+n@mux_3_to_1
+vProcessador
+R0
+!i10b 1
+!s100 C_mVo807i[c5n`JkcRBjo2
+IL@cZ9n<?V3zXoY_5;kDm00
+R1
+R2
+w1510002059
+8C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
+FC:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
+!i113 1
+R5
+R6
+n@processador
