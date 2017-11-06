@@ -15,7 +15,7 @@ reg [15:0] registradores [15:0];
 integer i;
 
 initial begin
-	for(i = 0; i < 15; i=i+1) begin
+	for(i = 0; i < 16; i=i+1) begin
 		registradores[i] <= 16'b0;
 	end
 end

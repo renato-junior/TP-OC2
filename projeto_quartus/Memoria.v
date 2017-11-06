@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: memoria.v
+// File Name: Memoria.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -37,7 +37,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module memoria (
+module Memoria (
 	address,
 	clock,
 	q);
@@ -84,12 +84,7 @@ module memoria (
 		altsyncram_component.address_aclr_a = "NONE",
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-`ifdef NO_PLI
-		altsyncram_component.init_file = "memi.rif"
-`else
-		altsyncram_component.init_file = "memi.hex"
-`endif
-,
+		altsyncram_component.init_file = "MemoriaInicia.mif",
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
@@ -124,7 +119,7 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "memi.hex"
+// Retrieval info: PRIVATE: MIFfilename STRING "MemoriaInicia.mif"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "4096"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
@@ -139,7 +134,7 @@ endmodule
 // Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "NONE"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
-// Retrieval info: CONSTANT: INIT_FILE STRING "memi.hex"
+// Retrieval info: CONSTANT: INIT_FILE STRING "MemoriaInicia.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
@@ -162,4 +157,10 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL memoria.bsf FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL memoria_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL memoria_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL Memoria_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

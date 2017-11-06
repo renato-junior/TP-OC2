@@ -1,15 +1,5 @@
-module Processador(CLOCK_50, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7, reset);
+module Processador(CLOCK_50, reset);
 input CLOCK_50;
-input [3:0] KEY;
-//input [15:0] SW;
-output [6:0] HEX0;
-output [6:0] HEX1;
-output [6:0] HEX2;
-output [6:0] HEX3;
-output [6:0] HEX4;
-output [6:0] HEX5;
-output [6:0] HEX6;
-output [6:0] HEX7;
 wire [15:0] memi_out;
 reg [11:0] PC;
 reg [15:0] extPC;
@@ -40,7 +30,7 @@ Controle controle(
 );
 
 
-memoria memoria_inst(
+Memoria memoria_inst(
 	
 	.address(PC),
 	.clock(CLOCK_50),
@@ -127,17 +117,6 @@ Mux_3_to_1 muxPosAlu(
  
  always @(posedge CLOCK_50)
 begin
-//	if(aux == 1)  begin
-//		bancoRW = 1;
-//		aux = 0;
-//	end
-
-//	if(KEY[0] == 0) begin
-//		endRegA = memi_out[11:8];
-//		endRegB = memi_out[7:4];
-//		bancoRW = 0;
-//		flagimm = 0;
-//	end
 	
 	//logica do PC
 	if (reset) begin 
@@ -149,10 +128,7 @@ begin
 	end else begin
 		PC = PC + 1'b1;
 	end
-	
-//	if(KEY[3] == 0) begin
-//		aux = 1;
-//		bancoRW = 0;
+
 		flagimm = 0;
 
 		
@@ -212,52 +188,7 @@ begin
 			flagimm = 1;
 		end
 		dadoBanco = resultadoALU;
-//	end
 end
-
-
- 
- conversor7segmentos conversor7(
-	.clk(CLOCK_50),
-	.dado(saidaA[7:4]),
-	.z(HEX7)
-);
-conversor7segmentos conversor6(
-	.clk(CLOCK_50),
-	.dado(saidaA[3:0]),
-	.z(HEX6)
-);
-conversor7segmentos conversor5(
-	.clk(CLOCK_50),
-	.dado(saidaB[7:4]),
-	.z(HEX5)
-);
-conversor7segmentos conversor4(
-	.clk(CLOCK_50),
-	.dado(saidaB[3:0]),
-	.z(HEX4)
-);
-conversor7segmentos conversor3(
-	.clk(CLOCK_50),
-	.dado(resultadoALU[15:12]),
-	.z(HEX3)
-);
-conversor7segmentos conversor2(
-	.clk(CLOCK_50),
-	.dado(resultadoALU[11:8]),
-	.z(HEX2)
-);
-conversor7segmentos conversor1(
-	.clk(CLOCK_50),
-	.dado(resultadoALU[7:4]),
-	.z(HEX1)
-);
-conversor7segmentos conversor0(
-	.clk(CLOCK_50),
-	.dado(resultadoALU[3:0]),
-	.z(HEX0)
-);
-
 
 
  
