@@ -119,14 +119,14 @@ Mux_3_to_1 muxPosAlu(
 begin
 	
 	//logica do PC
-	if (reset) begin 
-	PC = 15'b0;
+	if (reset == 1) begin 
+		PC = 12'd0;
 	end
 	
 	if (escCp || (escCondCp && zero )) begin
-		PC = resultadoMux;
+		//PC = resultadoMux;
 	end else begin
-		PC = PC + 1'b1;
+		PC = PC + 12'd1;
 	end
 
 		flagimm = 0;

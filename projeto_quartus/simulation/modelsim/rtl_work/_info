@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1510007526
+Z1 !s110 1510008279
 !i10b 1
 !s100 U>i30[RjQ=P^fYnaJ0fZ_2
 IUToU]BSZUoa1jeOORho^N2
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1510007526.000000
+Z5 !s108 1510008279.000000
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
@@ -32,7 +32,7 @@ Z7 !s92 -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus
 Z8 tCvgOpt 0
 n@a@l@u
 vBanco_registradores
-R1
+Z9 !s110 1510008262
 !i10b 1
 !s100 O:D>D=?PRhf7bae=ezWVS2
 IT]]OiMGJd9B@W85Ejkk?z2
@@ -46,7 +46,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1510008262.000000
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
 !i113 1
@@ -123,7 +123,7 @@ R7
 R8
 n@memoria
 vMux_2_to_1
-R1
+R9
 !i10b 1
 !s100 Pl?KY=Bkl4UEYnh5Y;GMA1
 I[J39U]9XUEOZS37Oe?Mc_3
@@ -137,7 +137,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v|
 !i113 1
@@ -146,7 +146,7 @@ R7
 R8
 n@mux_2_to_1
 vMux_3_to_1
-R1
+R9
 !i10b 1
 !s100 ecF=zGIQKk3?UMJCEl6El3
 I5=AVe@JgSQ]l:8AE2BMc`0
@@ -160,7 +160,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v|
 !i113 1
@@ -169,13 +169,13 @@ R7
 R8
 n@mux_3_to_1
 vProcessador
-R1
+R9
 !i10b 1
-!s100 OQfIMZP68kPoekT_9?e782
-IO<^lSG@kX=Y[e]Q5F4WGa0
+!s100 J<?G5FE_F5d?@Z50PcOdk0
+IZT6HE=FRl9CS81ReOD`J?0
 R2
 R0
-w1510005713
+w1510008242
 8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 L0 1
@@ -183,7 +183,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
 !i113 1
