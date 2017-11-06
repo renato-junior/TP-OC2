@@ -18,8 +18,8 @@ begin
 			ULA_A = 0;
 			ULA_B = 00;
 			EscIR = 0;
-			FonteCP = 0;
-			EscReg = 0;
+			FonteCP = 00;
+			EscReg = 1;
 		end
 		
 	if (opcode == 4'd2 || opcode == 4'd6 || opcode == 4'd7 || opcode == 4'd8 || opcode == 4'd9 || opcode == 4'd10)	

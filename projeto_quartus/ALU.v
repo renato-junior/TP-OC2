@@ -1,10 +1,8 @@
 module ALU(clk, codop, operando1, operando2, imm, resultado, neg, zero, overflow);
 input clk;
 input [3:0] codop;
-input [3:0] pc;
 input [15:0] operando1;
 input [15:0] operando2;
-input [15:0] imm;
 output reg [15:0] resultado;
 output reg neg;
 output reg zero;
@@ -12,6 +10,7 @@ output reg overflow;
 
 always @(posedge clk)
 begin
+	zero = 0;
 	case (codop)
 		4'd0: begin
 			resultado = operando1 + operando2;
@@ -59,11 +58,12 @@ begin
          overflow <= (operando2[15] & ~imm[15] & ~resultado[15]) | (~operando2[15] & imm[15] & resultado[15]);
 		end
 		4'd11: begin
-			pc = imm;
+			resultado = operando1;
 		end
 		4'd12: begin
 			if (operando1 == 0) begin
-				pc = operando2;
+				resultado = operando2;
+				zero = 1;
 			end
 		end
 	endcase
