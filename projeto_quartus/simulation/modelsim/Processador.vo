@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
-// DATE "11/06/2017 19:02:55"
+// DATE "11/06/2017 19:32:50"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -3347,9 +3347,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a2 .port_a_address_width = 12;
@@ -3749,9 +3749,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a0 .port_a_address_width = 12;
@@ -3932,9 +3932,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a13 .port_a_address_width = 12;
@@ -4169,9 +4169,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a10 .port_a_address_width = 12;
@@ -4535,9 +4535,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a8 .port_a_address_width = 12;
@@ -5079,9 +5079,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a12 .port_a_address_width = 12;
@@ -7689,9 +7689,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a4 .port_a_address_width = 12;
@@ -7833,9 +7833,9 @@ cycloneive_ram_block \memoria_inst|altsyncram_component|auto_generated|ram_block
 // synopsys translate_off
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .data_interleave_offset_in_bits = 1;
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .data_interleave_width_in_bits = 1;
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .init_file = "memi.mif";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .init_file = "memi.hex";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .init_file_layout = "port_a";
-defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM";
+defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .logical_ram_name = "memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .operation_mode = "rom";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_address_clear = "none";
 defparam \memoria_inst|altsyncram_component|auto_generated|ram_block1a6 .port_a_address_width = 12;

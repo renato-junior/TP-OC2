@@ -1,5 +1,5 @@
 Fitter report for Processador
-Mon Nov 06 19:02:35 2017
+Mon Nov 06 19:32:30 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -30,7 +30,7 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
  22. Control Signals
  23. Global & Other Fast Signals
  24. Fitter RAM Summary
- 25. |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM
+ 25. |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM
  26. |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_f8n1:auto_generated|ALTSYNCRAM
  27. |Processador|Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_f8n1:auto_generated|ALTSYNCRAM
  28. Routing Usage Summary
@@ -74,7 +74,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov 06 19:02:35 2017       ;
+; Fitter Status                      ; Successful - Mon Nov 06 19:32:29 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -2332,7 +2332,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |conversor7segmentos:conversor7|       ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Processador|conversor7segmentos:conversor7                                                          ; conversor7segmentos ; work         ;
 ;    |memoria:memoria_inst|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Processador|memoria:memoria_inst                                                                    ; memoria             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Processador|memoria:memoria_inst|altsyncram:altsyncram_component                                    ; altsyncram          ; work         ;
-;          |altsyncram_ds91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated     ; altsyncram_ds91     ; work         ;
+;          |altsyncram_ms91:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 65536       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated     ; altsyncram_ms91     ; work         ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2432,7 +2432,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; endRegC~2                                                                                   ; LCCOMB_X103_Y11_N10 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; flagimm                                                                                     ; FF_X103_Y11_N31     ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
 ; flagimm~0                                                                                   ; LCCOMB_X103_Y11_N30 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|q_a[15] ; M9K_X104_Y12_N0     ; 36      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|q_a[15] ; M9K_X104_Y12_N0     ; 36      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
 +---------------------------------------------------------------------------------------------+---------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2452,14 +2452,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 ; Banco_registradores:banco|altsyncram:registradores_rtl_0|altsyncram_f8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256   ; 16                          ; 8                           ; 16                          ; 8                           ; 128                 ; 1    ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ; M9K_X104_Y7_N0                                                                                                                       ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 ; Banco_registradores:banco|altsyncram:registradores_rtl_1|altsyncram_f8n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 16           ; 16           ; 16           ; 16           ; yes                    ; no                      ; yes                    ; no                      ; 256   ; 16                          ; 16                          ; 16                          ; 16                          ; 256                 ; 1    ; db/Processador.ram0_Banco_registradores_10cb5bbb.hdl.mif ; M9K_X104_Y11_N0                                                                                                                      ; Old data             ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
-; memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM     ; AUTO ; ROM              ; Single Clock ; 4096         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 65536 ; 4096                        ; 16                          ; --                          ; --                          ; 65536               ; 8    ; memi.mif                                                 ; M9K_X104_Y15_N0, M9K_X104_Y12_N0, M9K_X104_Y14_N0, M9K_X104_Y8_N0, M9K_X104_Y9_N0, M9K_X104_Y10_N0, M9K_X104_Y16_N0, M9K_X104_Y13_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
+; memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM     ; AUTO ; ROM              ; Single Clock ; 4096         ; 16           ; --           ; --           ; yes                    ; no                      ; --                     ; --                      ; 65536 ; 4096                        ; 16                          ; --                          ; --                          ; 65536               ; 8    ; memi.hex                                                 ; M9K_X104_Y15_N0, M9K_X104_Y12_N0, M9K_X104_Y14_N0, M9K_X104_Y8_N0, M9K_X104_Y9_N0, M9K_X104_Y10_N0, M9K_X104_Y16_N0, M9K_X104_Y13_N0 ; Don't care           ; New data with NBE Read ; New data with NBE Read ; Off      ; No                     ; No - Unknown  ;
 +----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------------+------------------------+----------+------------------------+---------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
 RAM content values are presented in the following format: (Binary) (Octal) (Decimal) (Hexadecimal) 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ds91:auto_generated|ALTSYNCRAM                                                                                                                                                      ;
+; |Processador|memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_ms91:auto_generated|ALTSYNCRAM                                                                                                                                                      ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ;   Addr   ;              +0              ;              +1              ;              +2              ;              +3              ;              +4              ;              +5              ;              +6              ;              +7              ;
 +----------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+------------------------------+
@@ -3874,7 +3874,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -3887,7 +3887,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3899,10 +3899,10 @@ Warning (169177): 2 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 2
 Info (144001): Generated suppressed messages file C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 474 warnings
-    Info: Peak virtual memory: 1627 megabytes
-    Info: Processing ended: Mon Nov 06 19:02:37 2017
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 1620 megabytes
+    Info: Processing ended: Mon Nov 06 19:32:31 2017
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +----------------------------+

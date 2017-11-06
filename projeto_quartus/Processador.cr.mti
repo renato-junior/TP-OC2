@@ -1,100 +1,64 @@
-C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v
+C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria_bb.v 
 -- Compiling module memoria
 
 Top level modules:
 	memoria
-End time: 19:05:56 on Nov 06,2017, Elapsed time: 0:00:01
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/conversor7segmentos.v 
 -- Compiling module conversor7segmentos
 
 Top level modules:
 	conversor7segmentos
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:56 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v 
 -- Compiling module Mux_3_to_1
 
 Top level modules:
 	Mux_3_to_1
-End time: 19:05:56 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v {1 {vlog -work work -stats=none {C:\Users\optma-31\Documents\GitHub\TP-OC2\projeto_quartus\Processador.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v 
 -- Compiling module Processador
 
 Top level modules:
 	Processador
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v 
--- Compiling module ALU
-
-Top level modules:
-	ALU
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
-
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v 
--- Compiling module Controle
-
-Top level modules:
-	Controle
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
-
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/memoria.v 
 -- Compiling module memoria
 
 Top level modules:
 	memoria
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:55 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v 
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Controle
+
+Top level modules:
+	Controle
+
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module Banco_registradores
 
 Top level modules:
 	Banco_registradores
-End time: 19:05:55 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
-} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v {1 {vlog -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+} {} {}} C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v {1 {vlog -work work -stats=none C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-Start time: 19:05:56 on Nov 06,2017
-vlog -reportprogress 300 -work work C:/Users/optma-31/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v 
 -- Compiling module Mux_2_to_1
 
 Top level modules:
 	Mux_2_to_1
-End time: 19:05:56 on Nov 06,2017, Elapsed time: 0:00:00
-Errors: 0, Warnings: 0
 
 } {} {}}
