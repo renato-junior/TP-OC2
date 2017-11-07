@@ -104,15 +104,14 @@ ALU alu(
 wire [15:0] resultadoMux;
 
 assign j_imm[11:0] = memi_out[11:0];
-assign j_imm[15:12] = 4'b0;
 
-Mux_3_to_1 muxPosAlu(
-	.data0(resultadoALU),
-	.data1(resultadoALU),
-	.data2(j_imm),
-	.select(fonteCp),
-	.resultado(resultadoMux)
-);
+//Mux_3_to_1 muxPosAlu(
+//	.data0(resultadoALU),
+//	.data1(resultadoALU),
+//	.data2(j_imm),
+//	.select(fonteCp),
+//	.resultado(resultadoMux)
+//);
 
  
  always @(posedge CLOCK_50)
@@ -124,17 +123,16 @@ begin
 	end
 	
 	if(escCp == 1) begin
-		PC = PC + 12'd1;
+		if(fonteCp == 00) begin
+			PC = PC + 12'd1;
+		end  if(fonteCp == 01) begin //Se Branch
+			PC = resultadoALU[11:0];
+		end else if(fonteCp == 10) begin //Se Jump
+			PC = j_imm[11:0];
+		end
 	end
-	
-//	if (escCondCp == 1) begin
-//		if(zero == 1) begin
-//			PC = resultadoMux;
-//		end
-//	end
-
 		flagimm = 0;
-
+		
 		
 		if(codeop == 4'd0) begin
 			endRegC = memi_out[11:8];

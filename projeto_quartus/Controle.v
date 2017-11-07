@@ -47,7 +47,8 @@ begin
 		begin
 			if(estado == 0) begin
 				EscCondCP = 0;
-				EscCP = 0;
+				EscCP = 0;sim:/Processador/escIr
+
 				ULA_A = 1;
 				ULA_B = 00;   //operador imediato
 				EscIR = 0;
@@ -68,13 +69,21 @@ begin
 		
 	if (opcode == 4'd11)	//jump
 		begin
-			EscCondCP = 0;
-			EscCP = 1;
-			ULA_A = 0;
-			ULA_B = 10; //operador imediato
-			EscIR = 0;	//nao escreve na memoria
-			FonteCP = 00;
-			EscReg = 0;  //nao escreve no banco
+			if(estado == 0) begin
+				EscCondCP = 0;
+				EscCP = 0;
+				ULA_A = 0;
+				ULA_B = 10; //operador imediato
+				EscIR = 0;	//nao escreve na memoria
+				FonteCP = 10;
+				EscReg = 0;  //nao escreve no banco
+				estado = estado + 1;
+			end else if(estado == 2) begin 
+				EscCP = 1;
+				estado = estado + 1;
+			end else begin
+				estado = estado + 1;
+			end
 		end
 		
 	if (opcode == 4'd12)	
