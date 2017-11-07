@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1510078135
+Z1 !s110 1510094347
 !i10b 1
 !s100 U>i30[RjQ=P^fYnaJ0fZ_2
 IUToU]BSZUoa1jeOORho^N2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1509988884
+Z3 w1510004295
 8/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 L0 1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1510078135.000000
+Z5 !s108 1510094347.000000
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
@@ -38,7 +38,7 @@ R1
 IT]]OiMGJd9B@W85Ejkk?z2
 R2
 R0
-Z9 w1510077121
+Z9 w1510011064
 8/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
 L0 1
@@ -57,11 +57,11 @@ n@banco_registradores
 vControle
 R1
 !i10b 1
-!s100 VekOVngj;cOjG[Y[RR5TB2
-I[4a;1[i:gd;d;J;QRM@[b2
+!s100 E]2PJKdnNEKQPSZdcKO5]3
+IeeG>;zDJHBe013VX3ZK@?0
 R2
 R0
-R9
+w1510094316
 8/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 L0 1
@@ -78,7 +78,7 @@ R7
 R8
 n@controle
 vMemoria
-R1
+!s110 1510094348
 !i10b 1
 !s100 Lf@7DX6EV9:lef;m4VC]U1
 IM7jHU>Ik7:7eMQeL^BiPU0
@@ -107,7 +107,7 @@ R1
 IW@G5bzPbRYKH9=T2[S?kZ2
 R2
 R0
-R9
+w1510016947
 8/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
 L0 1
@@ -153,7 +153,7 @@ R1
 I:@zh1L6JB:PJfL;bVPFV00
 R2
 R0
-w1510078126
+w1510091566
 8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 L0 1
