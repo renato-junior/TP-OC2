@@ -11,91 +11,90 @@
 # 
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:22 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v 
 # -- Compiling module Mux_3_to_1
 # 
 # Top level modules:
 # 	Mux_3_to_1
-# End time: 20:44:22 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:22 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v 
 # -- Compiling module Mux_2_to_1
 # 
 # Top level modules:
 # 	Mux_2_to_1
-# End time: 20:44:22 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:22 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v 
 # -- Compiling module Processador
 # 
 # Top level modules:
 # 	Processador
-# End time: 20:44:22 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:22 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v 
 # -- Compiling module Banco_registradores
 # 
 # Top level modules:
 # 	Banco_registradores
-# End time: 20:44:22 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Load canceled
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:39 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 20:44:39 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:39 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v 
 # -- Compiling module conversor7segmentos
 # 
 # Top level modules:
 # 	conversor7segmentos
-# End time: 20:44:39 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:39 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v 
 # -- Compiling module Controle
 # 
 # Top level modules:
 # 	Controle
-# End time: 20:44:39 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:44:39 on Nov 06,2017
+# Start time: 22:24:49 on Nov 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v 
 # -- Compiling module Memoria
 # 
 # Top level modules:
 # 	Memoria
-# End time: 20:44:39 on Nov 06,2017, Elapsed time: 0:00:00
+# End time: 22:24:49 on Nov 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
 # stdin: <EOF>
 vsim -i -l msim_transcript work.ALU work.Banco_registradores work.Controle work.conversor7segmentos work.Memoria work.Mux_2_to_1 work.Mux_3_to_1 work.Processador -Lf altera_mf_ver
 # vsim -i -l msim_transcript work.ALU work.Banco_registradores work.Controle work.conversor7segmentos work.Memoria work.Mux_2_to_1 work.Mux_3_to_1 work.Processador -Lf altera_mf_ver 
-# Start time: 20:44:52 on Nov 06,2017
+# Start time: 22:25:05 on Nov 06,2017
 # Loading work.ALU
 # Loading work.Banco_registradores
 # Loading work.Controle
@@ -122,14 +121,8 @@ vsim -i -l msim_transcript work.ALU work.Banco_registradores work.Controle work.
 #    Time: 0 ps  Iteration: 0  Instance: /Processador/muxPosAlu File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v
 add wave -position end  sim:/Processador/CLOCK_50
 add wave -position end  sim:/Processador/reset
+force -freeze sim:/Processador/reset 1 0
 force -freeze sim:/Processador/CLOCK_50 1 0, 0 {50 ps} -r 100
-force -freeze sim:/Processador/reset 0HiZ 0
-# Invalid binary digit: H.
-# ** Error: (vsim-4011) Invalid force value: 0HiZ 0.
-# 
-force -freeze sim:/Processador/reset 0 0
-run
-force -freeze sim:/Processador/reset St1 0
 run
 force -freeze sim:/Processador/reset St0 0
 run
@@ -141,6 +134,5 @@ run
 run
 run
 run
-run
-# End time: 20:47:08 on Nov 06,2017, Elapsed time: 0:02:16
-# Errors: 1, Warnings: 7
+# End time: 22:28:56 on Nov 06,2017, Elapsed time: 0:03:51
+# Errors: 0, Warnings: 7
