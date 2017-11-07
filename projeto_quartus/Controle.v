@@ -31,10 +31,10 @@ begin
 				FonteCP = 00;
 				EscReg = 0;
 				estado = estado + 1;
-			end else if(estado == 4) begin 
+			end else if(estado == 5) begin 
 				EscReg = 1;
 				estado = estado + 1;
-			end else if(estado == 6) begin 
+			end else if(estado == 7) begin 
 				EscCP = 1;
 				EscReg = 0;
 				estado = 0;
@@ -54,10 +54,10 @@ begin
 				FonteCP = 00;
 				EscReg = 0;
 				estado = estado + 1;
-			end else if(estado == 4) begin 
+			end else if(estado == 5) begin 
 				EscReg = 1;
 				estado = estado + 1;
-			end else if(estado == 6) begin 
+			end else if(estado == 7) begin 
 				EscCP = 1;
 				EscReg = 0;
 				estado = 0;
