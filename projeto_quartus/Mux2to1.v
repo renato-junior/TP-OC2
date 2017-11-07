@@ -1,6 +1,6 @@
 module Mux_2_to_1(regA, pc, select, resultado);
-input [4:0] regA;
-input [4:0] pc;
+input [3:0] regA;
+input [3:0] pc;
 input select;
 output reg [15:0] resultado;
 reg [15:0] extData;
