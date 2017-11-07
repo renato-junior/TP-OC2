@@ -123,11 +123,15 @@ begin
 		PC = 12'd0;
 	end
 	
-	if (escCp || (escCondCp && zero )) begin
-		//PC = resultadoMux;
-	end else begin
+	if(escCp == 1) begin
 		PC = PC + 12'd1;
 	end
+	
+//	if (escCondCp == 1) begin
+//		if(zero == 1) begin
+//			PC = resultadoMux;
+//		end
+//	end
 
 		flagimm = 0;
 

@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1510016683
+Z1 !s110 1510078135
 !i10b 1
 !s100 U>i30[RjQ=P^fYnaJ0fZ_2
 IUToU]BSZUoa1jeOORho^N2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1510004295
+Z3 w1509988884
 8/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
 L0 1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1510016683.000000
+Z5 !s108 1510078135.000000
 !s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
@@ -38,7 +38,7 @@ R1
 IT]]OiMGJd9B@W85Ejkk?z2
 R2
 R0
-Z9 w1510011064
+Z9 w1510077121
 8/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
 L0 1
@@ -61,7 +61,7 @@ R1
 I[4a;1[i:gd;d;J;QRM@[b2
 R2
 R0
-w1510016669
+R9
 8/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
 L0 1
@@ -77,28 +77,6 @@ R6
 R7
 R8
 n@controle
-vconversor7segmentos
-R1
-!i10b 1
-!s100 NC2IG53:GIZh7PDQ_=DZ=1
-I>zlCdiFK^Yb_2Soc3gG?K0
-R2
-R0
-w1507947072
-8/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v
-L0 1
-R4
-r1
-!s85 0
-31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v|
-!i113 1
-R6
-R7
-R8
 vMemoria
 R1
 !i10b 1
@@ -125,11 +103,11 @@ n@memoria
 vMux_2_to_1
 R1
 !i10b 1
-!s100 Pl?KY=Bkl4UEYnh5Y;GMA1
-I[J39U]9XUEOZS37Oe?Mc_3
+!s100 fH76[bzPS<Zk^4eA7>SGK3
+IW@G5bzPbRYKH9=T2[S?kZ2
 R2
 R0
-R3
+R9
 8/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
 L0 1
@@ -171,11 +149,11 @@ n@mux_3_to_1
 vProcessador
 R1
 !i10b 1
-!s100 J<?G5FE_F5d?@Z50PcOdk0
-IZT6HE=FRl9CS81ReOD`J?0
+!s100 h08JH`=0DH44?^@m?TPJN0
+I:@zh1L6JB:PJfL;bVPFV00
 R2
 R0
-w1510011152
+w1510078126
 8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
 L0 1

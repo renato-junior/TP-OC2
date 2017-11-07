@@ -1,5 +1,5 @@
 Flow report for Processador
-Mon Nov  6 20:00:06 2017
+Tue Nov  7 16:00:54 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov  6 20:00:06 2017       ;
+; Flow Status                        ; Successful - Tue Nov  7 16:00:54 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 288                                         ;
-;     Total combinational functions  ; 198                                         ;
-;     Dedicated logic registers      ; 196                                         ;
-; Total registers                    ; 196                                         ;
-; Total pins                         ; 62                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 2                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 65,920                                      ;
+; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/06/2017 19:59:49 ;
+; Start date & time ; 11/07/2017 16:00:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processador         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 163683367109732.151000558909277        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 45015803704536.151007764513485         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -96,18 +96,18 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 1008 MB             ; 00:00:33                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 934 MB              ; 00:00:22                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+----------------------+--------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname   ; OS Name        ; OS Version ; Processor type ;
-+----------------------+--------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; renato-GA-78LMT-S2 ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
-+----------------------+--------------------+----------------+------------+----------------+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++----------------------+----------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname     ; OS Name        ; OS Version ; Processor type ;
++----------------------+----------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; renato-OptiPlex-5040 ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
++----------------------+----------------------+----------------+------------+----------------+
 
 
 ------------
