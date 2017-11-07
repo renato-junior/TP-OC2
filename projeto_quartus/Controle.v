@@ -15,6 +15,9 @@ end
 
 always @(posedge clk)
 begin
+	if(opcode != ULA_OP) begin
+		estado = 2'd0;
+	end
 	ULA_OP = opcode;
 	
 	if (opcode == 4'd0 || opcode == 4'd1 || opcode == 4'd3 || opcode == 4'd4 || opcode == 4'd5)
@@ -22,7 +25,7 @@ begin
 			if(estado == 2'd0) begin
 				EscCondCP = 0;
 				EscCP = 1;
-				ULA_A = 0;
+				ULA_A = 1;
 				ULA_B = 00;
 				EscIR = 0;
 				FonteCP = 00;
@@ -31,14 +34,14 @@ begin
 			end else if(estado == 2'd1) begin 
 				EscCondCP = 0;
 				EscCP = 1;
-				ULA_A = 0;
+				ULA_A = 1;
 				ULA_B = 00;
 				EscIR = 0;
 				FonteCP = 00;
-				EscReg = 1;
+				EscReg = 0;
 				estado = 2'd2;
 			end else if(estado == 2'd2) begin 
-				estado = 2'd0;
+				EscReg = 1;
 			end
 		end
 		
@@ -47,21 +50,23 @@ begin
 			if(estado == 2'd0) begin
 				EscCondCP = 0;
 				EscCP = 1;
-				ULA_A = 0;
-				ULA_B = 10;   //operador imediato
+				ULA_A = 1;
+				ULA_B = 00;   //operador imediato
 				EscIR = 0;
 				FonteCP = 00;
 				EscReg = 0;
+				estado = 2'd1;
 			end else if(estado == 2'd1) begin 
 				EscCondCP = 0;
 				EscCP = 1;
-				ULA_A = 0;
-				ULA_B = 10;   //operador imediato
+				ULA_A = 1;
+				ULA_B = 00;   //operador imediato
 				EscIR = 0;
 				FonteCP = 00;
-				EscReg = 1;
+				EscReg = 0;
+				estado = 2'd2;
 			end else if(estado == 2'd2) begin 
-				estado = 2'd0;
+				EscReg = 1;
 			end
 		end
 		
