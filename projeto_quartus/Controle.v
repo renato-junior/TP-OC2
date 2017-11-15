@@ -47,8 +47,7 @@ begin
 		begin
 			if(estado == 0) begin
 				EscCondCP = 0;
-				EscCP = 0;sim:/Processador/escIr
-
+				EscCP = 0;
 				ULA_A = 1;
 				ULA_B = 00;   //operador imediato
 				EscIR = 0;
