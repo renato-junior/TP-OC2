@@ -1,11 +1,9 @@
-module Banco_registradores(regA, regB, dado, regC, RW, imediato, flagImediato, clk, regsaidaA, regsaidaB);
+module Banco_registradores(regA, regB, dado, regC, RW, clk, regsaidaA, regsaidaB);
 input [3:0] regA;
 input [3:0] regB;
 input [15:0] dado;
 input [3:0] regC;
 input RW; //0 - leitura / 1 - escrita
-input [15:0] imediato;
-input flagImediato;
 input clk;
 output reg [15:0] regsaidaA;
 output reg [15:0] regsaidaB;
@@ -22,21 +20,17 @@ end
 
 
 
-always @(regA or regB or regC or dado or RW or imediato or flagImediato or clk)
+always @(regA or regB or regC or dado or RW or clk)
 begin
-		if(flagImediato == 0) 
-		begin
-			regsaidaA <= registradores[regA][15:0];
-		end else begin
-			regsaidaA <= imediato[15:0];
-		end
+
+		regsaidaA <= registradores[regA][15:0];
 		
 		regsaidaB <= registradores[regB][15:0];
 
 end
 
 
-always @(negedge clk) 
+always @(negedge clk) 			// fas a escrita na borda de descida, depois da leitura
 		begin
 		
 			if (RW==1) begin

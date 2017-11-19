@@ -22,10 +22,9 @@ wire [15:0] resL;
 wire	[3:0]  endRegC = memi_out[11:8];
 wire	[3:0]  endRegA = memi_out[7:4];
 wire	[3:0]  endRegB = memi_out[3:0];
-wire	[15:0] imm;
-wire flagimm;
-assign 		 imm[15:4] = 12'd0;
-assign   	 imm[3:0] = memi_out[7:4];
+//wire	[15:0] imm;
+//assign 		 imm[15:4] = 12'd0;
+//assign   	 imm[3:0] = memi_out[7:4];
 
 Controle controle(
 	.clk(CLOCK_50),
@@ -38,7 +37,6 @@ Controle controle(
 	.EscIR(escIr),
 	.FonteCP(fonteCp),
 	.EscReg(bancoRW),
-	.flagimm(flagimm),
 	.mul (mul_enable)
 );
 
@@ -63,8 +61,6 @@ Banco_registradores banco(
 	.regC(endRegC),
 	.RW(bancoRW),
 	.dado(resultadoALU),
-	.imediato(imm),
-	.flagImediato(flagimm),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
 	.regsaidaB(saidaB)
@@ -75,6 +71,7 @@ wire [15:0] resultadoMuxAluA;
 wire [15:0] resultadoMuxAluB;
 
 Mux_2_to_1 muxAluA(
+
 	.select(aluA),
 	.regA(saidaA),
 	.pc(PC),
