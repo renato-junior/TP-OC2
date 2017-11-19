@@ -7,165 +7,165 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/renato/Dev/TP-OC2/projeto_quartus/simulation/modelsim
+Z0 dC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1510098592
+Z1 !s110 1511056464
 !i10b 1
-!s100 U>i30[RjQ=P^fYnaJ0fZ_2
-IUToU]BSZUoa1jeOORho^N2
+!s100 SH@SG>_hUm>bIU9hQ@9hn3
+I21eXf;nW1ZNjAG5BnN?490
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1510004295
-8/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v
+w1511055465
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
 L0 1
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1510098592.000000
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v|
+Z4 !s108 1511056464.000000
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus
-Z8 tCvgOpt 0
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus
+Z7 tCvgOpt 0
 n@a@l@u
 vBanco_registradores
 R1
 !i10b 1
-!s100 O:D>D=?PRhf7bae=ezWVS2
-IT]]OiMGJd9B@W85Ejkk?z2
+!s100 [Q`40V>UZPbb6EFiA2XK13
+I]^9a]E?==fb;Y]46PSUob3
 R2
 R0
-Z9 w1510011064
-8/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v
+w1511056394
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v|
+R4
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@banco_registradores
 vControle
-R1
+!s110 1511056465
 !i10b 1
-!s100 VjZ:@LBA:g^AG18CiK`iX3
-IS<`Vh7;B:z7W>O:9IYfiC1
+!s100 KLCM0mcIhL4RA5U1Y?GiN0
+I9>c1d;a2eR4OL9ZU4>ll13
 R2
 R0
-w1510096212
-8/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v
+w1511055014
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v|
+!s108 1511056465.000000
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@controle
 vMemoria
-R1
+!s110 1511056467
 !i10b 1
 !s100 Lf@7DX6EV9:lef;m4VC]U1
-IM7jHU>Ik7:7eMQeL^BiPU0
+IFlnn3MgaclK_Z_DzX5R@<0
 R2
 R0
-R9
-8/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v
+Z8 w1510765474
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 L0 40
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v|
+!s108 1511056467.000000
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@memoria
 vMux_2_to_1
 R1
 !i10b 1
 !s100 fH76[bzPS<Zk^4eA7>SGK3
-IW@G5bzPbRYKH9=T2[S?kZ2
+IMfNi4VF_DA9hc;ITj<i2^0
 R2
 R0
-w1510016947
-8/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
+R8
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v|
+R4
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@mux_2_to_1
 vMux_3_to_1
 R1
 !i10b 1
 !s100 ecF=zGIQKk3?UMJCEl6El3
-I5=AVe@JgSQ]l:8AE2BMc`0
+I[>8mR2:hQFdX2LOZGhA@e3
 R2
 R0
-R3
-8/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v
+R8
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v|
+R4
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@mux_3_to_1
 vProcessador
 R1
 !i10b 1
-!s100 UFE8K>FToN@f1J8UGHKNZ3
-I6J;gMXJBej`Rh>4NUKz5F3
+!s100 Fg;2K82z2]Yfc;8DKXB=?2
+IOz37kY3`WSNWI6b3VL32C0
 R2
 R0
-w1510098584
-8/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
-F/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
+w1511053282
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/renato/Dev/TP-OC2/projeto_quartus|/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v|
+R4
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
 !i113 1
+R5
 R6
 R7
-R8
 n@processador

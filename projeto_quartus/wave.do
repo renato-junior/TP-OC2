@@ -2,10 +2,6 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /Processador/CLOCK_50
 add wave -noupdate /Processador/reset
-add wave -noupdate -radix unsigned /Processador/PC
-add wave -noupdate -radix unsigned /Processador/memoria_inst/address
-add wave -noupdate /Processador/memoria_inst/clock
-add wave -noupdate /Processador/memoria_inst/q
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {6202 ps} 0}
 quietly wave cursor active 1

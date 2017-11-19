@@ -8,7 +8,7 @@ output reg neg;
 output reg zero;
 output reg overflow;
 
-always @(posedge clk)
+always @(codop or operando1 or operando2 or clk)
 begin
 	zero = 0;
 	case (codop)

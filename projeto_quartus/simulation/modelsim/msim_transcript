@@ -1,3 +1,4 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
 # do Processador_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -6,148 +7,150 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying /opt/intelFPGA_lite/17.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v 
+# Start time: 23:54:24 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v 
 # -- Compiling module Mux_3_to_1
 # 
 # Top level modules:
 # 	Mux_3_to_1
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:24 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v 
+# Start time: 23:54:24 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v 
 # -- Compiling module Mux_2_to_1
 # 
 # Top level modules:
 # 	Mux_2_to_1
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:24 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v 
+# Start time: 23:54:24 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v 
 # -- Compiling module Processador
 # 
 # Top level modules:
 # 	Processador
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:24 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v 
+# Start time: 23:54:24 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v 
 # -- Compiling module Banco_registradores
 # 
 # Top level modules:
 # 	Banco_registradores
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:24 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v 
+# Start time: 23:54:24 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:24 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v 
+# Start time: 23:54:25 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v 
 # -- Compiling module Controle
 # 
 # Top level modules:
 # 	Controle
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:25 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v}
+do C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /Processador/CLOCK_50
+# add wave -noupdate /Processador/reset
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {6202 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 251
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {5799 ps} {100 ns}
+# view wave 
+# .main_pane.wave.interior.cs.body.pw.wf
+# wave clipboard store
+# wave create -driver freeze -pattern clock -initialvalue {-No Data-} -period 5ns -dutycycle 50 -starttime 0ns -endtime 100ns sim:/Processador/CLOCK_50 
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/processador/clock_50'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\Vinicius\Documents\GitHub\TP-OC2\projeto_quartus\wave.do line 25
+# wave create -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 100ns sim:/Processador/reset 
+# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/processador/reset'.
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\Vinicius\Documents\GitHub\TP-OC2\projeto_quartus\wave.do line 26
+# wave edit change_value -start 0ps -end 3500ps -value 1 Edit:/Processador/reset 
+# Netname is not editable or not present in the active waveform window
+# 
+# WaveCollapseAll -1
+# 0
+# wave clipboard restore
+# vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:49:52 on Nov 07,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/renato/Dev/TP-OC2/projeto_quartus" /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v 
+# Start time: 23:54:27 on Nov 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus" C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v 
 # -- Compiling module Memoria
 # 
 # Top level modules:
 # 	Memoria
-# End time: 21:49:52 on Nov 07,2017, Elapsed time: 0:00:00
+# End time: 23:54:27 on Nov 18,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# 
-# stdin: <EOF>
-vsim -i -l msim_transcript work.ALU work.Banco_registradores work.Controle work.Memoria work.Mux_2_to_1 work.Mux_3_to_1 work.Processador -Lf altera_mf_ver
-# vsim -i -l msim_transcript work.ALU work.Banco_registradores work.Controle work.Memoria work.Mux_2_to_1 work.Mux_3_to_1 work.Processador -Lf altera_mf_ver 
-# Start time: 21:50:05 on Nov 07,2017
-# Loading work.ALU
-# Loading work.Banco_registradores
+vsim -gui -l msim_transcript work.Processador -Lf altera_mf_ver
+# vsim -gui -l msim_transcript work.Processador -Lf altera_mf_ver 
+# Start time: 23:54:44 on Nov 18,2017
+# Loading work.Processador
 # Loading work.Controle
 # Loading work.Memoria
 # Loading altera_mf_ver.altsyncram
+# Loading work.Banco_registradores
 # Loading work.Mux_2_to_1
 # Loading work.Mux_3_to_1
-# Loading work.Processador
+# Loading work.ALU
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(67): [PCDPC] - Port size (4) does not match connection size (16) for port 'regA'. The port definition is at: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluA File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
-# ** Warning: (vsim-3015) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(67): [PCDPC] - Port size (4) does not match connection size (12) for port 'pc'. The port definition is at: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluA File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v
-# ** Warning: (vsim-3015) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(83): [PCDPC] - Port size (1) does not match connection size (2) for port 'select'. The port definition is at: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluB File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v
-# ** Warning: (vsim-3017) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(94): [TFMPC] - Too few port connections. Expected 8, found 6.
-#    Time: 0 ps  Iteration: 0  Instance: /Processador/alu File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v
-# ** Warning: (vsim-3722) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(94): [TFMPC] - Missing connection for port 'neg'.
-# ** Warning: (vsim-3722) /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v(94): [TFMPC] - Missing connection for port 'overflow'.
-add wave -position end sim:/Processador/*
-force -freeze sim:/Processador/CLOCK_50 1 0, 0 {50 ps} -r 100
-force -freeze sim:/Processador/reset 1 0
+# ** Warning: (vsim-3015) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(73): [PCDPC] - Port size (4) does not match connection size (16) for port 'regA'. The port definition is at: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluA File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+# ** Warning: (vsim-3015) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(73): [PCDPC] - Port size (4) does not match connection size (12) for port 'pc'. The port definition is at: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluA File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
+# ** Warning: (vsim-3015) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(89): [PCDPC] - Port size (1) does not match connection size (2) for port 'select'. The port definition is at: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /Processador/muxAluB File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
+# ** Warning: (vsim-3017) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(100): [TFMPC] - Too few port connections. Expected 8, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /Processador/alu File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
+# ** Warning: (vsim-3722) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(100): [TFMPC] - Missing connection for port 'neg'.
+# ** Warning: (vsim-3722) C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v(100): [TFMPC] - Missing connection for port 'overflow'.
+add wave -position insertpoint sim:/Processador/alu/*
+add wave -position insertpoint sim:/Processador/banco/*
+do C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
 run
-force -freeze sim:/Processador/reset 0 0
-run
-run
-run
-run
-add wave -position end  sim:/Processador/banco/registradores
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-# End time: 21:53:59 on Nov 07,2017, Elapsed time: 0:03:54
-# Errors: 0, Warnings: 6

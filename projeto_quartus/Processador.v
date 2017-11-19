@@ -16,6 +16,15 @@ wire aluA, bancoRW, escCondCp, escCp, escIr;
 wire [1:0]aluB;  
 wire [1:0]fonteCp;
 
+
+wire	[3:0]  endRegC = memi_out[11:8];
+wire	[3:0]  endRegA = memi_out[7:4];
+wire	[3:0]  endRegB = memi_out[3:0];
+wire	[15:0] imm;
+wire flagimm;
+assign 		 imm[15:4] = 12'd0;
+assign   	 imm[3:0] = memi_out[7:4];
+
 Controle controle(
 	.clk(CLOCK_50),
 	.opcode(codeop),
@@ -26,7 +35,8 @@ Controle controle(
 	.ULA_B(aluB),
 	.EscIR(escIr),
 	.FonteCP(fonteCp),
-	.EscReg(bancoRW)
+	.EscReg(bancoRW),
+	.flagimm(flagimm)
 );
 
 
@@ -39,12 +49,8 @@ Memoria memoria_inst(
 
 
 //Componentes do Banco de Registradores
-reg [3:0] endRegA;
-reg [3:0] endRegB;
-reg [3:0] endRegC;
-reg [15:0] dadoBanco;
-reg [15:0] imm;
-reg flagimm;
+
+wire [15:0] resultadoALU;
 wire [15:0] saidaA;
 wire [15:0] saidaB;
 
@@ -53,7 +59,7 @@ Banco_registradores banco(
 	.regB(endRegB),
 	.regC(endRegC),
 	.RW(bancoRW),
-	.dado(dadoBanco),
+	.dado(resultadoALU),
 	.imediato(imm),
 	.flagImediato(flagimm),
 	.clk(CLOCK_50),
@@ -89,7 +95,7 @@ Mux_3_to_1 muxAluB(
 );
 
 //Componentes da ALU
-wire [15:0] resultadoALU;
+
 
 ALU alu(
 	.clk(CLOCK_50),
@@ -131,8 +137,7 @@ begin
 			PC = j_imm[11:0];
 		end
 	end
-		flagimm = 0;
-		
+	/*	
 		
 		if(codeop == 4'd0) begin
 			endRegC = memi_out[11:8];
@@ -189,7 +194,8 @@ begin
 			endRegB = memi_out[3:0];
 			flagimm = 1;
 		end
-		dadoBanco = resultadoALU;
+		*/
+		//dadoBanco = resultadoALU;
 end
 
 

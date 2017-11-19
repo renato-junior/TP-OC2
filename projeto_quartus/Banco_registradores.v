@@ -20,18 +20,24 @@ initial begin
 	end
 end
 
-always @(posedge clk)
+always @(regA or regB or regC or dado or RW or imediato or flagImediato or clk)
 begin
-	if(RW == 0) begin
 		if(flagImediato == 0) begin
-			regsaidaA <= registradores[regA][15:0];
+			regsaidaA = registradores[regA][15:0];
 		end else begin
-			regsaidaA <= imediato[15:0];
+			regsaidaA = imediato[15:0];
 		end
-		regsaidaB <= registradores[regB][15:0];
-	end else begin
-		registradores[regC] <= dado;
-	end
+		
+		regsaidaB = registradores[regB][15:0];
+		
+		@(negedge clk) 
+		begin
+		
+			if (RW==1) begin
+		registradores[regC] = dado;
+			end
+			
+		end
 end
 
 endmodule

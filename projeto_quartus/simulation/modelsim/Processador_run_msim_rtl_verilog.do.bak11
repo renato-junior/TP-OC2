@@ -5,11 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Processador.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v}
 
