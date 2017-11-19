@@ -20,17 +20,23 @@ initial begin
 	end
 end
 
+
+
 always @(regA or regB or regC or dado or RW or imediato or flagImediato or clk)
 begin
-		if(flagImediato == 0) begin
-			regsaidaA = registradores[regA][15:0];
+		if(flagImediato == 0) 
+		begin
+			regsaidaA <= registradores[regA][15:0];
 		end else begin
-			regsaidaA = imediato[15:0];
+			regsaidaA <= imediato[15:0];
 		end
 		
-		regsaidaB = registradores[regB][15:0];
-		
-		@(negedge clk) 
+		regsaidaB <= registradores[regB][15:0];
+
+end
+
+
+always @(negedge clk) 
 		begin
 		
 			if (RW==1) begin
@@ -38,6 +44,5 @@ begin
 			end
 			
 		end
-end
 
 endmodule

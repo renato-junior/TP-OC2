@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Sat Nov 18 23:53:26 2017
+Sun Nov 19 00:16:23 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -15,20 +15,19 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Source assignments for Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated
- 13. Parameter Settings for User Entity Instance: Memoria:memoria_inst|altsyncram:altsyncram_component
- 14. altsyncram Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "ALU:alu"
- 16. Port Connectivity Checks: "Mux_3_to_1:muxAluB"
- 17. Port Connectivity Checks: "Mux_2_to_1:muxAluA"
- 18. Port Connectivity Checks: "Banco_registradores:banco"
- 19. Port Connectivity Checks: "Controle:controle"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Source assignments for Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated
+ 12. Parameter Settings for User Entity Instance: Memoria:memoria_inst|altsyncram:altsyncram_component
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Port Connectivity Checks: "ALU:alu"
+ 15. Port Connectivity Checks: "Mux_3_to_1:muxAluB"
+ 16. Port Connectivity Checks: "Mux_2_to_1:muxAluA"
+ 17. Port Connectivity Checks: "Banco_registradores:banco"
+ 18. Port Connectivity Checks: "Controle:controle"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,7 +54,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 18 23:53:26 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 19 00:16:23 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -250,28 +249,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------+
-; Registers Removed During Synthesis                              ;
-+--------------------------------------------+--------------------+
-; Register name                              ; Reason for Removal ;
-+--------------------------------------------+--------------------+
-; PC[0..11]                                  ; Lost fanout        ;
-; Banco_registradores:banco|regsaidaB[0..15] ; Lost fanout        ;
-; Banco_registradores:banco|regsaidaA[0..3]  ; Lost fanout        ;
-; Total Number of Removed Registers = 32     ;                    ;
-+--------------------------------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                            ;
-+---------------+--------------------+-----------------------------------------------------------------------------------+
-; Register name ; Reason for Removal ; Registers Removed due to This Register                                            ;
-+---------------+--------------------+-----------------------------------------------------------------------------------+
-; PC[2]         ; Lost Fanouts       ; Banco_registradores:banco|regsaidaB[2], Banco_registradores:banco|regsaidaB[13],  ;
-;               ;                    ; Banco_registradores:banco|regsaidaB[14], Banco_registradores:banco|regsaidaB[15], ;
-;               ;                    ; Banco_registradores:banco|regsaidaA[2]                                            ;
-; PC[1]         ; Lost Fanouts       ; Banco_registradores:banco|regsaidaB[1], Banco_registradores:banco|regsaidaA[1]    ;
-+---------------+--------------------+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; PC[0..11]                              ; Lost fanout        ;
+; Total Number of Removed Registers = 12 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -460,7 +445,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 18 23:53:17 2017
+    Info: Processing started: Sun Nov 19 00:16:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -586,7 +571,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[14]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 329
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[15]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 350
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -598,9 +583,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
     Info: Peak virtual memory: 637 megabytes
-    Info: Processing ended: Sat Nov 18 23:53:26 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Sun Nov 19 00:16:23 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+

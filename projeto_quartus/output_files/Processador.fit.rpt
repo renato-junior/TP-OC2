@@ -1,5 +1,5 @@
 Fitter report for Processador
-Sat Nov 18 23:53:36 2017
+Sun Nov 19 00:16:33 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Nov 18 23:53:36 2017       ;
+; Fitter Status                      ; Successful - Sun Nov 19 00:16:33 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -2966,7 +2966,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.02 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.01 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2977,8 +2977,8 @@ Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 2
 Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 534 warnings
-    Info: Peak virtual memory: 1552 megabytes
-    Info: Processing ended: Sat Nov 18 23:53:37 2017
+    Info: Peak virtual memory: 1550 megabytes
+    Info: Processing ended: Sun Nov 19 00:16:34 2017
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:14
 

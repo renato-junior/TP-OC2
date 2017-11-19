@@ -137,65 +137,7 @@ begin
 			PC = j_imm[11:0];
 		end
 	end
-	/*	
-		
-		if(codeop == 4'd0) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd1) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd2) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd3) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd4) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd5) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd6) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd7) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd8) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd9) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd10) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end
-		*/
-		//dadoBanco = resultadoALU;
+
 end
 
 

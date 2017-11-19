@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1511056464
+Z1 !s110 1511057345
 !i10b 1
 !s100 SH@SG>_hUm>bIU9hQ@9hn3
 I21eXf;nW1ZNjAG5BnN?490
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1511056464.000000
+Z4 !s108 1511057345.000000
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
@@ -34,11 +34,11 @@ n@a@l@u
 vBanco_registradores
 R1
 !i10b 1
-!s100 [Q`40V>UZPbb6EFiA2XK13
-I]^9a]E?==fb;Y]46PSUob3
+!s100 jcHKBVkmX=ck`oU56CGgS1
+IcBdJK8b4D3gYEZhLV?IHD3
 R2
 R0
-w1511056394
+w1511057239
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v
 L0 1
@@ -46,7 +46,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z8 !s108 1511057344.000000
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
 !i113 1
@@ -55,7 +55,7 @@ R6
 R7
 n@banco_registradores
 vControle
-!s110 1511056465
+R1
 !i10b 1
 !s100 KLCM0mcIhL4RA5U1Y?GiN0
 I9>c1d;a2eR4OL9ZU4>ll13
@@ -69,7 +69,7 @@ R3
 r1
 !s85 0
 31
-!s108 1511056465.000000
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v|
 !i113 1
@@ -78,13 +78,13 @@ R6
 R7
 n@controle
 vMemoria
-!s110 1511056467
+R1
 !i10b 1
 !s100 Lf@7DX6EV9:lef;m4VC]U1
 IFlnn3MgaclK_Z_DzX5R@<0
 R2
 R0
-Z8 w1510765474
+Z9 w1510765474
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 L0 40
@@ -92,7 +92,7 @@ R3
 r1
 !s85 0
 31
-!s108 1511056467.000000
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v|
 !i113 1
@@ -101,13 +101,13 @@ R6
 R7
 n@memoria
 vMux_2_to_1
-R1
+Z10 !s110 1511057344
 !i10b 1
 !s100 fH76[bzPS<Zk^4eA7>SGK3
 IMfNi4VF_DA9hc;ITj<i2^0
 R2
 R0
-R8
+R9
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 L0 1
@@ -115,7 +115,7 @@ R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
 !i113 1
@@ -124,13 +124,13 @@ R6
 R7
 n@mux_2_to_1
 vMux_3_to_1
-R1
+R10
 !i10b 1
 !s100 ecF=zGIQKk3?UMJCEl6El3
 I[>8mR2:hQFdX2LOZGhA@e3
 R2
 R0
-R8
+R9
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 L0 1
@@ -138,7 +138,7 @@ R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
 !i113 1
@@ -147,7 +147,7 @@ R6
 R7
 n@mux_3_to_1
 vProcessador
-R1
+R10
 !i10b 1
 !s100 Fg;2K82z2]Yfc;8DKXB=?2
 IOz37kY3`WSNWI6b3VL32C0
@@ -161,7 +161,7 @@ R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
 !i113 1
