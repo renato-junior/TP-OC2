@@ -26,7 +26,8 @@ begin
 		if(flagImediato == 0) begin
 			regsaidaA <= registradores[regA][15:0];
 		end else begin
-			regsaidaA <= imediato[15:0];
+			regsaidaA[3:0] <= regA;
+			regsaidaA[15:4] <= 12'd0;
 		end
 		regsaidaB <= registradores[regB][15:0];
 	end else begin

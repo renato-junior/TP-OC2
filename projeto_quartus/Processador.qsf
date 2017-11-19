@@ -583,9 +583,6 @@ set_global_assignment -name VERILOG_FILE Banco_registradores.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE conversor7segmentos.v
 set_global_assignment -name VERILOG_FILE Controle.v
-set_global_assignment -name HEX_FILE memi.hex
-set_global_assignment -name QIP_FILE memoria.qip
-set_global_assignment -name MIF_FILE MemoriaInicia.mif
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

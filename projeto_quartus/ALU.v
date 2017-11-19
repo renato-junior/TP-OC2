@@ -8,7 +8,7 @@ output reg neg;
 output reg zero;
 output reg overflow;
 
-always @(posedge clk)
+always @(operando1 or operando2 or codop)
 begin
 	zero = 0;
 	case (codop)
@@ -23,7 +23,7 @@ begin
          overflow <= (operando1[15] & ~operando2[15] & ~resultado[15]) | (~operando1[15] & operando2[15] & resultado[15]);
 		end
 		4'd2: begin
-			if(operando1 > operando2) begin
+			if(operando2 > operando1) begin
 				resultado = 16'd1;
 			end else begin
 				resultado = 16'd0;

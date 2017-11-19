@@ -1,24 +1,23 @@
-module Processador(CLOCK_50, reset);
-input CLOCK_50;
-wire [15:0] memi_out;
-reg [11:0] PC;
-reg [15:0] extPC;
-wire zero;
-integer aux;
+module Processador(CLOCK_50, reset, resetFSM, instruction);
+input CLOCK_50, resetFSM;
+input [15:0]instruction;
 input reset;
+reg [15:0] PC;
+wire zero;
 
 //Componentes unidade de controle
 
-wire [3:0] codeop;
 wire [3:0] ULA_OP;
-assign codeop = memi_out[15:12];
 wire aluA, bancoRW, escCondCp, escCp, escIr;
 wire [1:0]aluB;  
 wire [1:0]fonteCp;
 
+wire flagimm;
+
 Controle controle(
 	.clk(CLOCK_50),
-	.opcode(codeop),
+	.rst(resetFSM),
+	.opcode(instruction[15:12]),
 	.EscCondCP(escCondCp),
 	.EscCP(escCp),
 	.ULA_OP(ULA_OP),
@@ -26,35 +25,21 @@ Controle controle(
 	.ULA_B(aluB),
 	.EscIR(escIr),
 	.FonteCP(fonteCp),
-	.EscReg(bancoRW)
+	.EscReg(bancoRW),
+	.flagimm(flagimm)
 );
-
-
-Memoria memoria_inst(
-	
-	.address(PC),
-	.clock(CLOCK_50),
-	.q (memi_out)
-);
-
 
 //Componentes do Banco de Registradores
-reg [3:0] endRegA;
-reg [3:0] endRegB;
-reg [3:0] endRegC;
-reg [15:0] dadoBanco;
-reg [15:0] imm;
-reg flagimm;
 wire [15:0] saidaA;
 wire [15:0] saidaB;
+wire [15:0] resultadoALU;
 
 Banco_registradores banco(
-	.regA(endRegA),
-	.regB(endRegB),
-	.regC(endRegC),
+	.regA(instruction[7:4]), //operando $s3 está nos bits [7:4] da instrucao
+	.regB(instruction[3:0]), //operando $s2 está nos bits menos significativos
+	.regC(instruction[11:8]),//operando $s4 está nos bits [11:8] da instrucao
 	.RW(bancoRW),
-	.dado(dadoBanco),
-	.imediato(imm),
+	.dado(resultadoALU),
 	.flagImediato(flagimm),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
@@ -74,10 +59,9 @@ Mux_2_to_1 muxAluA(
 //Componentes do MUX 3 to 1 ALU
 reg [15:0] data = 16'd1;
 wire [15:0] extEndRegB;
-wire [15:0] j_imm;
 wire [15:0] resultadoMuxAluB;
 
-assign extEndRegB[3:0] = endRegB[3:0];
+assign extEndRegB[3:0] = instruction[7:4];
 assign extEndRegB[15:4] = 12'd0;
 
 Mux_3_to_1 muxAluB(
@@ -89,11 +73,11 @@ Mux_3_to_1 muxAluB(
 );
 
 //Componentes da ALU
-wire [15:0] resultadoALU;
+
 
 ALU alu(
 	.clk(CLOCK_50),
-	.codop(codeop),
+	.codop(instruction[15:12]),
 	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
 	.resultado(resultadoALU),
@@ -102,8 +86,6 @@ ALU alu(
 
 //Componentes do ultimo Mux 3 to 1
 wire [15:0] resultadoMux;
-
-assign j_imm[11:0] = memi_out[11:0];
 
 //Mux_3_to_1 muxPosAlu(
 //	.data0(resultadoALU),
@@ -114,82 +96,24 @@ assign j_imm[11:0] = memi_out[11:0];
 //);
 
  
- always @(posedge CLOCK_50)
+always @(posedge CLOCK_50)
 begin
 	
 	//logica do PC
 	if (reset == 1) begin 
-		PC = 12'd0;
+		PC = 16'd0;
 	end
 	
 	if(escCp == 1) begin
 		if(fonteCp == 00) begin
-			PC = PC + 12'd1;
+			PC = PC + 16'd1;
 		end  if(fonteCp == 01) begin //Se Branch
-			PC = resultadoALU[11:0];
+			PC = resultadoALU[15:0];
 		end else if(fonteCp == 10) begin //Se Jump
-			PC = j_imm[11:0];
+			PC[11:0] = instruction[11:0];
+			PC[15:12] = PC[15:12]; 
 		end
 	end
-		flagimm = 0;
-		
-		
-		if(codeop == 4'd0) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd1) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd2) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd3) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd4) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd5) begin
-			endRegC = memi_out[11:8];
-			endRegA = memi_out[7:4];
-			endRegB = memi_out[3:0];
-		end else if(codeop == 4'd6) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd7) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd8) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd9) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end else if(codeop == 4'd10) begin
-			endRegC = memi_out[11:8];
-			imm[15:4] = 12'd0;
-			imm[3:0] = memi_out[7:4];
-			endRegB = memi_out[3:0];
-			flagimm = 1;
-		end
-		dadoBanco = resultadoALU;
 end
 
 
