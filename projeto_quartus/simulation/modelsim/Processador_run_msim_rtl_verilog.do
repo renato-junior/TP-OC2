@@ -12,4 +12,5 @@ vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/
 vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v}
+vlog -vlog01compat -work work +incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus {C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v}
 

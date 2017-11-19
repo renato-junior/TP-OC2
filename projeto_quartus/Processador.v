@@ -15,6 +15,8 @@ assign codeop = memi_out[15:12];
 wire aluA, bancoRW, escCondCp, escCp, escIr;
 wire [1:0]aluB;  
 wire [1:0]fonteCp;
+wire [15:0] resH;
+wire [15:0] resL;
 
 
 wire	[3:0]  endRegC = memi_out[11:8];
@@ -36,7 +38,8 @@ Controle controle(
 	.EscIR(escIr),
 	.FonteCP(fonteCp),
 	.EscReg(bancoRW),
-	.flagimm(flagimm)
+	.flagimm(flagimm),
+	.mul (mul_enable)
 );
 
 
@@ -69,6 +72,7 @@ Banco_registradores banco(
 
 //Componentes do MUX 2 to 1
 wire [15:0] resultadoMuxAluA;
+wire [15:0] resultadoMuxAluB;
 
 Mux_2_to_1 muxAluA(
 	.select(aluA),
@@ -81,7 +85,7 @@ Mux_2_to_1 muxAluA(
 reg [15:0] data = 16'd1;
 wire [15:0] extEndRegB;
 wire [15:0] j_imm;
-wire [15:0] resultadoMuxAluB;
+wire [15:0] resultadoMux;
 
 assign extEndRegB[3:0] = endRegB[3:0];
 assign extEndRegB[15:4] = 12'd0;
@@ -103,11 +107,22 @@ ALU alu(
 	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
 	.resultado(resultadoALU),
-	.zero(zero)
+	.zero(zero),
+	.mulH (resH),
+	.mulL (resL)
+);
+//Componentes do ultimo Mux 3 to 1
+
+
+Mul Mul(
+
+	.op1 (resultadoMuxAluA),
+	.op2 (resultadoMuxAluB),
+	.resH (resH),
+	.resL (resL),
+	.enable (mul_enable)
 );
 
-//Componentes do ultimo Mux 3 to 1
-wire [15:0] resultadoMux;
 
 assign j_imm[11:0] = memi_out[11:0];
 

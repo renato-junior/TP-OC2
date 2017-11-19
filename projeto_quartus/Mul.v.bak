@@ -1,0 +1,3 @@
+module Mul (op1, op2, resH, resL, enable);
+input [15:0] op1, [15:0] op2;
+output [15:0] resH, [15:0] resL, enable;

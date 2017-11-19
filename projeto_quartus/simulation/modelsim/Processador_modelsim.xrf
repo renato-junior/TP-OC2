@@ -10,6 +10,7 @@ source_file = 1, C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/memi.
 source_file = 1, C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/memoria.qip
 source_file = 1, C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 source_file = 1, C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/MemoriaInicia.mif
+source_file = 1, C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc

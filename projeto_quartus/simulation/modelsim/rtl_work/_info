@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/simulation/modelsim
 vALU
-Z1 !s110 1511057345
+Z1 !s110 1511096438
 !i10b 1
-!s100 SH@SG>_hUm>bIU9hQ@9hn3
-I21eXf;nW1ZNjAG5BnN?490
+!s100 X9OGR9D;d6P@C]bh45M8l0
+II5@003HQC[3o?KzflVf9W2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1511055465
+w1511062080
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1511057345.000000
+Z4 !s108 1511096438.000000
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v|
 !i113 1
@@ -46,7 +46,7 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1511057344.000000
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v|
 !i113 1
@@ -57,11 +57,11 @@ n@banco_registradores
 vControle
 R1
 !i10b 1
-!s100 KLCM0mcIhL4RA5U1Y?GiN0
-I9>c1d;a2eR4OL9ZU4>ll13
+!s100 M4kN2LVa07<M@jPNgH2Y@3
+I_b_:8QO`==okAO[5T;Pn>1
 R2
 R0
-w1511055014
+w1511062826
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v
 L0 1
@@ -84,7 +84,7 @@ R1
 IFlnn3MgaclK_Z_DzX5R@<0
 R2
 R0
-Z9 w1510765474
+Z8 w1510765474
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v
 L0 40
@@ -100,14 +100,37 @@ R5
 R6
 R7
 n@memoria
+vMul
+R1
+!i10b 1
+!s100 7bI>9FfKSdl54?>SBGTUb2
+IVY[2@OiKk<>@@3:KGKlM10
+R2
+R0
+w1511062022
+8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v
+FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v|
+!i113 1
+R5
+R6
+R7
+n@mul
 vMux_2_to_1
-Z10 !s110 1511057344
+R1
 !i10b 1
 !s100 fH76[bzPS<Zk^4eA7>SGK3
 IMfNi4VF_DA9hc;ITj<i2^0
 R2
 R0
-R9
+R8
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v
 L0 1
@@ -115,7 +138,7 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v|
 !i113 1
@@ -124,13 +147,13 @@ R6
 R7
 n@mux_2_to_1
 vMux_3_to_1
-R10
+R1
 !i10b 1
 !s100 ecF=zGIQKk3?UMJCEl6El3
 I[>8mR2:hQFdX2LOZGhA@e3
 R2
 R0
-R9
+R8
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v
 L0 1
@@ -138,7 +161,7 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v|
 !i113 1
@@ -147,13 +170,13 @@ R6
 R7
 n@mux_3_to_1
 vProcessador
-R10
+R1
 !i10b 1
-!s100 Fg;2K82z2]Yfc;8DKXB=?2
-IOz37kY3`WSNWI6b3VL32C0
+!s100 WM=k5]nag74Ao9V?9SH_[2
+InZ<]Y^@BOCCFF_2JPIZ1H3
 R2
 R0
-w1511053282
+w1511096324
 8C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
 FC:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v
 L0 1
@@ -161,7 +184,7 @@ R3
 r1
 !s85 0
 31
-R8
+R4
 !s107 C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus|C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v|
 !i113 1
