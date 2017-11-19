@@ -11,5 +11,5 @@ vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/
 vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v}
 vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/ALU.v}
 vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Controle.v}
-vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v}
+vlog -vlog01compat -work work +incdir+/home/renato/Dev/TP-OC2/projeto_quartus {/home/renato/Dev/TP-OC2/projeto_quartus/Mul.v}
 

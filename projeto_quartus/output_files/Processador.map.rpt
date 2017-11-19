@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Sun Nov 19 16:12:07 2017
+Sun Nov 19 17:42:08 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 19 16:12:07 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 19 17:42:08 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -159,8 +159,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,18 +170,19 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
-; Mux3to1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v             ;         ;
-; Mux2to1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux2to1.v             ;         ;
-; Processador.v                    ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v         ;         ;
-; Banco_registradores.v            ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Banco_registradores.v ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v                 ;         ;
-; Controle.v                       ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v            ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
+; Mux3to1.v                        ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v             ;         ;
+; Mux2to1.v                        ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v             ;         ;
+; Processador.v                    ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v         ;         ;
+; Banco_registradores.v            ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v                 ;         ;
+; Controle.v                       ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v            ;         ;
+; Mul.v                            ; yes             ; User Verilog HDL File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v                 ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -343,128 +344,171 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 19 16:11:55 2017
+    Info: Processing started: Sun Nov 19 17:41:51 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file mux3to1.v
-    Info (12023): Found entity 1: Mux_3_to_1 File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
-    Info (12023): Found entity 1: Mux_2_to_1 File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux2to1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file processador.v
-    Info (12023): Found entity 1: Processador File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file banco_registradores.v
-    Info (12023): Found entity 1: Banco_registradores File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Banco_registradores.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Mux3to1.v
+    Info (12023): Found entity 1: Mux_3_to_1 File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Mux2to1.v
+    Info (12023): Found entity 1: Mux_2_to_1 File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Processador.v
+    Info (12023): Found entity 1: Processador File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Banco_registradores.v
+    Info (12023): Found entity 1: Banco_registradores File: /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
+    Info (12023): Found entity 1: ALU File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conversor7segmentos.v
-    Info (12023): Found entity 1: conversor7segmentos File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/conversor7segmentos.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file controle.v
-    Info (12023): Found entity 1: Controle File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 1
+    Info (12023): Found entity 1: conversor7segmentos File: /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Controle.v
+    Info (12023): Found entity 1: Controle File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Mul.v
+    Info (12023): Found entity 1: Mul File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Processador.v(34): created implicit net for "mul_enable" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 34
 Info (12127): Elaborating entity "Processador" for the top level hierarchy
-Info (12128): Elaborating entity "Controle" for hierarchy "Controle:controle" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 30
-Warning (10230): Verilog HDL assignment warning at Controle.v(45): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 45
-Warning (10230): Verilog HDL assignment warning at Controle.v(55): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 55
-Warning (10230): Verilog HDL assignment warning at Controle.v(56): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 56
-Warning (10230): Verilog HDL assignment warning at Controle.v(88): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 88
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCondCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_A", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_B", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "FonteCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscReg", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "flagimm", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Warning (10034): Output port "EscIR" at Controle.v(4) has no driver File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 4
-Info (10041): Inferred latch for "flagimm" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "EscReg" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "FonteCP[0]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "FonteCP[1]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "ULA_B[0]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "ULA_B[1]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "ULA_A" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "EscCP" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (10041): Inferred latch for "EscCondCP" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
-Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 47
-Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 57
-Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 73
-Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(8): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 8
-Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 85
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(14): incomplete case statement has no default case item File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "neg", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "overflow" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "neg" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[0]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[1]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[2]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[3]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[4]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[5]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[6]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[7]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[8]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[9]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[10]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[11]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[12]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[13]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[14]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
-Info (10041): Inferred latch for "resultado[15]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:controle" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 35
+Warning (10230): Verilog HDL assignment warning at Controle.v(45): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 45
+Warning (10230): Verilog HDL assignment warning at Controle.v(55): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 55
+Warning (10230): Verilog HDL assignment warning at Controle.v(56): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 56
+Warning (10230): Verilog HDL assignment warning at Controle.v(98): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 98
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCondCP", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCP", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_A", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_B", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "FonteCP", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscReg", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "flagimm", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "mul", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Warning (10034): Output port "EscIR" at Controle.v(4) has no driver File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 4
+Info (10041): Inferred latch for "mul" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "flagimm" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscReg" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "FonteCP[0]" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "FonteCP[1]" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_B[0]" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_B[1]" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_A" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscCP" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscCondCP" at Controle.v(27) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 27
+Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 52
+Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 62
+Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 78
+Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(8): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 8
+Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 92
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(72): variable "mulH" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 72
+Warning (10235): Verilog HDL Always Construct warning at ALU.v(75): variable "mulL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 75
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(16): incomplete case statement has no default case item File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "neg", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(13): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "overflow" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "neg" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[0]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[1]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[2]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[3]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[4]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[5]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[6]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[7]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[8]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[9]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[10]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[11]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[12]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[13]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[14]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (10041): Inferred latch for "resultado[15]" at ALU.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 13
+Info (12128): Elaborating entity "Mul" for hierarchy "Mul:Mul" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 106
+Warning (10240): Verilog HDL Always Construct warning at Mul.v(9): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at Mul.v(9): inferring latch(es) for variable "resH", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at Mul.v(9): inferring latch(es) for variable "resL", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 9
+Info (10041): Inferred latch for "resL[0]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[1]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[2]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[3]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[4]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[5]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[6]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[7]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[8]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[9]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[10]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[11]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[12]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[13]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[14]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resL[15]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[0]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[1]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[2]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[3]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[4]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[5]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[6]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[7]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[8]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[9]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[10]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[11]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[12]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[13]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[14]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
+Info (10041): Inferred latch for "resH[15]" at Mul.v(11) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mul.v Line: 11
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/output_files/Processador.map.smsg
+Info (144001): Generated suppressed messages file /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 19 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 4
-    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 2
-    Warning (15610): No output dependent on input pin "resetFSM" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 2
+    Warning (15610): No output dependent on input pin "reset" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 4
+    Warning (15610): No output dependent on input pin "instruction[0]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[1]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[2]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[3]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[4]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[5]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[6]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[7]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[8]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[9]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[10]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[11]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[12]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[13]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[14]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[15]" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 2
+    Warning (15610): No output dependent on input pin "resetFSM" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 2
 Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 596 megabytes
-    Info: Processing ended: Sun Nov 19 16:12:07 2017
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 947 megabytes
+    Info: Processing ended: Sun Nov 19 17:42:08 2017
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/output_files/Processador.map.smsg.
+The suppressed messages can be found in /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg.
 
 

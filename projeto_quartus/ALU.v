@@ -1,8 +1,10 @@
-module ALU(clk, codop, operando1, operando2, resultado, neg, zero, overflow);
+module ALU(clk, codop, operando1, operando2, resultado, neg, zero, overflow, mulH, mulL);
 input clk;
 input [3:0] codop;
 input [15:0] operando1;
 input [15:0] operando2;
+input [15:0] mulH;
+input [15:0] mulL;
 output reg [15:0] resultado;
 output reg neg;
 output reg zero;
@@ -66,6 +68,12 @@ begin
 				zero = 1;
 			end
 		end
+		4'd13: begin
+			resultado = mulH;
+		end
+		4'd14: begin
+			resultado = mulL;
+		end	
 	endcase
 end
 

@@ -5,6 +5,10 @@ input reset;
 reg [15:0] PC;
 wire zero;
 
+wire [15:0] resH;
+wire [15:0] resL;
+
+
 //Componentes unidade de controle
 
 wire [3:0] ULA_OP;
@@ -26,7 +30,8 @@ Controle controle(
 	.EscIR(escIr),
 	.FonteCP(fonteCp),
 	.EscReg(bancoRW),
-	.flagimm(flagimm)
+	.flagimm(flagimm),
+	.mul(mul_enable)
 );
 
 //Componentes do Banco de Registradores
@@ -81,19 +86,25 @@ ALU alu(
 	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
 	.resultado(resultadoALU),
-	.zero(zero)
+	.zero(zero),
+	.mulH(resH),
+	.mulL(resL)
 );
 
 //Componentes do ultimo Mux 3 to 1
 wire [15:0] resultadoMux;
 
-//Mux_3_to_1 muxPosAlu(
-//	.data0(resultadoALU),
-//	.data1(resultadoALU),
-//	.data2(j_imm),
-//	.select(fonteCp),
-//	.resultado(resultadoMux)
-//);
+
+// Multiplicaçao
+
+Mul Mul(
+	.op1 (resultadoMuxAluA),
+	.op2 (resultadoMuxAluB),
+	.resH (resH),
+	.resL (resL),
+	.enable (mul_enable)
+);
+
 
  
 always @(posedge CLOCK_50)
