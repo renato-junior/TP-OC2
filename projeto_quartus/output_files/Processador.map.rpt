@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Wed Nov 15 12:19:33 2017
+Sun Nov 19 16:12:07 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,21 +13,18 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. State Machine - |Processador|Controle:controle|state
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Source assignments for Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated
- 12. Parameter Settings for User Entity Instance: Memoria:memoria_inst|altsyncram:altsyncram_component
- 13. altsyncram Parameter Settings by Entity Instance
- 14. Port Connectivity Checks: "ALU:alu"
- 15. Port Connectivity Checks: "Mux_3_to_1:muxAluB"
- 16. Port Connectivity Checks: "Mux_2_to_1:muxAluA"
- 17. Port Connectivity Checks: "Banco_registradores:banco"
- 18. Port Connectivity Checks: "Controle:controle"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 11. Parameter Settings for User Entity Instance: Controle:controle
+ 12. Port Connectivity Checks: "ALU:alu"
+ 13. Port Connectivity Checks: "Mux_3_to_1:muxAluB"
+ 14. Port Connectivity Checks: "Banco_registradores:banco"
+ 15. Port Connectivity Checks: "Controle:controle"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,7 +51,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 15 12:19:33 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 19 16:12:07 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -63,7 +60,7 @@ agreement for further details.
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 2                                           ;
+; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,8 +159,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -173,61 +170,49 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                         ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+-----------------------------------+--------------------------------------------------------------------------------+---------+
-; Mux3to1.v                        ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v                              ;         ;
-; Mux2to1.v                        ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v                              ;         ;
-; Processador.v                    ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v                          ;         ;
-; Banco_registradores.v            ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v                  ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v                                  ;         ;
-; Controle.v                       ; yes             ; User Verilog HDL File             ; /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v                             ;         ;
-; MemoriaInicia.mif                ; yes             ; User Memory Initialization File   ; /home/renato/Dev/TP-OC2/projeto_quartus/MemoriaInicia.mif                      ;         ;
-; Memoria.v                        ; yes             ; Auto-Found Wizard-Generated File  ; /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v                              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal170.inc                   ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                      ; /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_spa1.tdf           ; yes             ; Auto-Generated Megafunction       ; /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf                 ;         ;
-+----------------------------------+-----------------+-----------------------------------+--------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; Mux3to1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v             ;         ;
+; Mux2to1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux2to1.v             ;         ;
+; Processador.v                    ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v         ;         ;
+; Banco_registradores.v            ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Banco_registradores.v ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v                 ;         ;
+; Controle.v                       ; yes             ; User Verilog HDL File  ; C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v            ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-;                                             ;          ;
-; Total combinational functions               ; 0        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 0        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 2        ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 1        ;
-; Total fan-out                               ; 2        ;
-; Average fan-out                             ; 0.50     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 19    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; reset ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 19    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,61 +220,31 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Processador               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |Processador        ; Processador ; work         ;
+; |Processador               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |Processador        ; Processador ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------+
-; Registers Removed During Synthesis                              ;
-+--------------------------------------------+--------------------+
-; Register name                              ; Reason for Removal ;
-+--------------------------------------------+--------------------+
-; imm[0,1]                                   ; Lost fanout        ;
-; dadoBanco[0..15]                           ; Lost fanout        ;
-; imm[2,3]                                   ; Lost fanout        ;
-; endRegB[0..3]                              ; Lost fanout        ;
-; endRegA[0..3]                              ; Lost fanout        ;
-; endRegC[0..3]                              ; Lost fanout        ;
-; flagimm                                    ; Lost fanout        ;
-; PC[0..11]                                  ; Lost fanout        ;
-; ALU:alu|resultado[0..15]                   ; Lost fanout        ;
-; Banco_registradores:banco|regsaidaB[0..15] ; Lost fanout        ;
-; Banco_registradores:banco|regsaidaA[0..3]  ; Lost fanout        ;
-; Controle:controle|ULA_B[0]                 ; Lost fanout        ;
-; Controle:controle|FonteCP[0,1]             ; Lost fanout        ;
-; Controle:controle|EscReg                   ; Lost fanout        ;
-; Controle:controle|ULA_A                    ; Lost fanout        ;
-; Controle:controle|EscCP                    ; Lost fanout        ;
-; Controle:controle|ULA_OP[0..3]             ; Lost fanout        ;
-; Controle:controle|estado[0..31]            ; Lost fanout        ;
-; Total Number of Removed Registers = 123    ;                    ;
-+--------------------------------------------+--------------------+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |Processador|Controle:controle|state ;
++----------+-------------------------------------------+
+; Name     ; state.S1                                  ;
++----------+-------------------------------------------+
+; state.S0 ; 0                                         ;
+; state.S1 ; 1                                         ;
++----------+-------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                          ;
-+----------------------------------------+--------------------+----------------------------------------+
-; Register name                          ; Reason for Removal ; Registers Removed due to This Register ;
-+----------------------------------------+--------------------+----------------------------------------+
-; dadoBanco[7]                           ; Lost Fanouts       ; ALU:alu|resultado[7]                   ;
-; Banco_registradores:banco|regsaidaB[0] ; Lost Fanouts       ; Controle:controle|EscReg               ;
-; dadoBanco[0]                           ; Lost Fanouts       ; ALU:alu|resultado[0]                   ;
-; dadoBanco[1]                           ; Lost Fanouts       ; ALU:alu|resultado[1]                   ;
-; dadoBanco[2]                           ; Lost Fanouts       ; ALU:alu|resultado[2]                   ;
-; dadoBanco[3]                           ; Lost Fanouts       ; ALU:alu|resultado[3]                   ;
-; dadoBanco[4]                           ; Lost Fanouts       ; ALU:alu|resultado[4]                   ;
-; dadoBanco[5]                           ; Lost Fanouts       ; ALU:alu|resultado[5]                   ;
-; dadoBanco[6]                           ; Lost Fanouts       ; ALU:alu|resultado[6]                   ;
-; dadoBanco[15]                          ; Lost Fanouts       ; ALU:alu|resultado[15]                  ;
-; dadoBanco[8]                           ; Lost Fanouts       ; ALU:alu|resultado[8]                   ;
-; dadoBanco[9]                           ; Lost Fanouts       ; ALU:alu|resultado[9]                   ;
-; dadoBanco[10]                          ; Lost Fanouts       ; ALU:alu|resultado[10]                  ;
-; dadoBanco[11]                          ; Lost Fanouts       ; ALU:alu|resultado[11]                  ;
-; dadoBanco[12]                          ; Lost Fanouts       ; ALU:alu|resultado[12]                  ;
-; dadoBanco[13]                          ; Lost Fanouts       ; ALU:alu|resultado[13]                  ;
-; dadoBanco[14]                          ; Lost Fanouts       ; ALU:alu|resultado[14]                  ;
-+----------------------------------------+--------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; Controle:controle|state~5             ; Lost fanout        ;
+; Controle:controle|state.S1            ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -307,94 +262,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Source assignments for Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                           ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                            ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Memoria:memoria_inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+---------------------------------------+
-; Parameter Name                     ; Value                ; Type                                  ;
-+------------------------------------+----------------------+---------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                               ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                        ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                               ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                               ;
-; WIDTH_A                            ; 16                   ; Signed Integer                        ;
-; WIDTHAD_A                          ; 12                   ; Signed Integer                        ;
-; NUMWORDS_A                         ; 4096                 ; Signed Integer                        ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                               ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                               ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                               ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                               ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                               ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                               ;
-; WIDTH_B                            ; 1                    ; Untyped                               ;
-; WIDTHAD_B                          ; 1                    ; Untyped                               ;
-; NUMWORDS_B                         ; 1                    ; Untyped                               ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                               ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                               ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                               ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                               ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                               ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                               ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                               ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                               ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                               ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                               ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                        ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                               ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                               ;
-; BYTE_SIZE                          ; 8                    ; Untyped                               ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                               ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
-; INIT_FILE                          ; MemoriaInicia.mif    ; Untyped                               ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                               ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                               ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                               ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                               ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                               ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                               ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                               ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                               ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                               ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                               ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                               ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                               ;
-; CBXI_PARAMETER                     ; altsyncram_spa1      ; Untyped                               ;
-+------------------------------------+----------------------+---------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Controle:controle ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; S0             ; 0     ; Signed Integer                        ;
+; S1             ; 1     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                 ;
-+-------------------------------------------+------------------------------------------------------+
-; Name                                      ; Value                                                ;
-+-------------------------------------------+------------------------------------------------------+
-; Number of entity instances                ; 1                                                    ;
-; Entity Instance                           ; Memoria:memoria_inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                  ;
-;     -- WIDTH_A                            ; 16                                                   ;
-;     -- NUMWORDS_A                         ; 4096                                                 ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                         ;
-;     -- WIDTH_B                            ; 1                                                    ;
-;     -- NUMWORDS_B                         ; 1                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                            ;
-+-------------------------------------------+------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------+
@@ -419,23 +295,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+-------+----------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Mux_2_to_1:muxAluA"                                                                                                                                                               ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; regA ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; pc   ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (4 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Banco_registradores:banco"                                                                      ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; regsaidaA[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Banco_registradores:banco"                                                                                                                      ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; imediato ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -455,7 +321,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 2                               ;
+; boundary_port     ; 19                              ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -477,114 +343,128 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Nov 15 12:19:19 2017
+    Info: Processing started: Sun Nov 19 16:11:55 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
-Warning (125092): Tcl Script File memoria.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE memoria.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file Mux3to1.v
-    Info (12023): Found entity 1: Mux_3_to_1 File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Mux2to1.v
-    Info (12023): Found entity 1: Mux_2_to_1 File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Processador.v
-    Info (12023): Found entity 1: Processador File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Banco_registradores.v
-    Info (12023): Found entity 1: Banco_registradores File: /home/renato/Dev/TP-OC2/projeto_quartus/Banco_registradores.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ALU.v
-    Info (12023): Found entity 1: ALU File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux3to1.v
+    Info (12023): Found entity 1: Mux_3_to_1 File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1.v
+    Info (12023): Found entity 1: Mux_2_to_1 File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux2to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file processador.v
+    Info (12023): Found entity 1: Processador File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file banco_registradores.v
+    Info (12023): Found entity 1: Banco_registradores File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Banco_registradores.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conversor7segmentos.v
-    Info (12023): Found entity 1: conversor7segmentos File: /home/renato/Dev/TP-OC2/projeto_quartus/conversor7segmentos.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Controle.v
-    Info (12023): Found entity 1: Controle File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 1
+    Info (12023): Found entity 1: conversor7segmentos File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/conversor7segmentos.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controle.v
+    Info (12023): Found entity 1: Controle File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 1
 Info (12127): Elaborating entity "Processador" for the top level hierarchy
-Info (12128): Elaborating entity "Controle" for hierarchy "Controle:controle" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 30
-Warning (10230): Verilog HDL assignment warning at Controle.v(75): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 75
-Warning (10230): Verilog HDL assignment warning at Controle.v(77): truncated value with size 32 to match size of target (2) File: /home/renato/Dev/TP-OC2/projeto_quartus/Controle.v Line: 77
-Warning (12125): Using design file Memoria.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: Memoria File: /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v Line: 40
-Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:memoria_inst" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 38
-Info (12128): Elaborating entity "altsyncram" for hierarchy "Memoria:memoria_inst|altsyncram:altsyncram_component" File: /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v Line: 82
-Info (12130): Elaborated megafunction instantiation "Memoria:memoria_inst|altsyncram:altsyncram_component" File: /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v Line: 82
-Info (12133): Instantiated megafunction "Memoria:memoria_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/renato/Dev/TP-OC2/projeto_quartus/Memoria.v Line: 82
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "MemoriaInicia.mif"
-    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "4096"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "12"
-    Info (12134): Parameter "width_a" = "16"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_spa1.tdf
-    Info (12023): Found entity 1: altsyncram_spa1 File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_spa1" for hierarchy "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated" File: /opt/intelFPGA_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 62
-Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 72
-Warning (10240): Verilog HDL Always Construct warning at Mux2to1.v(8): inferring latch(es) for variable "extData", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux2to1.v Line: 8
-Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 89
-Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(8): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 8
-Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(13) File: /home/renato/Dev/TP-OC2/projeto_quartus/Mux3to1.v Line: 13
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 101
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[0]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 35
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[1]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 56
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[2]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 77
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[3]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 98
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[4]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 119
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[5]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 140
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[6]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 161
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[7]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 182
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[8]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 203
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[9]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 224
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[10]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 245
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[11]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 266
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[12]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 287
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[13]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 308
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[14]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 329
-        Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[15]" File: /home/renato/Dev/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 350
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:controle" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 30
+Warning (10230): Verilog HDL assignment warning at Controle.v(45): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 45
+Warning (10230): Verilog HDL assignment warning at Controle.v(55): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 55
+Warning (10230): Verilog HDL assignment warning at Controle.v(56): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 56
+Warning (10230): Verilog HDL assignment warning at Controle.v(88): truncated value with size 32 to match size of target (2) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 88
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCondCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_A", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "ULA_B", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "FonteCP", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "EscReg", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(27): inferring latch(es) for variable "flagimm", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Warning (10034): Output port "EscIR" at Controle.v(4) has no driver File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 4
+Info (10041): Inferred latch for "flagimm" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscReg" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "FonteCP[0]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "FonteCP[1]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_B[0]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_B[1]" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "ULA_A" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscCP" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (10041): Inferred latch for "EscCondCP" at Controle.v(27) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Controle.v Line: 27
+Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 47
+Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 57
+Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 73
+Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(8): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 8
+Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(13) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Mux3to1.v Line: 13
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 85
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(14): incomplete case statement has no default case item File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 14
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "neg", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(11): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "overflow" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "neg" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[0]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[1]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[2]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[3]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[4]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[5]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[6]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[7]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[8]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[9]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[10]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[11]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[12]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[13]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[14]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
+Info (10041): Inferred latch for "resultado[15]" at ALU.v(11) File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/ALU.v Line: 11
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 123 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 2
-    Warning (15610): No output dependent on input pin "reset" File: /home/renato/Dev/TP-OC2/projeto_quartus/Processador.v Line: 8
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 4
+    Warning (15610): No output dependent on input pin "instruction[0]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[1]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[2]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[3]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[4]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[5]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[6]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[7]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[8]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[9]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[10]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[11]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[12]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[13]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[14]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "instruction[15]" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 3
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 2
+    Warning (15610): No output dependent on input pin "resetFSM" File: C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/Processador.v Line: 2
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 983 megabytes
-    Info: Processing ended: Wed Nov 15 12:19:33 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
+    Info: Peak virtual memory: 596 megabytes
+    Info: Processing ended: Sun Nov 19 16:12:07 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/renato/Dev/TP-OC2/projeto_quartus/output_files/Processador.map.smsg.
+The suppressed messages can be found in C:/Users/w7/Desktop/UFMG/OC2/TP3-OC/projeto_quartus/output_files/Processador.map.smsg.
 
 
