@@ -20,17 +20,21 @@ end
 
 
 
-always @(regA or regB or regC or dado or RW or clk)
+always @(regA or regB or regC or clk or dado)
+
 begin
 
-		regsaidaA <= registradores[regA][15:0];
-		
+		regsaidaA <= registradores[regA][15:0];		
 		regsaidaB <= registradores[regB][15:0];
+		
+			if (RW==1) begin
+		registradores[regC] <= dado;
+			end
 
 end
 
 
-always @(negedge clk) 			// fas a escrita na borda de descida, depois da leitura
+/*always @ (clk) 			// faz a escrita na borda de descida, depois da leitura
 		begin
 		
 			if (RW==1) begin
@@ -38,5 +42,6 @@ always @(negedge clk) 			// fas a escrita na borda de descida, depois da leitura
 			end
 			
 		end
+*/	
 
 endmodule

@@ -3,25 +3,34 @@ input CLOCK_50;
 wire [15:0] memi_out;
 reg [11:0] PC;
 reg [15:0] extPC;
+reg [15:0] dado;
 wire zero;
 integer aux;
 input reset;
 
 //Componentes unidade de controle
 
-wire [3:0] codeop;
+
 wire [3:0] ULA_OP;
-assign codeop = memi_out[15:12];
 wire aluA, bancoRW, escCondCp, escCp, escIr;
 wire [1:0]aluB;  
 wire [1:0]fonteCp;
 wire [15:0] resH;
 wire [15:0] resL;
+wire [3:0] codeop;
+wire [3:0] endRegC;
+wire [3:0] endRegA;
+wire [3:0] endRegB;
 
 
-wire	[3:0]  endRegC = memi_out[11:8];
-wire	[3:0]  endRegA = memi_out[7:4];
-wire	[3:0]  endRegB = memi_out[3:0];
+
+assign codeop  [3:0] = memi_out[15:12];
+assign endRegC [3:0] = memi_out[11:8];
+assign endRegA [3:0] = memi_out[7:4];
+assign endRegB [3:0] = memi_out[3:0];
+
+
+
 //wire	[15:0] imm;
 //assign 		 imm[15:4] = 12'd0;
 //assign   	 imm[3:0] = memi_out[7:4];
@@ -60,7 +69,7 @@ Banco_registradores banco(
 	.regB(endRegB),
 	.regC(endRegC),
 	.RW(bancoRW),
-	.dado(resultadoALU),
+	.dado(dado),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
 	.regsaidaB(saidaB)
@@ -75,7 +84,8 @@ Mux_2_to_1 muxAluA(
 	.select(aluA),
 	.regA(saidaA),
 	.pc(PC),
-	.resultado(resultadoMuxAluA)
+	.resultado(resultadoMuxAluA),
+	.clk(CLOCK_50)
 );
 
 //Componentes do MUX 3 to 1 ALU
@@ -92,7 +102,8 @@ Mux_3_to_1 muxAluB(
 	.data1(data),
 	.data2(extEndRegB),
 	.select(aluB),
-	.resultado(resultadoMuxAluB)
+	.resultado(resultadoMuxAluB),
+	.clk(CLOCK_50)
 );
 
 //Componentes da ALU
@@ -134,6 +145,8 @@ assign j_imm[11:0] = memi_out[11:0];
  
  always @(posedge CLOCK_50)
 begin
+	
+	dado [15:0] = resultadoALU[15:0];
 	
 	//logica do PC
 	if (reset == 1) begin 

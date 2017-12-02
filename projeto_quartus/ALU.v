@@ -10,7 +10,9 @@ output reg neg;
 output reg zero;
 output reg overflow;
 
-always @(codop or operando1 or operando2 or clk)
+//codop or operando1 or operando2 or 
+
+always @(codop or operando1 or operando2)
 begin
 	zero = 0;
 	case (codop)

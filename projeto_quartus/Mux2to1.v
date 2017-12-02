@@ -1,11 +1,13 @@
-module Mux_2_to_1(regA, pc, select, resultado);
+module Mux_2_to_1(regA, pc, select, resultado, clk);
 input [3:0] regA;
 input [3:0] pc;
-input select;
+input select, clk;
 output reg [15:0] resultado;
 reg [15:0] extData;
 
-always @(regA or pc or select) 
+//regA or pc or select
+
+always @(posedge clk) 
 begin
     if (select == 1'b0) 
     begin

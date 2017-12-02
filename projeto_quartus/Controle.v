@@ -6,10 +6,12 @@ output reg [3:0]ULA_OP;
 output reg [1:0]ULA_B;  
 output reg [1:0]FonteCP;
 
+
 always @(opcode)
 begin
-
+	
 	ULA_OP = opcode;
+		
 	
 	if (opcode == 4'd0 || opcode == 4'd1 || opcode == 4'd3 || opcode == 4'd4 || opcode == 4'd5 || opcode == 4'd13 || opcode == 4'd14 || opcode == 4'd15 )
 		begin
@@ -73,7 +75,6 @@ begin
 				EscCP = 1;
 				mul = 1;
 		end
-		
 		
 end
 
