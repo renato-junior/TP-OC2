@@ -10,11 +10,6 @@ input reset;
 
 //Componentes unidade de controle
 
-
-wire [3:0] ULA_OP;
-wire aluA, bancoRW, escCondCp, escCp, escIr;
-wire [1:0]aluB;  
-wire [1:0]fonteCp;
 wire [15:0] resH;
 wire [15:0] resL;
 wire [3:0] codeop;
@@ -22,6 +17,12 @@ wire [3:0] endRegC;
 wire [3:0] endRegA;
 wire [3:0] endRegB;
 
+wire [15:0]controle_a ;
+wire [11:0]regs_a  ;
+wire [15:0]controle_b ;
+wire [11:0]regs_b  ;
+wire [15:0]controle_c ;
+wire [11:0]regs_c  ;
 
 
 assign codeop  [3:0] = memi_out[15:12];
@@ -35,18 +36,15 @@ assign endRegB [3:0] = memi_out[3:0];
 //assign 		 imm[15:4] = 12'd0;
 //assign   	 imm[3:0] = memi_out[7:4];
 
-Controle controle(
+Ctrl ctrl(
 	.clk(CLOCK_50),
-	.opcode(codeop),
-	.EscCondCP(escCondCp),
-	.EscCP(escCp),
-	.ULA_OP(ULA_OP),
-	.ULA_A(aluA),
-	.ULA_B(aluB),
-	.EscIR(escIr),
-	.FonteCP(fonteCp),
-	.EscReg(bancoRW),
-	.mul (mul_enable)
+	.inst(memi_out),
+	.controle_a(controle_a),
+	.regs_a (regs_a),
+	.controle_b(controle_b),
+	.regs_b (regs_b),
+	.controle_c(controle_c),
+	.regs_c (regs_c)
 );
 
 
@@ -65,10 +63,10 @@ wire [15:0] saidaA;
 wire [15:0] saidaB;
 
 Banco_registradores banco(
-	.regA(endRegA),
-	.regB(endRegB),
-	.regC(endRegC),
-	.RW(bancoRW),
+	.regA(regs_a[7:4]),
+	.regB(regs_a[3:0]),
+	.regC(regs_c[11:8]),
+	.RW(controle_c[8]),
 	.dado(dado),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
@@ -81,7 +79,7 @@ wire [15:0] resultadoMuxAluB;
 
 Mux_2_to_1 muxAluA(
 
-	.select(aluA),
+	.select(controle_b[2]),
 	.regA(saidaA),
 	.pc(PC),
 	.resultado(resultadoMuxAluA),
@@ -94,14 +92,14 @@ wire [15:0] extEndRegB;
 wire [15:0] j_imm;
 wire [15:0] resultadoMux;
 
-assign extEndRegB[3:0] = endRegB[3:0];
+assign extEndRegB[3:0] = regs_b[3:0];
 assign extEndRegB[15:4] = 12'd0;
 
 Mux_3_to_1 muxAluB(
 	.data0(saidaB),
 	.data1(data),
 	.data2(extEndRegB),
-	.select(aluB),
+	.select(controle_b[4:3]),
 	.resultado(resultadoMuxAluB),
 	.clk(CLOCK_50)
 );
@@ -111,7 +109,7 @@ Mux_3_to_1 muxAluB(
 
 ALU alu(
 	.clk(CLOCK_50),
-	.codop(codeop),
+	.codop(controle_b[14:11]),
 	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
 	.resultado(resultadoALU),
@@ -128,7 +126,7 @@ Mul Mul(
 	.op2 (resultadoMuxAluB),
 	.resH (resH),
 	.resL (resL),
-	.enable (mul_enable)
+	.enable (controle_b[10])
 );
 
 
@@ -142,6 +140,13 @@ assign j_imm[11:0] = memi_out[11:0];
 //	.resultado(resultadoMux)
 //);
 
+
+initial begin
+
+PC = 12'd0;
+
+end
+
  
  always @(posedge CLOCK_50)
 begin
@@ -153,12 +158,12 @@ begin
 		PC = 12'd0;
 	end
 	
-	if(escCp == 1) begin
-		if(fonteCp == 00) begin
+	if(controle_b[1] == 1) begin
+		if(controle_b[7:6] == 00) begin
 			PC = PC + 12'd1;
-		end  if(fonteCp == 01) begin //Se Branch
+		end  if(controle_b[7:6] == 01) begin //Se Branch
 			PC = resultadoALU[11:0];
-		end else if(fonteCp == 10) begin //Se Jump
+		end else if(controle_b[7:6] == 10) begin //Se Jump
 			PC = j_imm[11:0];
 		end
 	end
