@@ -2,20 +2,14 @@ module Processador(CLOCK_50, reset);
 input CLOCK_50;
 wire [15:0] memi_out;
 reg [11:0] PC;
-reg [15:0] extPC;
-reg [15:0] dado;
 wire zero;
-integer aux;
 input reset;
 
 //Componentes unidade de controle
 
 wire [15:0] resH;
 wire [15:0] resL;
-wire [3:0] codeop;
-wire [3:0] endRegC;
-wire [3:0] endRegA;
-wire [3:0] endRegB;
+
 
 wire [15:0]controle_a ;
 wire [11:0]regs_a  ;
@@ -25,16 +19,6 @@ wire [15:0]controle_c ;
 wire [11:0]regs_c  ;
 
 
-assign codeop  [3:0] = memi_out[15:12];
-assign endRegC [3:0] = memi_out[11:8];
-assign endRegA [3:0] = memi_out[7:4];
-assign endRegB [3:0] = memi_out[3:0];
-
-
-
-//wire	[15:0] imm;
-//assign 		 imm[15:4] = 12'd0;
-//assign   	 imm[3:0] = memi_out[7:4];
 
 Ctrl ctrl(
 	.clk(CLOCK_50),
@@ -44,7 +28,8 @@ Ctrl ctrl(
 	.controle_b(controle_b),
 	.regs_b (regs_b),
 	.controle_c(controle_c),
-	.regs_c (regs_c)
+	.regs_c (regs_c),
+	.pc(PC)
 );
 
 
@@ -73,17 +58,20 @@ Banco_registradores banco(
 	.regsaidaB(saidaB)
 );
 
-//Componentes do MUX 2 to 1
+//Componentes do MUX 3 to 1
 wire [15:0] resultadoMuxAluA;
 wire [15:0] resultadoMuxAluB;
+wire [1:0] select_muxAluA;
+assign select_muxAluA[0] = controle_b[2];
+assign select_muxAluA[1] = controle_b[9];
 
-Mux_2_to_1 muxAluA(
+Mux_3_to_1 muxAluA(
 
-	.select(controle_b[2]),
-	.regA(saidaA),
-	.pc(PC),
-	.resultado(resultadoMuxAluA),
-	.clk(CLOCK_50)
+	.select(select_muxAluA),
+	.data2(resultadoALU),
+	.data1(saidaA),
+	.data0(PC),
+	.resultado(resultadoMuxAluA)
 );
 
 //Componentes do MUX 3 to 1 ALU
@@ -95,16 +83,18 @@ wire [15:0] resultadoMux;
 assign extEndRegB[3:0] = regs_b[3:0];
 assign extEndRegB[15:4] = 12'd0;
 
-Mux_3_to_1 muxAluB(
+Mux_4_to_1 muxAluB(
 	.data0(saidaB),
 	.data1(data),
 	.data2(extEndRegB),
+	.data3(resultadoALU),
 	.select(controle_b[4:3]),
-	.resultado(resultadoMuxAluB),
-	.clk(CLOCK_50)
+	.resultado(resultadoMuxAluB)
 );
 
 //Componentes da ALU
+
+
 
 
 ALU alu(
@@ -132,13 +122,6 @@ Mul Mul(
 
 assign j_imm[11:0] = memi_out[11:0];
 
-//Mux_3_to_1 muxPosAlu(
-//	.data0(resultadoALU),
-//	.data1(resultadoALU),
-//	.data2(j_imm),
-//	.select(fonteCp),
-//	.resultado(resultadoMux)
-//);
 
 
 initial begin
@@ -151,7 +134,6 @@ end
  always @(posedge CLOCK_50)
 begin
 	
-	dado [15:0] = resultadoALU[15:0];
 	
 	//logica do PC
 	if (reset == 1) begin 

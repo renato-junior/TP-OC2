@@ -20,7 +20,7 @@ end
 
 
 
-always @(regA or regB or regC or clk or dado)
+always @(regA or regB or regC or clk or dado or RW)
 
 begin
 
