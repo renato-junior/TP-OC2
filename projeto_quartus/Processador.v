@@ -158,12 +158,12 @@ begin
 		PC = 12'd0;
 	end
 	
-	if(controle_b[1] == 1) begin
-		if(controle_b[7:6] == 00) begin
+	if(controle_a[1] == 1) begin
+		if(controle_a[7:6] == 00) begin
 			PC = PC + 12'd1;
-		end  if(controle_b[7:6] == 01) begin //Se Branch
+		end  if(controle_a[7:6] == 01) begin //Se Branch
 			PC = resultadoALU[11:0];
-		end else if(controle_b[7:6] == 10) begin //Se Jump
+		end else if(controle_a[7:6] == 10) begin //Se Jump
 			PC = j_imm[11:0];
 		end
 	end

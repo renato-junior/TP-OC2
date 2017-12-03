@@ -1,5 +1,5 @@
 Fitter report for Processador
-Sat Dec 02 16:28:54 2017
+Sat Dec 02 22:21:16 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Dec 02 16:28:54 2017       ;
+; Fitter Status                      ; Successful - Sat Dec 02 22:21:16 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -2971,16 +2971,16 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 2
 Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 534 warnings
-    Info: Peak virtual memory: 1555 megabytes
-    Info: Processing ended: Sat Dec 02 16:28:54 2017
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 1553 megabytes
+    Info: Processing ended: Sat Dec 02 22:21:17 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+

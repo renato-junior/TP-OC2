@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Processador
-Sat Dec 02 16:29:02 2017
+Sat Dec 02 22:21:26 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sat Dec 02 16:29:02 2017 ;
+; EDA Netlist Writer Status ; Successful - Sat Dec 02 22:21:26 2017 ;
 ; Revision Name             ; Processador                           ;
 ; Top-level Entity Name     ; Processador                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 02 16:29:01 2017
+    Info: Processing started: Sat Dec 02 22:21:25 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Processador_7_1200mv_85c_slow.vo in folder "C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/simulation/modelsim/" for EDA simulation tool
@@ -102,7 +102,7 @@ Info (204019): Generated file Processador_min_1200mv_0c_v_fast.sdo in folder "C:
 Info (204019): Generated file Processador_v.sdo in folder "C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 532 megabytes
-    Info: Processing ended: Sat Dec 02 16:29:02 2017
+    Info: Processing ended: Sat Dec 02 22:21:26 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

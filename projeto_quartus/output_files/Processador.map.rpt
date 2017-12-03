@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Sat Dec 02 16:28:44 2017
+Sat Dec 02 22:21:06 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 02 16:28:44 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 02 22:21:06 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -251,23 +251,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; Mux_2_to_1:muxAluA|resultado[4..15]     ; Stuck at GND due to stuck port data_in ;
-; Ctrl:ctrl|controle_b[3]                 ; Stuck at GND due to stuck port data_in ;
-; PC[0..11]                               ; Lost fanout                            ;
-; dado[0..15]                             ; Lost fanout                            ;
-; Mux_3_to_1:muxAluB|resultado[0..15]     ; Lost fanout                            ;
-; Mux_2_to_1:muxAluA|resultado[0..3]      ; Lost fanout                            ;
-; Ctrl:ctrl|regs_c[8..11]                 ; Lost fanout                            ;
-; Ctrl:ctrl|regs_b[0..3,8..11]            ; Lost fanout                            ;
-; Ctrl:ctrl|controle_b[1,2,4,6..8,10..14] ; Lost fanout                            ;
-; Ctrl:ctrl|controle_c[8]                 ; Lost fanout                            ;
-; Total Number of Removed Registers = 85  ;                                        ;
-+-----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Mux_2_to_1:muxAluA|resultado[4..15]    ; Stuck at GND due to stuck port data_in ;
+; Ctrl:ctrl|controle_b[3]                ; Stuck at GND due to stuck port data_in ;
+; PC[0..11]                              ; Lost fanout                            ;
+; dado[0..15]                            ; Lost fanout                            ;
+; Mux_3_to_1:muxAluB|resultado[0..15]    ; Lost fanout                            ;
+; Mux_2_to_1:muxAluA|resultado[0..3]     ; Lost fanout                            ;
+; Ctrl:ctrl|regs_c[8..11]                ; Lost fanout                            ;
+; Ctrl:ctrl|regs_b[0..3,8..11]           ; Lost fanout                            ;
+; Ctrl:ctrl|controle_b[2,4,8,10..14]     ; Lost fanout                            ;
+; Ctrl:ctrl|controle_c[8]                ; Lost fanout                            ;
+; Total Number of Removed Registers = 82 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -284,7 +284,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[11], Mux_3_to_1:muxAluB|resultado[12],                    ;
 ;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[13], Mux_3_to_1:muxAluB|resultado[14],                    ;
 ;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[15], Mux_2_to_1:muxAluA|resultado[0],                     ;
-;                                  ;                           ; Ctrl:ctrl|controle_b[1], Ctrl:ctrl|controle_b[6], Ctrl:ctrl|controle_b[10]             ;
+;                                  ;                           ; Ctrl:ctrl|controle_b[10]                                                               ;
 ; Mux_2_to_1:muxAluA|resultado[7]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[7]                                                        ;
 ;                                  ; due to stuck port data_in ;                                                                                        ;
 ; Mux_2_to_1:muxAluA|resultado[6]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[6]                                                        ;
@@ -454,12 +454,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port              ; Type   ; Severity ; Details                                                                             ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
-; controle_a        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controle_a[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controle_a[5..2]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controle_a[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; regs_a[11..8]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; controle_b[9..8]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controle_b[9..5]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; controle_b[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_b[15]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; controle_b[5]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; controle_b[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; regs_b[11..4]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_c[15..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_c[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -494,7 +495,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 02 16:28:34 2017
+    Info: Processing started: Sat Dec 02 22:20:55 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -522,19 +523,19 @@ Warning (10036): Verilog HDL or VHDL warning at Processador.v(16): object "endRe
 Warning (10036): Verilog HDL or VHDL warning at Processador.v(17): object "endRegA" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 17
 Warning (10036): Verilog HDL or VHDL warning at Processador.v(18): object "endRegB" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 18
 Info (12128): Elaborating entity "Ctrl" for hierarchy "Ctrl:ctrl" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 48
-Warning (10240): Verilog HDL Always Construct warning at Controle.v(44): inferring latch(es) for variable "controle_a", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 44
-Warning (10030): Net "controle_a[15]" at Controle.v(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 24
-Warning (10030): Net "controle_a[9]" at Controle.v(24) has no driver or initial value, using a default initial value '0' File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 24
-Info (10041): Inferred latch for "controle_a[0]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[1]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[2]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[3]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[4]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[5]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[6]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[7]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[8]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
-Info (10041): Inferred latch for "controle_a[10]" at Controle.v(110) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 110
+Warning (10240): Verilog HDL Always Construct warning at Controle.v(43): inferring latch(es) for variable "controle_a", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 43
+Info (10041): Inferred latch for "controle_a[0]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[1]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[2]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[3]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[4]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[5]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[6]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[7]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[8]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[9]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[10]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
+Info (10041): Inferred latch for "controle_a[15]" at Controle.v(123) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Controle.v Line: 123
 Info (12128): Elaborating entity "Memoria" for hierarchy "Memoria:memoria_inst" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 56
 Info (12128): Elaborating entity "altsyncram" for hierarchy "Memoria:memoria_inst|altsyncram:altsyncram_component" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 82
 Info (12130): Elaborated megafunction instantiation "Memoria:memoria_inst|altsyncram:altsyncram_component" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Memoria.v Line: 82
@@ -640,7 +641,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[14]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 329
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[15]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 350
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 72 registers lost all their fanouts during netlist optimizations.
+Info (17049): 69 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -650,11 +651,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 639 megabytes
-    Info: Processing ended: Sat Dec 02 16:28:44 2017
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Sat Dec 02 22:21:06 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

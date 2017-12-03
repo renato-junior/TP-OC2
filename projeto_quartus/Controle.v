@@ -36,8 +36,6 @@ always @(posedge clk) begin
 	regs_c [11:0] = regs_b [11:0];
 	regs_b [11:0] = regs_a [11:0];
 	
-	controle_a [14:11] = inst [15:12];	
-	regs_a [11:0] = inst [11:0];
 	
 end
 
@@ -120,6 +118,10 @@ begin
 	controle_a[8] = 1;			//EscReg
 	controle_a[10] = 1;			//Mul		
 
+		end
+
+		if (inst[15:0] == 16'b0) begin
+		controle_a[15:0] = 16'b0;
 		end
 		
 end

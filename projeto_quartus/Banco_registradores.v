@@ -24,11 +24,11 @@ always @(regA or regB or regC or clk or dado)
 
 begin
 
-		regsaidaA <= registradores[regA][15:0];		
-		regsaidaB <= registradores[regB][15:0];
+		regsaidaA = registradores[regA][15:0];		
+		regsaidaB = registradores[regB][15:0];
 		
 			if (RW==1) begin
-		registradores[regC] <= dado;
+		registradores[regC] = dado;
 			end
 
 end
