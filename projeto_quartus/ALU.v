@@ -12,7 +12,7 @@ output reg overflow;
 
 //codop or operando1 or operando2 or 
 
-always @(codop or operando1 or operando2)
+always @(posedge clk)
 begin
 	zero = 0;
 	case (codop)

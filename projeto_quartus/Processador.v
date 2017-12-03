@@ -63,11 +63,11 @@ wire [15:0] saidaA;
 wire [15:0] saidaB;
 
 Banco_registradores banco(
-	.regA(regs_a[7:4]),
-	.regB(regs_a[3:0]),
+	.regA(regs_b[7:4]),
+	.regB(regs_b[3:0]),
 	.regC(regs_c[11:8]),
 	.RW(controle_c[8]),
-	.dado(dado),
+	.dado(resultadoALU[15:0]),
 	.clk(CLOCK_50),
 	.regsaidaA(saidaA),
 	.regsaidaB(saidaB)

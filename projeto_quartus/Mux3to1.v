@@ -8,7 +8,7 @@ input clk;
 
 //data0 or data1 or data2 or select
 
-always @(posedge clk) 
+always @(data0 or data1 or data2 or select) 
 begin
     if (select == 2'b00) 
     begin

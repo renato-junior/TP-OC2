@@ -7,7 +7,7 @@ reg [15:0] extData;
 
 //regA or pc or select
 
-always @(posedge clk) 
+always @(regA or pc or select) 
 begin
     if (select == 1'b0) 
     begin

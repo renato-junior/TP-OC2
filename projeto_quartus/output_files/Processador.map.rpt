@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador
-Sat Dec 02 22:21:06 2017
+Sat Dec 02 23:03:19 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -55,7 +55,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 02 22:21:06 2017       ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 02 23:03:19 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Processador                                 ;
 ; Top-level Entity Name              ; Processador                                 ;
@@ -256,51 +256,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; Mux_2_to_1:muxAluA|resultado[4..15]    ; Stuck at GND due to stuck port data_in ;
 ; Ctrl:ctrl|controle_b[3]                ; Stuck at GND due to stuck port data_in ;
 ; PC[0..11]                              ; Lost fanout                            ;
-; dado[0..15]                            ; Lost fanout                            ;
-; Mux_3_to_1:muxAluB|resultado[0..15]    ; Lost fanout                            ;
-; Mux_2_to_1:muxAluA|resultado[0..3]     ; Lost fanout                            ;
+; ALU:alu|resultado[0..15]               ; Lost fanout                            ;
 ; Ctrl:ctrl|regs_c[8..11]                ; Lost fanout                            ;
-; Ctrl:ctrl|regs_b[0..3,8..11]           ; Lost fanout                            ;
+; Ctrl:ctrl|regs_b[0..11]                ; Lost fanout                            ;
 ; Ctrl:ctrl|controle_b[2,4,8,10..14]     ; Lost fanout                            ;
 ; Ctrl:ctrl|controle_c[8]                ; Lost fanout                            ;
-; Total Number of Removed Registers = 82 ;                                        ;
+; Total Number of Removed Registers = 54 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                           ;
-+----------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-; Register name                    ; Reason for Removal        ; Registers Removed due to This Register                                                 ;
-+----------------------------------+---------------------------+----------------------------------------------------------------------------------------+
-; Ctrl:ctrl|controle_b[3]          ; Stuck at GND              ; dado[0], dado[1], dado[2], dado[3], dado[4], dado[5], Mux_3_to_1:muxAluB|resultado[2], ;
-;                                  ; due to stuck port data_in ; Mux_3_to_1:muxAluB|resultado[1], Mux_3_to_1:muxAluB|resultado[3],                      ;
-;                                  ;                           ; Ctrl:ctrl|regs_b[0], Ctrl:ctrl|regs_b[1], Ctrl:ctrl|regs_b[2], Ctrl:ctrl|regs_b[3],    ;
-;                                  ;                           ; Ctrl:ctrl|controle_b[4]                                                                ;
-; Mux_2_to_1:muxAluA|resultado[15] ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[0], Mux_3_to_1:muxAluB|resultado[8],                      ;
-;                                  ; due to stuck port data_in ; Mux_3_to_1:muxAluB|resultado[9], Mux_3_to_1:muxAluB|resultado[10],                     ;
-;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[11], Mux_3_to_1:muxAluB|resultado[12],                    ;
-;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[13], Mux_3_to_1:muxAluB|resultado[14],                    ;
-;                                  ;                           ; Mux_3_to_1:muxAluB|resultado[15], Mux_2_to_1:muxAluA|resultado[0],                     ;
-;                                  ;                           ; Ctrl:ctrl|controle_b[10]                                                               ;
-; Mux_2_to_1:muxAluA|resultado[7]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[7]                                                        ;
-;                                  ; due to stuck port data_in ;                                                                                        ;
-; Mux_2_to_1:muxAluA|resultado[6]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[6]                                                        ;
-;                                  ; due to stuck port data_in ;                                                                                        ;
-; Mux_2_to_1:muxAluA|resultado[5]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[5]                                                        ;
-;                                  ; due to stuck port data_in ;                                                                                        ;
-; Mux_2_to_1:muxAluA|resultado[4]  ; Stuck at GND              ; Mux_3_to_1:muxAluB|resultado[4]                                                        ;
-;                                  ; due to stuck port data_in ;                                                                                        ;
-; PC[3]                            ; Lost Fanouts              ; Mux_2_to_1:muxAluA|resultado[3]                                                        ;
-; PC[2]                            ; Lost Fanouts              ; Mux_2_to_1:muxAluA|resultado[2]                                                        ;
-; PC[1]                            ; Lost Fanouts              ; Mux_2_to_1:muxAluA|resultado[1]                                                        ;
-; Ctrl:ctrl|regs_c[11]             ; Lost Fanouts              ; Ctrl:ctrl|regs_b[11]                                                                   ;
-; Ctrl:ctrl|regs_c[10]             ; Lost Fanouts              ; Ctrl:ctrl|regs_b[10]                                                                   ;
-; Ctrl:ctrl|regs_c[9]              ; Lost Fanouts              ; Ctrl:ctrl|regs_b[9]                                                                    ;
-; Ctrl:ctrl|regs_c[8]              ; Lost Fanouts              ; Ctrl:ctrl|regs_b[8]                                                                    ;
-+----------------------------------+---------------------------+----------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++-------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Register name           ; Reason for Removal        ; Registers Removed due to This Register                                                ;
++-------------------------+---------------------------+---------------------------------------------------------------------------------------+
+; Ctrl:ctrl|controle_b[3] ; Stuck at GND              ; PC[3], PC[2], PC[1], ALU:alu|resultado[10], Ctrl:ctrl|regs_b[0], Ctrl:ctrl|regs_b[1], ;
+;                         ; due to stuck port data_in ; Ctrl:ctrl|regs_b[2], Ctrl:ctrl|regs_b[3], Ctrl:ctrl|controle_b[2],                    ;
+;                         ;                           ; Ctrl:ctrl|controle_b[4], Ctrl:ctrl|controle_b[10]                                     ;
+; PC[7]                   ; Lost Fanouts              ; ALU:alu|resultado[7]                                                                  ;
+; PC[6]                   ; Lost Fanouts              ; ALU:alu|resultado[6]                                                                  ;
+; PC[5]                   ; Lost Fanouts              ; ALU:alu|resultado[5]                                                                  ;
+; PC[4]                   ; Lost Fanouts              ; ALU:alu|resultado[4]                                                                  ;
+; Ctrl:ctrl|regs_c[11]    ; Lost Fanouts              ; Ctrl:ctrl|regs_b[11]                                                                  ;
+; Ctrl:ctrl|regs_c[10]    ; Lost Fanouts              ; Ctrl:ctrl|regs_b[10]                                                                  ;
+; Ctrl:ctrl|regs_c[9]     ; Lost Fanouts              ; Ctrl:ctrl|regs_b[9]                                                                   ;
+; Ctrl:ctrl|regs_c[8]     ; Lost Fanouts              ; Ctrl:ctrl|regs_b[8]                                                                   ;
++-------------------------+---------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -457,11 +440,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; controle_a[15..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_a[5..2]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_a[0]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; regs_a[11..8]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; regs_a            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_b[9..5]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_b[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_b[15]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; regs_b[11..4]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; regs_b[11..8]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_c[15..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; controle_c[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; regs_c[7..0]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -495,7 +478,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Dec 02 22:20:55 2017
+    Info: Processing started: Sat Dec 02 23:03:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador -c Processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -518,6 +501,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file memoria
 Info (12021): Found 1 design units, including 1 entities, in source file mul.v
     Info (12023): Found entity 1: Mul File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v Line: 1
 Info (12127): Elaborating entity "Processador" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Processador.v(6): object "dado" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 6
 Warning (10036): Verilog HDL or VHDL warning at Processador.v(15): object "codeop" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 15
 Warning (10036): Verilog HDL or VHDL warning at Processador.v(16): object "endRegC" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 16
 Warning (10036): Verilog HDL or VHDL warning at Processador.v(17): object "endRegA" assigned a value but never read File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 17
@@ -560,32 +544,26 @@ Info (12128): Elaborating entity "altsyncram_spa1" for hierarchy "Memoria:memori
 Info (12128): Elaborating entity "Banco_registradores" for hierarchy "Banco_registradores:banco" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 74
 Warning (10235): Verilog HDL Always Construct warning at Banco_registradores.v(30): variable "RW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Banco_registradores.v Line: 30
 Info (12128): Elaborating entity "Mux_2_to_1" for hierarchy "Mux_2_to_1:muxAluA" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 87
+Warning (10240): Verilog HDL Always Construct warning at Mux2to1.v(10): inferring latch(es) for variable "extData", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux2to1.v Line: 10
 Info (12128): Elaborating entity "Mux_3_to_1" for hierarchy "Mux_3_to_1:muxAluB" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 105
+Warning (10240): Verilog HDL Always Construct warning at Mux3to1.v(11): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 11
+Info (10041): Inferred latch for "resultado[0]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[1]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[2]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[3]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[4]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[5]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[6]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[7]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[8]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[9]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[10]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[11]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[12]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[13]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[14]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
+Info (10041): Inferred latch for "resultado[15]" at Mux3to1.v(16) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mux3to1.v Line: 16
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 119
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(74): variable "mulH" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 74
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(77): variable "mulL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 77
-Warning (10270): Verilog HDL Case Statement warning at ALU.v(18): incomplete case statement has no default case item File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 18
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(15): inferring latch(es) for variable "resultado", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(15): inferring latch(es) for variable "neg", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(15): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "overflow" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "neg" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[0]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[1]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[2]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[3]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[4]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[5]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[6]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[7]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[8]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[9]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[10]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[11]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[12]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[13]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[14]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
-Info (10041): Inferred latch for "resultado[15]" at ALU.v(15) File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
 Info (12128): Elaborating entity "Mul" for hierarchy "Mul:Mul" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Processador.v Line: 130
 Warning (10240): Verilog HDL Always Construct warning at Mul.v(9): inferring latch(es) for variable "result", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v Line: 9
 Warning (10240): Verilog HDL Always Construct warning at Mul.v(9): inferring latch(es) for variable "resH", which holds its previous value in one or more paths through the always construct File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/Mul.v Line: 9
@@ -641,7 +619,7 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[14]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 329
         Warning (14320): Synthesized away node "Memoria:memoria_inst|altsyncram:altsyncram_component|altsyncram_spa1:auto_generated|q_a[15]" File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/db/altsyncram_spa1.tdf Line: 350
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 69 registers lost all their fanouts during netlist optimizations.
+Info (17049): 53 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/output_files/Processador.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -651,11 +629,11 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 637 megabytes
-    Info: Processing ended: Sat Dec 02 22:21:06 2017
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 642 megabytes
+    Info: Processing ended: Sat Dec 02 23:03:19 2017
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
