@@ -106,7 +106,7 @@ begin
 	controle_a[15] = 0;
 		end
 		
-	if (inst[15:12] == 4'd12)	
+	if (inst[15:12] == 4'd12)	//branch
 		begin
 		
 	controle_a[0] = 1;			//EscCondCP

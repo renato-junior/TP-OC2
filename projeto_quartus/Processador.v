@@ -77,7 +77,7 @@ Mux_3_to_1 muxAluA(
 //Componentes do MUX 3 to 1 ALU
 reg [15:0] data = 16'd1;
 wire [15:0] extEndRegB;
-wire [15:0] j_imm;
+wire [11:0] j_imm;
 wire [15:0] resultadoMux;
 
 assign extEndRegB[3:0] = regs_b[3:0];
@@ -122,12 +122,12 @@ Mul Mul(
 
 assign j_imm[11:0] = memi_out[11:0];
 
-
+//reg aux;
 
 initial begin
 
 PC = 12'd0;
-
+//aux = 0;
 end
 
  
@@ -141,13 +141,19 @@ begin
 	end
 	
 	if(controle_a[1] == 1) begin
+	
 		if(controle_a[7:6] == 00) begin
 			PC = PC + 12'd1;
-		end  if(controle_a[7:6] == 01) begin //Se Branch
-			PC = resultadoALU[11:0];
-		end else if(controle_a[7:6] == 10) begin //Se Jump
-			PC = j_imm[11:0];
+			
+		end  if(controle_b[7:6] == 2'b01 && zero == 1) begin //Se Branch
+			PC = regs_b[11:0];
+			
+		end else if(controle_a[7:6] == 2'b10) begin //Se Jump
+			PC = regs_a[11:0];
 		end
+		
+	//	aux = ~aux;
+		
 	end
 
 end
