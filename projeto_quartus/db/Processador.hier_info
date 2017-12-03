@@ -1,5 +1,5 @@
 |Processador
-CLOCK_50 => CLOCK_50.IN4
+CLOCK_50 => CLOCK_50.IN5
 reset => PC.OUTPUTSELECT
 reset => PC.OUTPUTSELECT
 reset => PC.OUTPUTSELECT
@@ -192,7 +192,7 @@ inst[15] => Equal14.IN0
 inst[15] => Equal15.IN0
 inst[15] => Equal17.IN0
 controle_a[0] <= controle_a[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-controle_a[1] <= controle_a[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+controle_a[1] <= <VCC>
 controle_a[2] <= controle_a[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 controle_a[3] <= controle_a[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 controle_a[4] <= controle_a[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
@@ -1371,5 +1371,6 @@ enable => resH[12]$latch.LATCH_ENABLE
 enable => resH[13]$latch.LATCH_ENABLE
 enable => resH[14]$latch.LATCH_ENABLE
 enable => resH[15]$latch.LATCH_ENABLE
+clk => ~NO_FANOUT~
 
 

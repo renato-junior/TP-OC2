@@ -111,7 +111,7 @@ begin
 		
 	controle_a[0] = 1;			//EscCondCP
 	controle_a[1] = 1;			//EscCP
-	controle_a[2] = 0;			//ULA_A
+	controle_a[2] = 1;			//ULA_A
 	controle_a[4:3] = 2'b00;	//ULA_B
 	controle_a[5] = 0;			//EscIR
 	controle_a[7:6] = 2'b01;	//FonteCP
@@ -128,7 +128,7 @@ begin
 		
 		
 	controle_a[0] = 0;			//EscCondCP
-	controle_a[1] = 0;			//EscCP
+	controle_a[1] = 1;			//EscCP
 	controle_a[2] = 1;			//ULA_A
 	controle_a[4:3] = 2'b00;	//ULA_B
 	controle_a[5] = 0;			//EscIR
@@ -142,9 +142,9 @@ begin
 
 	if (pc != 12'b0) begin
 		
-		if (inst[15:0] == 16'b0) begin			//nop
-		controle_a[15:0] = 16'b0;
-		controle_a[1] = 1;			//EscCP
+		if (inst[15:0] == 16'b0) begin			//Tratamento do nop
+		controle_a[15:0] = 16'b10;					//EscCP = 1
+		
 		end
 		
 		if (regs_a[7:4] == regs_b[11:8]) begin	 //encaminhamento ALU_A	

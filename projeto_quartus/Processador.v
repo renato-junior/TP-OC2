@@ -116,18 +116,17 @@ Mul Mul(
 	.op2 (resultadoMuxAluB),
 	.resH (resH),
 	.resL (resL),
-	.enable (controle_b[10])
+	.enable (controle_b[10]),
+	.clk (CLOCK_50)
 );
 
 
 assign j_imm[11:0] = memi_out[11:0];
 
-//reg aux;
 
 initial begin
 
 PC = 12'd0;
-//aux = 0;
 end
 
  
@@ -142,24 +141,25 @@ begin
 	
 	if(controle_a[1] == 1) begin
 	
-		if(controle_a[7:6] == 00) begin
-			PC = PC + 12'd1;
+	  if(controle_a[7:6] == 2'b01) begin //Se Branch
 			
-		end  if(controle_b[7:6] == 2'b01 && zero == 1) begin //Se Branch
-			PC = regs_b[11:0];
+			if (saidaA == 0) begin
+				PC [11:0] = saidaB[11:0];
+			end
 			
 		end else if(controle_a[7:6] == 2'b10) begin //Se Jump
 			PC = regs_a[11:0];
-		end
-		
-	//	aux = ~aux;
+			
+			end else begin
+				PC = PC + 12'd1;
+		 
+			end
+
 		
 	end
-
 end
 
 
- 
 endmodule
  
  
