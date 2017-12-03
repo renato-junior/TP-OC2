@@ -14,6 +14,9 @@
 	  10: Mul
   11-14: ULA_OP
      15: reservado
+	  
+	O bloco de controle mantem os sinais de controle da instrução atual e das duas últimas.
+	No pipeline alguns blocos usam os sinais de controle atual e outros usam os sinais das instruções passdas.
   
 		
 */
