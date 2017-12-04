@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at ALU.v(15): always construct contains both blocking and non-blocking assignments File: C:/Users/Vinicius/Documents/GitHub/TP-OC2/projeto_quartus/ALU.v Line: 15
+Warning (10268): Verilog HDL information at ALU.v(15): always construct contains both blocking and non-blocking assignments File: /home/renato/Dev/TP-OC2/projeto_quartus/ALU.v Line: 15

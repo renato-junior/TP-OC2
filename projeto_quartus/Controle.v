@@ -21,7 +21,7 @@
 		
 */
 
-module Ctrl(clk, inst, controle_a, controle_b, controle_c, regs_a, regs_b, regs_c, pc);
+module Ctrl(clk, inst, controle_a, controle_b, controle_c, regs_a, regs_b, regs_c);
 input clk;
 input [15:0] inst;
 output reg [15:0]controle_a ;
@@ -30,7 +30,6 @@ output reg [15:0]controle_b ;
 output reg [11:0]regs_b  ;
 output reg [15:0]controle_c ;
 output reg [11:0]regs_c  ;
-input [11:0] pc;
 
 initial begin
 
@@ -140,22 +139,6 @@ begin
 	
 		end
 
-	if (pc != 12'b0) begin
-		
-		if (inst[15:0] == 16'b0) begin			//Tratamento do nop
-		controle_a[15:0] = 16'b10;					//EscCP = 1
-		
-		end
-		
-		if (regs_a[7:4] == regs_b[11:8]) begin	 //encaminhamento ALU_A	
-			controle_a[9] = 1;
-			controle_a[2] = 0;
-			end	
-			
-		if (regs_a[3:0] == regs_b[11:8]) begin	//encaminhamento ALU_B	
-			controle_a[4:3] = 2'b11;
-			end	
-		end
 		
 		
 end
