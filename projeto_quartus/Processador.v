@@ -13,6 +13,7 @@ output [6:0] HEX6;
 output [6:0] HEX7;
 reg [11:0] PC;
 wire zero;
+wire inv = ~KEY[3];
 
 
 //Componentes unidade de controle
@@ -31,7 +32,7 @@ wire [11:0]regs_c  ;
 
 
 Ctrl ctrl(
-	.clk(CLOCK_50),
+	.clk(inv),
 	.inst(SW[15:0]),
 	.controle_a(controle_a),
 	.regs_a (regs_a),
@@ -99,7 +100,7 @@ Mux_4_to_1 muxAluB(
 
 
 ALU alu(
-	.clk(CLOCK_50),
+	.clk(inv),
 	.codop(controle_b[14:11]),
 	.operando1(resultadoMuxAluA),
 	.operando2(resultadoMuxAluB),
@@ -118,7 +119,7 @@ Mul Mul(
 	.resH (resH),
 	.resL (resL),
 	.enable (controle_b[10]),
-	.clk (CLOCK_50)
+	.clk (inv)
 );
 
 
@@ -177,8 +178,6 @@ end
  
  always @(posedge CLOCK_50)
 begin
-	
-	
 	//logica do PC
 	if (reset == 1) begin 
 		PC = 12'd0;

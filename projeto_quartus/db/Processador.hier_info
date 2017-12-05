@@ -1,5 +1,5 @@
 |Processador
-CLOCK_50 => CLOCK_50.IN12
+CLOCK_50 => CLOCK_50.IN9
 reset => PC.OUTPUTSELECT
 reset => PC.OUTPUTSELECT
 reset => PC.OUTPUTSELECT
@@ -15,7 +15,7 @@ reset => PC.OUTPUTSELECT
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+KEY[3] => inv.IN3
 SW[0] => SW[0].IN1
 SW[1] => SW[1].IN1
 SW[2] => SW[2].IN1
